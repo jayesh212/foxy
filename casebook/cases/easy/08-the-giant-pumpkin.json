@@ -1,0 +1,193 @@
+{
+  "$schema": "../../schema/case.schema.json",
+  "id": "case-08",
+  "number": 8,
+  "slug": "the-giant-pumpkin",
+  "title": "The Giant Pumpkin",
+  "tier": "easy",
+  "difficulty": 2,
+  "minutes": 15,
+  "tagline": "The night before the show, someone cut the vine of the biggest pumpkin in the county. They left one footprint.",
+  "crime": "sabotage",
+  "tags": ["footprints", "soil", "two filters"],
+  "setting": { "place": "Hillcrest Allotments", "when": "Friday night, before Saturday's Harvest Show" },
+  "briefing": [
+    "Ivy Marsh's pumpkin, Big Bertha, weighed over 400 kilograms and was the favourite to win Saturday's Harvest Show. A pumpkin cut from its vine stops growing and starts to soften, and the judges disqualify it.",
+    "On Saturday at 6 am Ivy found Bertha's vine sliced clean through. In the soft soil right beside the pumpkin was one clear boot print.",
+    "Four plot holders were at the allotments on Friday evening. Every one of them has a gate key. Who walked onto Plot 12?"
+  ],
+  "rules": ["The vine was cut after the rain stopped at 10:00 pm on Friday and before 6:00 am on Saturday.", "Only someone who walked on Plot 12 that night could have made the print."],
+  "suspects": [
+    {
+      "id": "wilf",
+      "name": "Wilf Arkwright",
+      "role": "Plot 3",
+      "description": "Grows prize marrows. Grumbles that pumpkins hog the show.",
+      "motive": "Wants the Best in Show trophy for his marrows.",
+      "statement": "I was checking my marrows on Plot 3 till about half ten. Never went near Plot 12."
+    },
+    {
+      "id": "petra",
+      "name": "Petra Szabo",
+      "role": "Plot 9",
+      "description": "Also grows giant pumpkins. Came second to Ivy last year by just 6 kilograms.",
+      "motive": "Her own pumpkin, Duchess, is the second-biggest entry this year.",
+      "statement": "I covered Duchess with a blanket against the cold and went home. I haven't set foot on Plot 12 all month."
+    },
+    {
+      "id": "desmond",
+      "name": "Desmond Okoro",
+      "role": "Allotment caretaker",
+      "description": "Runs deliveries of soil and manure. Spread a load of clay on Plot 12 last weekend.",
+      "motive": "Ivy complained to the committee about his late delivery.",
+      "statement": "I locked my shed at nine and left. Haven't been on Plot 12 since I dropped the clay."
+    },
+    {
+      "id": "hettie",
+      "name": "Hettie Nash",
+      "role": "Plot 1",
+      "description": "Committee secretary. Keeps bees.",
+      "motive": "Has bet a large box of chocolates on Petra.",
+      "statement": "I shut the bees in and went home before the rain even stopped."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev1",
+      "kind": "photo",
+      "title": "The boot print",
+      "source": "Pressed into the soil beside Big Bertha",
+      "body": ["One sharp boot print in damp red clay soil.", "Size 9. A zigzag tread pattern across the whole sole.", "Ivy measured it with a ruler and the sizing chart from the allotment shop."]
+    },
+    {
+      "id": "ev2",
+      "kind": "document",
+      "title": "Soil delivery note",
+      "source": "Desmond's delivery book",
+      "body": [
+        "Last Saturday: 2 tonnes of RED CLAY delivered and spread on Plot 12 only (Ivy Marsh).",
+        "Committee note: every other plot at Hillcrest is dark brown loam. Plot 12 is the only place on the site with red clay."
+      ]
+    },
+    {
+      "id": "ev3",
+      "kind": "report",
+      "title": "Boots examined on Saturday morning",
+      "source": "Committee and police",
+      "body": ["Boots worn by each suspect on Friday evening, examined at 8 am Saturday."],
+      "table": {
+        "columns": ["Suspect", "Boots", "Size", "Tread", "Soil in the tread"],
+        "rows": [
+          ["Wilf Arkwright", "Green wellies (allotment shop)", "9", "Zigzag", "Dark brown loam, damp"],
+          ["Petra Szabo", "Green wellies (allotment shop)", "9", "Zigzag", "Red clay, still damp"],
+          ["Desmond Okoro", "Steel-toe work boots", "11", "Square blocks", "Red clay, dry and cracked, a week old"],
+          ["Hettie Nash", "Garden clogs", "6", "Smooth", "Dark brown loam, dry"]
+        ]
+      }
+    },
+    {
+      "id": "ev4",
+      "kind": "object",
+      "title": "Found in the hedge",
+      "source": "Behind Plot 12",
+      "body": ["A pair of folding pruning shears, recently sharpened, with sap on the blades.", "Scratched on the handle: P.S."]
+    },
+    {
+      "id": "ev5",
+      "kind": "report",
+      "title": "Weather",
+      "source": "Hillcrest Allotments rain gauge",
+      "body": ["Rain on Friday from 4:00 pm. Stopped at 10:00 pm. Dry overnight."]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "Which two suspects have boots that match the print's size and tread?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "Wilf and Petra" },
+        { "id": "b", "text": "Petra and Desmond" },
+        { "id": "c", "text": "Wilf and Hettie" }
+      ],
+      "answer": "a",
+      "explanation": "The print is a size 9 zigzag. Wilf and Petra both wear the size 9 zigzag wellies from the allotment shop.",
+      "evidence": ["ev1", "ev3"]
+    },
+    {
+      "id": "q2",
+      "prompt": "What separates the two pairs of matching boots?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "One pair has damp red clay, which is only found on Plot 12" },
+        { "id": "b", "text": "One pair is newer" },
+        { "id": "c", "text": "One pair is a different colour" }
+      ],
+      "answer": "a",
+      "explanation": "Plot 12 is the only place on the site with red clay. Petra's treads have damp red clay; Wilf's have ordinary loam.",
+      "evidence": ["ev2", "ev3"]
+    },
+    {
+      "id": "q3",
+      "prompt": "Desmond has red clay on his boots too. Why isn't he the saboteur?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "He's the caretaker" },
+        { "id": "b", "text": "His boots are size 11 with a block tread, and the clay on them is dry and a week old, from the delivery" },
+        { "id": "c", "text": "He left before nine" }
+      ],
+      "answer": "b",
+      "explanation": "His boots don't match the print, and his clay is old and cracked, which fits spreading it last Saturday. Saying he left early is only his word.",
+      "evidence": ["ev1", "ev2", "ev3"]
+    },
+    {
+      "id": "q4",
+      "prompt": "Who cut Big Bertha's vine?",
+      "kind": "suspect",
+      "answer": "petra",
+      "explanation": "Size 9 zigzag, fresh red clay that only exists on Plot 12, and shears marked P.S. in the hedge. Petra lied about not setting foot on Plot 12.",
+      "evidence": ["ev1", "ev2", "ev3", "ev4"]
+    }
+  ],
+  "hints": [
+    { "question": "q1", "level": 1, "text": "The print tells you two things: a size and a pattern." },
+    { "question": "q1", "level": 2, "text": "Go down the boots table and tick everyone who matches both." },
+    { "question": "q1", "level": 3, "text": "Size 9 and zigzag. The allotment shop sells a popular pair of wellies." },
+    { "question": "q2", "level": 1, "text": "Look at the soil the print was made in." },
+    { "question": "q2", "level": 2, "text": "Where on the site can you get red clay on your boots?" },
+    { "question": "q2", "level": 3, "text": "Red clay is only on Plot 12, and one of the size 9 pairs is caked in it, still damp." },
+    { "question": "q3", "level": 1, "text": "Red clay alone isn't enough. Check the size and tread too." },
+    { "question": "q3", "level": 2, "text": "When would Desmond have got clay on his boots?" },
+    { "question": "q3", "level": 3, "text": "Dry, cracked, a week old, and the wrong boot. That's from the delivery." },
+    { "question": "q4", "level": 1, "text": "Who matches the print and has fresh Plot 12 clay?" },
+    { "question": "q4", "level": 2, "text": "Check the initials on the shears in the hedge." },
+    { "question": "q4", "level": 3, "text": "She said she hadn't been on Plot 12 all month. Her boots say otherwise." }
+  ],
+  "solution": {
+    "culprit": "petra",
+    "summary": "Petra Szabo crept onto Plot 12 after the rain stopped and cut Big Bertha's vine with her pruning shears, clearing the way for her own pumpkin, Duchess. She threw the shears into the hedge, but she couldn't hide the damp red clay in the treads of her size 9 wellies. That clay only exists on Plot 12.",
+    "chain": [
+      { "step": "The print is a size 9 zigzag: Wilf or Petra.", "evidence": ["ev1", "ev3"] },
+      { "step": "Red clay is found only on Plot 12. Petra's treads have damp red clay; Wilf's have loam.", "evidence": ["ev2", "ev3"] },
+      { "step": "The rain stopped at 10 pm, so a sharp, damp print was made overnight.", "evidence": ["ev5"] },
+      { "step": "Shears marked P.S. with fresh sap were in the hedge behind Plot 12.", "evidence": ["ev4"] }
+    ],
+    "eliminations": [
+      { "suspect": "wilf", "why": "His size 9 zigzag wellies only carry dark loam, so he wasn't on Plot 12." },
+      { "suspect": "desmond", "why": "Size 11 block-tread boots that don't match the print. His red clay is week-old and dry, from the delivery." },
+      { "suspect": "hettie", "why": "Size 6 smooth clogs with only loam on them." }
+    ]
+  },
+  "playtest": {
+    "solvePath": "A two-filter case: size and tread give two names, then the soil cuts it to one. Solvers enjoy that Wilf and Petra have identical wellies. The shears are the final nail.",
+    "pitfalls": [
+      "Players jumped on Desmond because of his red clay. The table now lists his boot size and the age of the clay.",
+      "One tester asked whether Petra could have picked up clay legitimately. She claims she hasn't been on Plot 12 all month, so the damp clay contradicts her."
+    ],
+    "revisions": [
+      "Gave Wilf and Petra the exact same welly so that the print alone can't decide it.",
+      "Added the weather so the print and the clay are clearly from Friday night.",
+      "Added the initialled shears for a positive link to Petra."
+    ]
+  }
+}

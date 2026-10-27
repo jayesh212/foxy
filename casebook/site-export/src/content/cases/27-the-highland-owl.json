@@ -1,0 +1,468 @@
+{
+  "number": 27,
+  "title": "The Highland Owl",
+  "tier": "hard",
+  "difficulty": 4,
+  "teaser": "A necklace vanished from a sleeper train somewhere between Preston and Carlisle. The train was searched from end to end. It wasn't on board.",
+  "minutes": 40,
+  "draft": false,
+  "booklet": {
+    "briefing": "The Highland Owl leaves London at 9:15 pm and arrives in Inverness at 8:40 the next morning. Mrs. Ottoline Sand, travelling in sleeper compartment C14, went to bed at 00:50 with her emerald necklace on the shelf beside her pillow.\n\nAt 02:00 the train braked hard on the way into Carlisle and she woke. The necklace was gone. The latch on her door had been reported broken before the journey.\n\nAt Perth, at 05:50, police searched the whole train: every passenger, every bag, every compartment. No necklace. Mr. Foxy thinks the necklace left the train, and that tells you more than it seems.",
+    "rules": [
+      "The necklace was taken between 00:50 and 02:00.",
+      "The thief acted alone.",
+      "The train's windows are sealed and cannot be opened. The only stops between 00:50 and the Perth search were Carlisle (02:10) and nowhere else."
+    ],
+    "setting": {
+      "place": "The Highland Owl sleeper train, London to Inverness",
+      "when": "Tuesday night into Wednesday morning"
+    },
+    "suspects": [
+      {
+        "id": "ferris",
+        "name": "Leon Ferris",
+        "role": "Passenger, compartment C13",
+        "description": "Next door to Mrs. Sand. A professional card player.",
+        "motive": "Lost heavily at cards earlier in the evening.",
+        "statement": "I went to the lounge car for a game at twenty to one and didn't come back till gone two. Ask the barman."
+      },
+      {
+        "id": "ames",
+        "name": "Professor Hilda Ames",
+        "role": "Passenger, compartment C12",
+        "description": "An elderly geologist who sleeps with a breathing machine for her sleep apnoea.",
+        "motive": "Her research grant has been cut and she needs money.",
+        "statement": "I was asleep with my mask on from half past twelve. I didn't hear a thing."
+      },
+      {
+        "id": "dunlop",
+        "name": "Mr. Kenneth Dunlop",
+        "role": "Passenger, compartment C16",
+        "description": "A retired jeweller. Recognised Mrs. Sand's emeralds at dinner and told her what they were worth.",
+        "motive": "Knows exactly what the necklace is worth and how to sell it.",
+        "statement": "My door was jammed. I couldn't have got out if I'd wanted to."
+      },
+      {
+        "id": "cho",
+        "name": "Miss Annabel Cho",
+        "role": "Passenger, compartment C18",
+        "description": "Quiet, polite, travelling light. Booked only as far as Carlisle.",
+        "motive": "None known.",
+        "statement": "I slept until the attendant knocked to say we were nearly at Carlisle, then I got off. I'm visiting my aunt."
+      },
+      {
+        "id": "rook",
+        "name": "Mr. Toby Rook",
+        "role": "Passenger, Coach A (seats)",
+        "description": "Couldn't afford a sleeper and sat up all night. Got off at Carlisle.",
+        "motive": "Was seen admiring the necklace in the dining car.",
+        "statement": "I was in my seat in Coach A all night, except getting a glass of water for that poor lady who was ill. Then I got off at Carlisle."
+      }
+    ],
+    "witnesses": [],
+    "evidence": [
+      {
+        "id": "1",
+        "title": "How the train is laid out",
+        "kind": "map",
+        "source": "Sleeper company plan",
+        "body": "From front to back: Coach A (seats) – Lounge car – Coach B (sleepers B1–B10) – Coach C (sleepers C11–C20).\n\nCoach C is at the very back. There is no door beyond it. The only way into or out of Coach C, while the train is moving, is through the vestibule between Coach B and Coach C.\n\nCoach C has its own outside door, opened only at stations.",
+        "lines": [
+          "From front to back: Coach A (seats) – Lounge car – Coach B (sleepers B1–B10) – Coach C (sleepers C11–C20).",
+          "Coach C is at the very back. There is no door beyond it. The only way into or out of Coach C, while the train is moving, is through the vestibule between Coach B and Coach C.",
+          "Coach C has its own outside door, opened only at stations."
+        ]
+      },
+      {
+        "id": "2",
+        "title": "Attendant's vestibule log",
+        "kind": "log",
+        "source": "Hamish Grant, attendant, desk in the B–C vestibule",
+        "body": "Hamish logs everyone who passes between Coach B and Coach C overnight. Nobody else passed between 00:30 and 03:00.\n\nTime | Entry\n00:40 | Mr. Ferris (C13), C to B, going to the lounge.\n01:20 | Called to Coach A: passenger taken ill. Desk unattended.\n01:36 | Back at desk.\n01:58 | Knocked on C18 (Miss Cho) to wake her for Carlisle, as she asked. She answered at once, dressed.\n02:01 | Mrs. Sand (C14) rings the call bell: necklace missing.\n02:15 | Mr. Ferris, B to C, back from the lounge.",
+        "lines": [
+          "Hamish logs everyone who passes between Coach B and Coach C overnight. Nobody else passed between 00:30 and 03:00."
+        ],
+        "table": {
+          "columns": [
+            "Time",
+            "Entry"
+          ],
+          "rows": [
+            [
+              "00:40",
+              "Mr. Ferris (C13), C to B, going to the lounge."
+            ],
+            [
+              "01:20",
+              "Called to Coach A: passenger taken ill. Desk unattended."
+            ],
+            [
+              "01:36",
+              "Back at desk."
+            ],
+            [
+              "01:58",
+              "Knocked on C18 (Miss Cho) to wake her for Carlisle, as she asked. She answered at once, dressed."
+            ],
+            [
+              "02:01",
+              "Mrs. Sand (C14) rings the call bell: necklace missing."
+            ],
+            [
+              "02:15",
+              "Mr. Ferris, B to C, back from the lounge."
+            ]
+          ]
+        }
+      },
+      {
+        "id": "3",
+        "title": "Hamish, about Coach A",
+        "kind": "statement",
+        "source": "Attendant",
+        "body": "“From 01:20 to 01:36 I was with the lady who was ill in Coach A. Mr. Rook sat across the aisle the whole time and fetched her water from the tap at the end of Coach A. He never left the coach while I was there.”",
+        "lines": [
+          "“From 01:20 to 01:36 I was with the lady who was ill in Coach A. Mr. Rook sat across the aisle the whole time and fetched her water from the tap at the end of Coach A. He never left the coach while I was there.”"
+        ]
+      },
+      {
+        "id": "4",
+        "title": "The lounge barman",
+        "kind": "statement",
+        "source": "Lounge car",
+        "body": "“Mr. Ferris played cards at the corner table from quarter to one until ten past two. He never left the table; he was winning back his money and wouldn't leave it for a second.”",
+        "lines": [
+          "“Mr. Ferris played cards at the corner table from quarter to one until ten past two. He never left the table; he was winning back his money and wouldn't leave it for a second.”"
+        ]
+      },
+      {
+        "id": "5",
+        "title": "Professor Ames's breathing machine",
+        "kind": "log",
+        "source": "Memory card in the machine",
+        "body": "Mask on: 00:31. Mask off: 05:41. No breaks. The machine stops and logs an alarm if the mask comes off for more than 10 seconds.",
+        "lines": [
+          "Mask on: 00:31. Mask off: 05:41. No breaks. The machine stops and logs an alarm if the mask comes off for more than 10 seconds."
+        ]
+      },
+      {
+        "id": "6",
+        "title": "Fault report, C16",
+        "kind": "log",
+        "source": "Attendant's fault book, before departure",
+        "body": "21:30: C16 door handle broken; door can only be opened from the corridor with the attendant's tool. Passenger informed. To be repaired at Inverness.\n\nHamish: “I didn't open C16 for anyone until the police did at Perth.”",
+        "lines": [
+          "21:30: C16 door handle broken; door can only be opened from the corridor with the attendant's tool. Passenger informed. To be repaired at Inverness.",
+          "Hamish: “I didn't open C16 for anyone until the police did at Perth.”"
+        ]
+      },
+      {
+        "id": "7",
+        "title": "Carlisle platform camera",
+        "kind": "photo",
+        "source": "Network Rail, 02:10 to 02:14",
+        "body": "Only two passengers got off at Carlisle: Miss Cho, from Coach C's door, with a small wheeled case; and Mr. Rook, from Coach A's door, with a rucksack.\n\nNobody got on.",
+        "lines": [
+          "Only two passengers got off at Carlisle: Miss Cho, from Coach C's door, with a small wheeled case; and Mr. Rook, from Coach A's door, with a rucksack.",
+          "Nobody got on."
+        ]
+      },
+      {
+        "id": "8",
+        "title": "Carlisle police, Wednesday 9:00 am",
+        "kind": "report",
+        "source": "Hotel near Carlisle station",
+        "body": "Miss Cho was traced to a hotel near the station, not her aunt's. In the lining of her washbag: an emerald necklace, identified by Mrs. Sand.",
+        "lines": [
+          "Miss Cho was traced to a hotel near the station, not her aunt's. In the lining of her washbag: an emerald necklace, identified by Mrs. Sand."
+        ]
+      }
+    ],
+    "timeline": [],
+    "puzzles": [
+      {
+        "id": "q1",
+        "prompt": "The necklace wasn't on the train at Perth. What must have happened to it?",
+        "answer": "It left the train at Carlisle with someone who got off",
+        "hint": "If it wasn't on the train at Perth, how did it get off?"
+      },
+      {
+        "id": "q2",
+        "prompt": "Which two suspects got off at Carlisle?",
+        "answer": "Miss Cho and Mr. Rook",
+        "hint": "Is there a camera on the Carlisle platform?"
+      },
+      {
+        "id": "q3",
+        "prompt": "During the theft window, when could someone from outside Coach C have slipped in without being logged?",
+        "answer": "Only between 01:20 and 01:36, when Hamish was in Coach A",
+        "hint": "Look at the train layout. How do you get into Coach C?"
+      },
+      {
+        "id": "q4",
+        "prompt": "Why couldn't Mr. Rook have used that gap?",
+        "answer": "He was in Coach A with Hamish the whole time Hamish was away from his desk",
+        "hint": "Why was the desk empty in that gap?"
+      },
+      {
+        "id": "q5",
+        "prompt": "Three other suspects were in or near Coach C. Which statement is true?",
+        "answer": "Ferris was at the lounge card table, Ames never took her mask off, and Dunlop's door couldn't be opened from inside",
+        "hint": "Check each of them against a record, not just their word."
+      },
+      {
+        "id": "q6",
+        "prompt": "Who stole the necklace?",
+        "answer": "Miss Annabel Cho",
+        "hint": "Two people got off at Carlisle. Can you clear one?"
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "prompt": "The necklace wasn't on the train at Perth. What must have happened to it?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "It was thrown out of a window"
+          },
+          {
+            "id": "b",
+            "text": "It left the train at Carlisle with someone who got off"
+          },
+          {
+            "id": "c",
+            "text": "It was hidden too well for the police to find"
+          }
+        ],
+        "answer": "b",
+        "explanation": "The windows are sealed and Carlisle was the only stop between the theft and the search. The thief got off at Carlisle with it.",
+        "evidence": [
+          "7"
+        ],
+        "hints": [
+          "If it wasn't on the train at Perth, how did it get off?",
+          "Check the rules about windows and stops.",
+          "One stop, one way off: through a door, at Carlisle."
+        ]
+      },
+      {
+        "id": "q2",
+        "prompt": "Which two suspects got off at Carlisle?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "Miss Cho and Mr. Rook"
+          },
+          {
+            "id": "b",
+            "text": "Mr. Ferris and Mr. Dunlop"
+          },
+          {
+            "id": "c",
+            "text": "Professor Ames and Miss Cho"
+          }
+        ],
+        "answer": "a",
+        "explanation": "The platform camera shows only two passengers leaving: Miss Cho from Coach C and Mr. Rook from Coach A.",
+        "evidence": [
+          "7"
+        ],
+        "hints": [
+          "Is there a camera on the Carlisle platform?",
+          "Read who stepped off, and from which coach.",
+          "One from Coach C and one from Coach A."
+        ]
+      },
+      {
+        "id": "q3",
+        "prompt": "During the theft window, when could someone from outside Coach C have slipped in without being logged?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "Never"
+          },
+          {
+            "id": "b",
+            "text": "Only between 01:20 and 01:36, when Hamish was in Coach A"
+          },
+          {
+            "id": "c",
+            "text": "Any time, there's a back door"
+          }
+        ],
+        "answer": "b",
+        "explanation": "The only way into Coach C is past Hamish's desk, and he logs everyone. He was away from 01:20 to 01:36.",
+        "evidence": [
+          "1",
+          "2"
+        ],
+        "hints": [
+          "Look at the train layout. How do you get into Coach C?",
+          "Somebody sits at that spot all night, except once.",
+          "Hamish's log shows sixteen minutes with nobody at the desk."
+        ]
+      },
+      {
+        "id": "q4",
+        "prompt": "Why couldn't Mr. Rook have used that gap?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "He was in Coach A with Hamish the whole time Hamish was away from his desk"
+          },
+          {
+            "id": "b",
+            "text": "He only had a seat ticket"
+          },
+          {
+            "id": "c",
+            "text": "He was asleep"
+          }
+        ],
+        "answer": "a",
+        "explanation": "The gap existed only because Hamish was in Coach A, and Hamish watched Rook sit there and fetch water from the Coach A tap the whole time.",
+        "evidence": [
+          "3"
+        ],
+        "hints": [
+          "Why was the desk empty in that gap?",
+          "Where was Hamish, and who was with him?",
+          "Rook was under Hamish's eye in Coach A for the whole gap."
+        ]
+      },
+      {
+        "id": "q5",
+        "prompt": "Three other suspects were in or near Coach C. Which statement is true?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "Ferris was at the lounge card table, Ames never took her mask off, and Dunlop's door couldn't be opened from inside"
+          },
+          {
+            "id": "b",
+            "text": "All three were awake and in the corridor"
+          },
+          {
+            "id": "c",
+            "text": "Dunlop's door was fixed at Carlisle"
+          }
+        ],
+        "answer": "a",
+        "explanation": "The barman, the breathing machine and the fault book each give an alibi. Besides, none of them got off at Carlisle, and the necklace did.",
+        "evidence": [
+          "4",
+          "5",
+          "6"
+        ],
+        "hints": [
+          "Check each of them against a record, not just their word.",
+          "A barman, a medical machine and a fault book.",
+          "And none of them got off at Carlisle."
+        ]
+      },
+      {
+        "id": "q6",
+        "prompt": "Who stole the necklace?",
+        "kind": "suspect",
+        "options": [
+          {
+            "id": "ferris",
+            "text": "Leon Ferris"
+          },
+          {
+            "id": "ames",
+            "text": "Professor Hilda Ames"
+          },
+          {
+            "id": "dunlop",
+            "text": "Mr. Kenneth Dunlop"
+          },
+          {
+            "id": "cho",
+            "text": "Miss Annabel Cho"
+          },
+          {
+            "id": "rook",
+            "text": "Mr. Toby Rook"
+          }
+        ],
+        "answer": "cho",
+        "explanation": "The necklace left at Carlisle, so the thief is Miss Cho or Mr. Rook. Rook was in Coach A with the attendant during the only unguarded window, and couldn't reach Coach C at any other time without being logged. Miss Cho was already in Coach C, answered her door dressed at 01:58, and the necklace was in her washbag.",
+        "evidence": [
+          "2",
+          "3",
+          "7",
+          "8"
+        ],
+        "hints": [
+          "Two people got off at Carlisle. Can you clear one?",
+          "The other was already inside Coach C and didn't need the gap at all.",
+          "Who answered her door fully dressed at 01:58, 'having slept until then'?"
+        ]
+      }
+    ],
+    "solution": {
+      "culprit": "Miss Annabel Cho",
+      "culpritId": "cho",
+      "explanation": "Annabel Cho booked compartment C18 only as far as Carlisle, the first stop after the small hours. Already in Coach C, she never needed to pass the attendant's desk. Shortly before 02:00 she slipped into C14 through the broken-latched door, took the emeralds from the shelf, and was back and dressed when Hamish knocked at 01:58. Ten minutes later she stepped off at Carlisle with the necklace in her washbag, long before the police searched the train at Perth.",
+      "chain": [
+        {
+          "step": "The necklace wasn't on board at Perth, the windows are sealed, and Carlisle was the only stop. It left at Carlisle.",
+          "evidence": [
+            "7"
+          ]
+        },
+        {
+          "step": "Only Miss Cho and Mr. Rook got off at Carlisle.",
+          "evidence": [
+            "7"
+          ]
+        },
+        {
+          "step": "To reach Coach C, Rook would have had to pass the desk. The desk was only empty from 01:20 to 01:36, while Hamish was with Rook in Coach A.",
+          "evidence": [
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        {
+          "step": "Miss Cho was in Coach C all along, and answered her door already dressed at 01:58.",
+          "evidence": [
+            "2"
+          ]
+        },
+        {
+          "step": "The necklace was found in her washbag.",
+          "evidence": [
+            "8"
+          ]
+        }
+      ],
+      "eliminations": [
+        {
+          "name": "Leon Ferris",
+          "why": "At the lounge card table from 00:45 to 02:10 per the barman, logged back into Coach C at 02:15, and didn't get off at Carlisle."
+        },
+        {
+          "name": "Professor Hilda Ames",
+          "why": "Her breathing machine shows the mask on without a break from 00:31 to 05:41, and she stayed on the train."
+        },
+        {
+          "name": "Mr. Kenneth Dunlop",
+          "why": "His door could only be opened from the corridor with the attendant's tool, and nobody opened it until Perth."
+        },
+        {
+          "name": "Mr. Toby Rook",
+          "why": "In Coach A, watched by the attendant, during the only time the B–C vestibule was unguarded."
+        }
+      ]
+    }
+  }
+}

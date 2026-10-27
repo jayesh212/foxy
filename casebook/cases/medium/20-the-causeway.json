@@ -1,0 +1,225 @@
+{
+  "$schema": "../../schema/case.schema.json",
+  "id": "case-20",
+  "number": 20,
+  "slug": "the-causeway",
+  "title": "The Causeway",
+  "tier": "medium",
+  "difficulty": 3,
+  "minutes": 25,
+  "tagline": "Twice a day the sea swallows the only road to St. Brannoc's Isle. The thief's story forgot to check the tide.",
+  "crime": "theft",
+  "tags": ["tide table", "arithmetic", "alibi"],
+  "setting": { "place": "St. Brannoc's Isle and its tidal causeway", "when": "Thursday, 14th June" },
+  "briefing": [
+    "St. Brannoc's Isle is joined to the mainland by a stone causeway, a road across the sand. When the tide comes in, the sea covers it completely.",
+    "On the island stands a small priory, home to the Brannoc Psalter, a book of hand-painted pages more than 800 years old. On Thursday between 1:30 pm and 2:30 pm, while the brothers were at prayers, someone cut out its most famous page: the painted fox.",
+    "Whoever did it was on the island in the middle of the day. Four people say they weren't, or had good reason to be. The tide table will tell you who's lying."
+  ],
+  "rules": [
+    "The page was cut out between 1:30 pm and 2:30 pm.",
+    "The only ways onto or off the island are the causeway on foot, or a boat. Swimming in those currents is impossible (the coastguard has signs everywhere)."
+  ],
+  "suspects": [
+    {
+      "id": "gwen",
+      "name": "Gwen Rowley",
+      "role": "Tour guide",
+      "description": "Runs walking tours to the island in a yellow jacket. Knows the Psalter's pages by heart.",
+      "motive": "Her tour business is failing, and a collector once asked her 'how much for the fox?'",
+      "statement": "I walked my group across the causeway at one o'clock, showed them round the priory church, and walked them back at four. I never went into the library."
+    },
+    {
+      "id": "kit",
+      "name": "Kit Amari",
+      "role": "Art student",
+      "description": "Has been sketching the Psalter for her degree. Asked for extra time with the fox page and was refused.",
+      "motive": "Desperate to finish her project, and furious at the refusal.",
+      "statement": "I crossed at about quarter past nine, did some sketching in the garden, and came back before the tide came in. I had lunch in the mainland café."
+    },
+    {
+      "id": "harold",
+      "name": "Harold Penhale",
+      "role": "Fisherman",
+      "description": "The only local with a boat that can reach the island at high tide.",
+      "motive": "Bitter that the priory sold its fishing rights.",
+      "statement": "My boat's been in bits on the slipway all week. I was in the boatyard all day."
+    },
+    {
+      "id": "anselm",
+      "name": "Brother Anselm",
+      "role": "Librarian monk",
+      "description": "Keeps the key to the library where the Psalter is kept.",
+      "motive": "The priory needs a new roof, and the insurance would pay for one.",
+      "statement": "I was at midday prayers in the chapel with the other brothers from half past one until half past two, then I found the Psalter cut."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev1",
+      "kind": "timetable",
+      "title": "Tide table and causeway rule",
+      "source": "Sign at the mainland end of the causeway",
+      "body": [
+        "THE CAUSEWAY IS UNDER WATER FROM 2 HOURS BEFORE HIGH TIDE UNTIL 3 HOURS AFTER HIGH TIDE. DO NOT ATTEMPT TO CROSS.",
+        "Thursday 14th June. High tides: 12:30 am and 12:30 pm."
+      ]
+    },
+    {
+      "id": "ev2",
+      "kind": "photo",
+      "title": "Causeway webcam",
+      "source": "Coastguard camera, one picture every 30 minutes",
+      "body": ["What the camera saw on Thursday."],
+      "table": {
+        "columns": ["Time", "Picture"],
+        "rows": [
+          ["9:00 am", "One person in a yellow jacket walking towards the island, alone."],
+          ["9:30 am", "One person with a sketchbook walking towards the island."],
+          ["10:00 am", "The same person with the sketchbook walking back towards the mainland."],
+          ["10:30 am", "Water beginning to cover the causeway. Nobody on it."],
+          ["11:00 am to 3:00 pm", "Causeway completely under water."],
+          ["4:00 pm", "Causeway clear of water. One person in a yellow jacket walking towards the mainland, alone."]
+        ]
+      }
+    },
+    {
+      "id": "ev3",
+      "kind": "letter",
+      "title": "Email on Gwen's phone",
+      "source": "From Holland Walking Tours, sent Wednesday",
+      "body": ["“Sorry Gwen, our group has had to cancel tomorrow's island tour. We hope to rebook in the autumn.”"]
+    },
+    {
+      "id": "ev4",
+      "kind": "object",
+      "title": "Kit's lunch receipt",
+      "source": "Seaview Café, mainland",
+      "body": ["Thursday, 13:50. Soup and a sandwich, eat in. The waitress remembers Kit sketching at the window table until gone three."]
+    },
+    {
+      "id": "ev5",
+      "kind": "document",
+      "title": "Boatyard record",
+      "source": "Penhale Slipway, mainland",
+      "body": ["Harold Penhale's boat Kittiwake: on the slipway since Monday, engine out, propeller removed.", "Boatyard foreman: “Harold was here helping me all day. That boat isn't going anywhere this week.”"]
+    },
+    {
+      "id": "ev6",
+      "kind": "statement",
+      "title": "The Prior",
+      "source": "Father Benedict",
+      "body": ["“All eight of us were in the chapel from 1:30 to 2:30, Brother Anselm included. He read the second lesson. Nobody left.”"]
+    },
+    {
+      "id": "ev7",
+      "kind": "report",
+      "title": "Search of Gwen's car",
+      "source": "Mainland car park, 5:00 pm",
+      "body": ["In the boot: a cardboard poster tube. Inside, rolled in tissue paper: a single painted page showing a red fox, with one neatly cut edge."]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "Between what times on Thursday afternoon was the causeway under water?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "12:30 pm to 3:30 pm" },
+        { "id": "b", "text": "10:30 am to 3:30 pm" },
+        { "id": "c", "text": "10:30 am to 2:30 pm" }
+      ],
+      "answer": "b",
+      "explanation": "High tide was at 12:30 pm. Two hours before is 10:30 am, three hours after is 3:30 pm. The webcam agrees: water at 10:30, covered until at least 3:00, clear by 4:00.",
+      "evidence": ["ev1", "ev2"]
+    },
+    {
+      "id": "q2",
+      "prompt": "Whose statement is impossible?",
+      "kind": "suspect",
+      "answer": "gwen",
+      "explanation": "Gwen says she walked a group across at 1:00 pm, when the causeway was under water. Her group had also cancelled.",
+      "evidence": ["ev1", "ev3"]
+    },
+    {
+      "id": "q3",
+      "prompt": "So when did Gwen really cross to the island?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "At 9:00 am, alone, before the tide came in" },
+        { "id": "b", "text": "By boat at 1:00 pm" },
+        { "id": "c", "text": "She never went to the island" }
+      ],
+      "answer": "a",
+      "explanation": "The 9:00 am webcam picture shows someone in a yellow jacket walking to the island alone, and at 4:00 pm the same jacket walks back. She was on the island the whole time the causeway was closed.",
+      "evidence": ["ev2"]
+    },
+    {
+      "id": "q4",
+      "prompt": "Kit wanted the fox page badly. Why couldn't she have taken it?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "She crossed back at 10:00 am, before the causeway flooded, and was in the mainland café at 1:50 pm" },
+        { "id": "b", "text": "She only draws, she doesn't steal" },
+        { "id": "c", "text": "She had a boat" }
+      ],
+      "answer": "a",
+      "explanation": "The 10:00 webcam shows her walking back with her sketchbook, and the causeway was under water from 10:30 to 3:30. The café receipt and waitress put her on the mainland during the theft.",
+      "evidence": ["ev2", "ev4"]
+    },
+    {
+      "id": "q5",
+      "prompt": "Who cut out the fox page?",
+      "kind": "suspect",
+      "answer": "gwen",
+      "explanation": "Kit was on the mainland, Harold's boat had no engine, and Brother Anselm was in chapel with seven witnesses. Gwen was on the island all day, lied about crossing at 1:00 pm, and the page was in her car.",
+      "evidence": ["ev2", "ev3", "ev4", "ev5", "ev6", "ev7"]
+    }
+  ],
+  "hints": [
+    { "question": "q1", "level": 1, "text": "Read the sign at the causeway carefully. It's all about high tide." },
+    { "question": "q1", "level": 2, "text": "High tide is 12:30 pm. Count back 2 hours and forward 3." },
+    { "question": "q1", "level": 3, "text": "10:30 am to 3:30 pm. Check the webcam to be sure." },
+    { "question": "q2", "level": 1, "text": "Now test every 'I crossed at...' against those times." },
+    { "question": "q2", "level": 2, "text": "Who says they walked across in the early afternoon?" },
+    { "question": "q2", "level": 3, "text": "Nobody walks a tour group across a road that's under the sea. And was there even a group?" },
+    { "question": "q3", "level": 1, "text": "If she didn't cross at 1:00, she must have been on the island already." },
+    { "question": "q3", "level": 2, "text": "Look at the webcam pictures for a yellow jacket." },
+    { "question": "q3", "level": 3, "text": "Yellow jacket heading out alone at 9:00 am, and heading home alone at 4:00 pm." },
+    { "question": "q4", "level": 1, "text": "Was Kit on the island when the tide came in?" },
+    { "question": "q4", "level": 2, "text": "Look at the 10:00 webcam picture, then the café receipt." },
+    { "question": "q4", "level": 3, "text": "She came back at 10:00 and was eating soup on the mainland at 1:50." },
+    { "question": "q5", "level": 1, "text": "Who was actually on the island between 1:30 and 2:30?" },
+    { "question": "q5", "level": 2, "text": "The brothers were all in chapel. Harold's boat had no engine." },
+    { "question": "q5", "level": 3, "text": "One person was on the island, alone, all day. What was in her car?" }
+  ],
+  "solution": {
+    "culprit": "gwen",
+    "summary": "Gwen Rowley's tour group cancelled, so she crossed to the island alone at 9:00 am and waited for the tide to cut it off. While the brothers were at prayers she slipped into the library, cut out the fox page and hid it in a poster tube. At 4:00 pm, with the causeway dry again, she walked back to her car. She told the police she'd brought a group over at 1:00 pm, forgetting that at 1:00 pm the causeway was under two metres of sea.",
+    "chain": [
+      { "step": "With high tide at 12:30 pm, the causeway was under water from 10:30 am to 3:30 pm. The thief was on the island before 10:30 and couldn't leave before 3:30, unless by boat.", "evidence": ["ev1", "ev2"] },
+      { "step": "Gwen's story of crossing at 1:00 pm is impossible, and her group had cancelled.", "evidence": ["ev1", "ev3"] },
+      { "step": "The webcam shows her crossing alone at 9:00 am and coming back alone at 4:00 pm.", "evidence": ["ev2"] },
+      { "step": "Kit left at 10:00 am, Harold's boat had no engine, Brother Anselm was in chapel.", "evidence": ["ev2", "ev4", "ev5", "ev6"] },
+      { "step": "The fox page was in a poster tube in Gwen's car.", "evidence": ["ev7"] }
+    ],
+    "eliminations": [
+      { "suspect": "kit", "why": "Walked back at 10:00 am, before the causeway flooded, and was at the mainland café at 1:50 pm." },
+      { "suspect": "harold", "why": "His boat was on the slipway with no engine or propeller, and the foreman was with him all day." },
+      { "suspect": "anselm", "why": "In chapel from 1:30 to 2:30 with seven other brothers, reading the second lesson." }
+    ]
+  },
+  "playtest": {
+    "solvePath": "Players work out the flood window from the sign (five minutes), and Gwen's 1:00 pm crossing falls apart. The webcam then rebuilds her real day, which most solvers find very satisfying.",
+    "pitfalls": [
+      "Some players used the 12:30 am high tide by mistake. The question now says 'afternoon'.",
+      "Players asked about swimming. The rules now rule it out.",
+      "In an early draft the webcam showed Gwen's face, which made the tide table unnecessary. It now shows only a yellow jacket."
+    ],
+    "revisions": [
+      "Added the cancelled-tour email so Gwen's lie has a second, independent crack.",
+      "Gave Brother Anselm seven witnesses, since the insurance motive makes him a strong red herring.",
+      "Made the webcam picture every 30 minutes so Kit's return before the flood is on record."
+    ]
+  }
+}

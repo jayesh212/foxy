@@ -1,0 +1,171 @@
+{
+  "$schema": "../../schema/case.schema.json",
+  "id": "case-10",
+  "number": 10,
+  "slug": "the-spelling-mistake",
+  "title": "The Spelling Mistake",
+  "tier": "easy",
+  "difficulty": 2,
+  "minutes": 15,
+  "tagline": "An anonymous letter accuses the bake-off favourite of cheating. Whoever wrote it can't spell.",
+  "crime": "poison-pen letter",
+  "tags": ["document comparison", "writing habits"],
+  "setting": { "place": "The Great Thornfield Bake-Off", "when": "The week before the final" },
+  "briefing": [
+    "Nora Fairweather has won every round of the Thornfield Bake-Off so far. On Monday the three judges each received the same anonymous letter, written in capital letters:",
+    "“TO THE JUDGES. YOU WILL RECIEVE THIS LETTER BEFORE THE FINAL. NORA FAIRWEATHER DEFINATELY BUYS HER CAKES FROM A SHOP IN TOWN & PASSES THEM OFF AS HER OWN. I HAVE SEEN HER DO IT THREE TIMES. CHECK THE BOXES IN HER BIN. A FRIEND OF THE CONTEST.”",
+    "The judges checked. Nora's bin held only eggshells and flour bags, and the shop in town has never heard of her. Somebody lied to get her thrown out. The capitals hide the handwriting, but they can't hide how the writer spells."
+  ],
+  "rules": ["The letter's writer is one of the three other finalists.", "All three samples below were written by the suspects before the letter arrived, in their normal writing."],
+  "suspects": [
+    {
+      "id": "fiona",
+      "name": "Fiona Crane",
+      "role": "Finalist",
+      "description": "A retired science teacher who bakes very precise sponges.",
+      "motive": "Came second to Nora in the bread round.",
+      "statement": "I'd never write something so nasty. If I had a complaint, I'd sign my name to it."
+    },
+    {
+      "id": "gerald",
+      "name": "Gerald Pike",
+      "role": "Finalist",
+      "description": "A cheerful postman famous for his towering meringues.",
+      "motive": "Has said he would 'give anything' to win the golden whisk.",
+      "statement": "Nora's lovely. I wouldn't know anything about any letter."
+    },
+    {
+      "id": "hugo",
+      "name": "Hugo Varga",
+      "role": "Finalist",
+      "description": "A young chef who is sure he should be winning.",
+      "motive": "Told a reporter that Nora's cakes look 'too perfect to be homemade'.",
+      "statement": "I said what I said to the paper, out loud, with my name on it. I don't need to send letters."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev1",
+      "kind": "letter",
+      "title": "The anonymous letter, studied",
+      "source": "Detective's notes",
+      "body": [
+        "Writing habits found in the letter:",
+        "1. “RECIEVE” instead of “receive”.",
+        "2. “DEFINATELY” instead of “definitely”.",
+        "3. Uses the & sign instead of the word “and”.",
+        "4. Writes numbers as words (“THREE TIMES”)."
+      ]
+    },
+    {
+      "id": "ev2",
+      "kind": "document",
+      "title": "Sample A: Fiona's recipe card",
+      "source": "Pinned to her bake-off station, written last month",
+      "body": [
+        "“Lemon Drizzle. You will receive the best results with 3 eggs, room temperature, and caster sugar. Definately sieve the flour twice. Bake for 40 mins and test with a skewer.”"
+      ]
+    },
+    {
+      "id": "ev3",
+      "kind": "document",
+      "title": "Sample B: Gerald's thank-you card",
+      "source": "Sent to the organisers after round two",
+      "body": [
+        "“Dear all, I was so happy to recieve your lovely card & the photos. I will definately be back next year whatever happens. Thank you for three wonderful weeks. Gerald.”"
+      ]
+    },
+    {
+      "id": "ev4",
+      "kind": "document",
+      "title": "Sample C: Hugo's entry form",
+      "source": "Filled in at registration",
+      "body": [
+        "“Signature dish: duck & cherry pie. I hope to receive feedback from the judges on every round. I have definitely been baking since I was 7 years old.”"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "Which sample shares the letter's mistake “definately”?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "Only Fiona's" },
+        { "id": "b", "text": "Fiona's and Gerald's" },
+        { "id": "c", "text": "All three" }
+      ],
+      "answer": "b",
+      "explanation": "Fiona's recipe card and Gerald's card both say “definately”. Hugo spells it correctly.",
+      "evidence": ["ev2", "ev3", "ev4"]
+    },
+    {
+      "id": "q2",
+      "prompt": "Which habit rules Fiona out?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "She spells “receive” correctly, writes “and” in full and writes numbers as digits" },
+        { "id": "b", "text": "She signs her name" },
+        { "id": "c", "text": "She writes in lower case" }
+      ],
+      "answer": "a",
+      "explanation": "Fiona writes “receive”, “and” and “3 eggs”. The letter writer writes “recieve”, “&” and “three”.",
+      "evidence": ["ev1", "ev2"]
+    },
+    {
+      "id": "q3",
+      "prompt": "How many of the letter's four habits does Gerald's card share?",
+      "kind": "number",
+      "answer": "4",
+      "explanation": "“recieve”, “definately”, the & sign and “three wonderful weeks”. All four.",
+      "evidence": ["ev1", "ev3"]
+    },
+    {
+      "id": "q4",
+      "prompt": "Who wrote the anonymous letter?",
+      "kind": "suspect",
+      "answer": "gerald",
+      "explanation": "Only Gerald's writing matches all four habits. Fiona matches one and Hugo matches one (the &).",
+      "evidence": ["ev1", "ev2", "ev3", "ev4"]
+    }
+  ],
+  "hints": [
+    { "question": "q1", "level": 1, "text": "Read each sample looking for one word only." },
+    { "question": "q1", "level": 2, "text": "Find the word that means 'for certain' in each sample, and check its spelling." },
+    { "question": "q1", "level": 3, "text": "Two samples spell it with an 'a'. Which two?" },
+    { "question": "q2", "level": 1, "text": "One shared mistake isn't enough. Check the other habits." },
+    { "question": "q2", "level": 2, "text": "Look at how Fiona writes 'receive', 'and' and numbers." },
+    { "question": "q2", "level": 3, "text": "She gets 'receive' right and writes '3 eggs'. The letter writer wouldn't." },
+    { "question": "q3", "level": 1, "text": "Make a little table: four habits across the top, three bakers down the side." },
+    { "question": "q3", "level": 2, "text": "Tick each habit you find in Gerald's card." },
+    { "question": "q3", "level": 3, "text": "Look at 'recieve', 'definately', the & sign and 'three wonderful weeks'." },
+    { "question": "q4", "level": 1, "text": "Who matches the most habits?" },
+    { "question": "q4", "level": 2, "text": "Hugo uses & too. Is that enough?" },
+    { "question": "q4", "level": 3, "text": "One baker matches all four. The others match only one each." }
+  ],
+  "solution": {
+    "culprit": "gerald",
+    "summary": "Cheerful Gerald Pike wanted the golden whisk badly enough to try to get Nora thrown out. He wrote in capitals so nobody would know his handwriting, but he couldn't change how he spells. His thank-you card has the same 'recieve', the same 'definately', the same & sign and the same habit of writing numbers as words.",
+    "chain": [
+      { "step": "The letter has four writing habits.", "evidence": ["ev1"] },
+      { "step": "Fiona shares one (definately) and Hugo shares one (&).", "evidence": ["ev2", "ev4"] },
+      { "step": "Gerald's card shares all four.", "evidence": ["ev3"] }
+    ],
+    "eliminations": [
+      { "suspect": "fiona", "why": "She spells 'receive' correctly, writes 'and' in full and uses digits for numbers. Only 'definately' matches." },
+      { "suspect": "hugo", "why": "Only the & sign matches. He spells 'receive' and 'definitely' correctly and writes '7 years'." }
+    ]
+  },
+  "playtest": {
+    "solvePath": "Solvers build a small habit-by-suspect grid. Fiona's matching 'definately' is the trap that rewards checking everything; Gerald lights up all four.",
+    "pitfalls": [
+      "With only two habits in the first draft, Fiona and Gerald tied. Added the & sign and the numbers-as-words habit so the answer is unique.",
+      "Hugo's public criticism makes him look guilty. The & sign was given to him on purpose so he isn't instantly cleared."
+    ],
+    "revisions": [
+      "Increased the letter's habits from two to four so the answer can't tie.",
+      "Stated that the samples were written before the letter, so nobody faked a sample afterwards.",
+      "Added proof in the briefing that the accusation was false, so the case is about who lied, not whether Nora cheated."
+    ]
+  }
+}

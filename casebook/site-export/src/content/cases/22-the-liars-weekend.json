@@ -1,0 +1,363 @@
+{
+  "number": 22,
+  "title": "The Liars' Weekend",
+  "tier": "hard",
+  "difficulty": 5,
+  "teaser": "Every year the Ravenmoor family plays a game: two of them must lie all weekend. This year someone burned Grandmother's new will.",
+  "minutes": 40,
+  "draft": false,
+  "booklet": {
+    "briefing": "Every summer the Ravenmoor family gathers for the Liars' Weekend. On Friday night each of the five grandchildren draws a sealed card. A Truth card means you must tell the truth all weekend. A Lie card means every single thing you say must be false. It's a family tradition, and they take it very seriously.\n\nOn Saturday evening, Grandmother Ravenmoor's new will, the one that left everything to the village hospital, was found burned to ash in the library fireplace. The old will, which splits everything between the five grandchildren, is now the only one left.\n\nThe game is still on. When the inspector asked each grandchild two questions, each answered according to their card. Only the butler, who dealt the cards, knows how many Lie cards there were. He won't say who drew them.",
+    "rules": [
+      "Each grandchild drew either a Truth card (both of their statements are true) or a Lie card (both of their statements are false).",
+      "The butler dealt exactly two Lie cards.",
+      "The will was burned in the library by one of the five grandchildren, so the burner went into the library that evening."
+    ],
+    "setting": {
+      "place": "Ravenmoor Hall, the library",
+      "when": "Saturday evening"
+    },
+    "suspects": [
+      {
+        "id": "ambrose",
+        "name": "Ambrose Ravenmoor",
+        "role": "Eldest grandson",
+        "description": "A struggling barrister with expensive tastes.",
+        "motive": "Under the old will he gets a fifth of a fortune.",
+        "statement": "1) Clement drew a Lie card. 2) Dulcie never went into the library."
+      },
+      {
+        "id": "beatrice",
+        "name": "Beatrice Ravenmoor",
+        "role": "Granddaughter",
+        "description": "A doctor at the very village hospital the new will would have funded.",
+        "motive": "Hardly any. She'd have been happy with the new will.",
+        "statement": "1) Whoever burned the will drew a Lie card. 2) I never went into the library."
+      },
+      {
+        "id": "clement",
+        "name": "Clement Ravenmoor",
+        "role": "Grandson",
+        "description": "Quiet, bookish, always in the library on any other night.",
+        "motive": "Wants to buy a bookshop.",
+        "statement": "1) Beatrice drew a Truth card. 2) I saw Dulcie walk into the library at half past nine."
+      },
+      {
+        "id": "dulcie",
+        "name": "Dulcie Ravenmoor",
+        "role": "Youngest granddaughter",
+        "description": "Charming, funny and deeply in debt from a failed fashion label.",
+        "motive": "The old will would clear her debts in one go.",
+        "statement": "1) Edgar and I drew the same kind of card. 2) I never went into the library."
+      },
+      {
+        "id": "edgar",
+        "name": "Edgar Ravenmoor",
+        "role": "Grandson",
+        "description": "A cheerful farmer who finds the whole game ridiculous.",
+        "motive": "Could use money for a new barn.",
+        "statement": "1) Dulcie and I drew different kinds of card. 2) Ambrose never went near the library."
+      }
+    ],
+    "witnesses": [],
+    "evidence": [
+      {
+        "id": "1",
+        "title": "The butler",
+        "kind": "statement",
+        "source": "Mr. Greaves, who dealt the cards",
+        "body": "“I shuffled five cards on Friday: two Lie and three Truth. Each grandchild took one and showed it to nobody but me.”\n\n“I will not tell you who has which. Madam would never forgive me for spoiling the game.”",
+        "lines": [
+          "“I shuffled five cards on Friday: two Lie and three Truth. Each grandchild took one and showed it to nobody but me.”",
+          "“I will not tell you who has which. Madam would never forgive me for spoiling the game.”"
+        ]
+      },
+      {
+        "id": "2",
+        "title": "The library fireplace",
+        "kind": "report",
+        "source": "Inspector, Saturday 11 pm",
+        "body": "The new will is ash. A corner that didn't burn shows Grandmother's signature and the words “to the Ravenmoor Cottage Hospital”.\n\nThe fire was lit with a match. The match box on the mantelpiece is missing one match. The ash was still warm at 10:15 pm.",
+        "lines": [
+          "The new will is ash. A corner that didn't burn shows Grandmother's signature and the words “to the Ravenmoor Cottage Hospital”.",
+          "The fire was lit with a match. The match box on the mantelpiece is missing one match. The ash was still warm at 10:15 pm."
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Gloves in the hall",
+        "kind": "object",
+        "source": "Hall table, Saturday 11 pm",
+        "body": "A pair of pale lilac evening gloves with soot on the right fingertips. The family agrees they are Dulcie's; she wore them at dinner.",
+        "lines": [
+          "A pair of pale lilac evening gloves with soot on the right fingertips. The family agrees they are Dulcie's; she wore them at dinner."
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Mr. Foxy's note on liars",
+        "kind": "note",
+        "source": "Margin of the inspector's notebook",
+        "body": "“A liar's statement is the exact opposite of the truth. If a liar says 'X and I drew the same card', then in fact we drew different cards.”\n\n“Try the statements in pairs. Some pairs can only be true or false together. Some can never both be true.”",
+        "lines": [
+          "“A liar's statement is the exact opposite of the truth. If a liar says 'X and I drew the same card', then in fact we drew different cards.”",
+          "“Try the statements in pairs. Some pairs can only be true or false together. Some can never both be true.”"
+        ]
+      }
+    ],
+    "timeline": [],
+    "puzzles": [
+      {
+        "id": "q1",
+        "prompt": "Look at Dulcie's first statement and Edgar's first statement. What must be true?",
+        "answer": "Dulcie is lying and Edgar is telling the truth",
+        "hint": "Suppose Dulcie is telling the truth. Follow what that means for Edgar."
+      },
+      {
+        "id": "q2",
+        "prompt": "There are two Lie cards. Who drew the other one?",
+        "answer": "Ambrose Ravenmoor",
+        "hint": "You've found one liar. The butler says there are exactly two."
+      },
+      {
+        "id": "q3",
+        "prompt": "Beatrice told the truth. What does her first statement tell you about the will-burner?",
+        "answer": "The burner is Ambrose or Dulcie",
+        "hint": "Beatrice's first statement is true. Which people could it describe?"
+      },
+      {
+        "id": "q4",
+        "prompt": "Which truthful statement clears Ambrose?",
+        "answer": "Edgar's: Ambrose never went near the library",
+        "hint": "Only truthful people's statements can clear anybody."
+      },
+      {
+        "id": "q5",
+        "prompt": "Who burned the will?",
+        "answer": "Dulcie Ravenmoor",
+        "hint": "Two liars, and one of them never went near the library."
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "prompt": "Look at Dulcie's first statement and Edgar's first statement. What must be true?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "Dulcie is lying and Edgar is telling the truth"
+          },
+          {
+            "id": "b",
+            "text": "Dulcie is telling the truth and Edgar is lying"
+          },
+          {
+            "id": "c",
+            "text": "They are both telling the truth"
+          }
+        ],
+        "answer": "a",
+        "explanation": "If Dulcie were truthful, she and Edgar would have the same card, so Edgar would be truthful too, but then his 'different cards' would be false. Contradiction. So Dulcie is lying, which means they really drew different cards, so Edgar is truthful.",
+        "evidence": [
+          "4"
+        ],
+        "hints": [
+          "Suppose Dulcie is telling the truth. Follow what that means for Edgar.",
+          "If they drew the same card and Dulcie is truthful, Edgar is truthful too. Is his statement then true?",
+          "That leads to a contradiction, so Dulcie must be a liar. What does her lie tell you about Edgar's card?"
+        ]
+      },
+      {
+        "id": "q2",
+        "prompt": "There are two Lie cards. Who drew the other one?",
+        "kind": "suspect",
+        "options": [
+          {
+            "id": "ambrose",
+            "text": "Ambrose Ravenmoor"
+          },
+          {
+            "id": "beatrice",
+            "text": "Beatrice Ravenmoor"
+          },
+          {
+            "id": "clement",
+            "text": "Clement Ravenmoor"
+          },
+          {
+            "id": "dulcie",
+            "text": "Dulcie Ravenmoor"
+          },
+          {
+            "id": "edgar",
+            "text": "Edgar Ravenmoor"
+          }
+        ],
+        "answer": "ambrose",
+        "explanation": "One more liar among Ambrose, Beatrice and Clement. If Ambrose were truthful, Clement would be a liar, so Clement's 'Beatrice drew Truth' would be false, making Beatrice a liar too: three liars. Too many. So Ambrose is the liar. Then Clement is truthful (Ambrose's claim is false) and so is Beatrice (Clement's claim is true).",
+        "evidence": [
+          "1",
+          "4"
+        ],
+        "hints": [
+          "You've found one liar. The butler says there are exactly two.",
+          "Ambrose and Clement talk about each other's cards, and Clement talks about Beatrice's. Try Ambrose as truthful.",
+          "If Ambrose is truthful you end up with three liars. So it must be him."
+        ]
+      },
+      {
+        "id": "q3",
+        "prompt": "Beatrice told the truth. What does her first statement tell you about the will-burner?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "The burner is Ambrose or Dulcie"
+          },
+          {
+            "id": "b",
+            "text": "The burner is Beatrice"
+          },
+          {
+            "id": "c",
+            "text": "The burner drew a Truth card"
+          }
+        ],
+        "answer": "a",
+        "explanation": "'Whoever burned the will drew a Lie card' is true, and the two liars are Ambrose and Dulcie.",
+        "evidence": [
+          "1"
+        ],
+        "hints": [
+          "Beatrice's first statement is true. Which people could it describe?",
+          "You know exactly who the two liars are.",
+          "The burner is one of the two people with a Lie card."
+        ]
+      },
+      {
+        "id": "q4",
+        "prompt": "Which truthful statement clears Ambrose?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "Edgar's: Ambrose never went near the library"
+          },
+          {
+            "id": "b",
+            "text": "Ambrose's own: Dulcie never went into the library"
+          },
+          {
+            "id": "c",
+            "text": "Clement's: Beatrice drew a Truth card"
+          }
+        ],
+        "answer": "a",
+        "explanation": "Edgar is truthful, so Ambrose never went near the library, and the burner had to be in the library. Ambrose's own statements are lies and can't clear anyone.",
+        "evidence": [
+          "2"
+        ],
+        "hints": [
+          "Only truthful people's statements can clear anybody.",
+          "Which truthful grandchild says something about Ambrose's movements?",
+          "Edgar's second statement."
+        ]
+      },
+      {
+        "id": "q5",
+        "prompt": "Who burned the will?",
+        "kind": "suspect",
+        "options": [
+          {
+            "id": "ambrose",
+            "text": "Ambrose Ravenmoor"
+          },
+          {
+            "id": "beatrice",
+            "text": "Beatrice Ravenmoor"
+          },
+          {
+            "id": "clement",
+            "text": "Clement Ravenmoor"
+          },
+          {
+            "id": "dulcie",
+            "text": "Dulcie Ravenmoor"
+          },
+          {
+            "id": "edgar",
+            "text": "Edgar Ravenmoor"
+          }
+        ],
+        "answer": "dulcie",
+        "explanation": "The burner is a liar (Beatrice), the liars are Ambrose and Dulcie, and Ambrose never went near the library (Edgar). Everything else agrees: Clement truthfully saw Dulcie enter the library at 9:30, and her two denials are lies. Her lilac gloves have soot on the fingertips.",
+        "evidence": [
+          "1",
+          "2",
+          "3"
+        ],
+        "hints": [
+          "Two liars, and one of them never went near the library.",
+          "Check that everything else fits: what did Clement see at 9:30?",
+          "And whose gloves have soot on them?"
+        ]
+      }
+    ],
+    "solution": {
+      "culprit": "Dulcie Ravenmoor",
+      "culpritId": "dulcie",
+      "explanation": "Dulcie Ravenmoor drew a Lie card on Friday and thought it was the perfect cover: anything she said would be ignored as part of the game. At half past nine she slipped into the library in her evening gloves, struck a match and fed Grandmother's new will to the fire. Clement saw her go in. But the game cuts both ways. Once you work out who holds the Lie cards, every statement becomes evidence, and only Dulcie fits.",
+      "chain": [
+        {
+          "step": "Dulcie 1 and Edgar 1 can't both be true or both be false. Dulcie can't be truthful without contradiction, so Dulcie lies and Edgar tells the truth.",
+          "evidence": [
+            "4"
+          ]
+        },
+        {
+          "step": "With exactly two Lie cards, the second liar must be Ambrose; if he were truthful there would be three liars. So Beatrice, Clement and Edgar are truthful.",
+          "evidence": [
+            "1"
+          ]
+        },
+        {
+          "step": "Beatrice (true): the burner holds a Lie card, so it's Ambrose or Dulcie.",
+          "evidence": [
+            "1"
+          ]
+        },
+        {
+          "step": "Edgar (true): Ambrose never went near the library. So the burner is Dulcie.",
+          "evidence": [
+            "2"
+          ]
+        },
+        {
+          "step": "Clement (true) saw Dulcie enter the library at 9:30, and her lilac gloves have soot on them.",
+          "evidence": [
+            "3"
+          ]
+        }
+      ],
+      "eliminations": [
+        {
+          "name": "Ambrose Ravenmoor",
+          "why": "He drew a Lie card, but truthful Edgar says he never went near the library."
+        },
+        {
+          "name": "Beatrice Ravenmoor",
+          "why": "She drew a Truth card, so her statement that she never entered the library is true."
+        },
+        {
+          "name": "Clement Ravenmoor",
+          "why": "Truth card. The burner drew a Lie card, per Beatrice."
+        },
+        {
+          "name": "Edgar Ravenmoor",
+          "why": "Truth card. The burner drew a Lie card, per Beatrice."
+        }
+      ]
+    }
+  }
+}

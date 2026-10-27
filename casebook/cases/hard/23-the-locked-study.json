@@ -1,0 +1,241 @@
+{
+  "$schema": "../../schema/case.schema.json",
+  "id": "case-23",
+  "number": 23,
+  "slug": "the-locked-study",
+  "title": "The Locked Study",
+  "tier": "hard",
+  "difficulty": 4,
+  "minutes": 35,
+  "tagline": "The door was bolted from the inside, the windows are barred, and the world's rarest stamp is gone. Nobody could have got in. So when did it leave?",
+  "crime": "theft",
+  "tags": ["locked room", "timeline", "witness"],
+  "setting": { "place": "Harrow House, Professor Harrow's study", "when": "Wednesday night to Thursday morning" },
+  "briefing": [
+    "Professor Aldous Harrow owns the Inverted Swan, a stamp printed upside down by mistake in 1868. Only one is known to exist.",
+    "On Wednesday night the professor locked and bolted himself into his study, as he always does, and took his sleeping drops. At 7:00 on Thursday morning he didn't answer the housekeeper's knock. The gardener broke the door down.",
+    "The professor was asleep in his armchair, groggy but fine. On the desk his stamp album lay open, and the Inverted Swan's page was empty.",
+    "It looks impossible. Mr. Foxy likes impossible cases, because they're usually about a moment everyone forgot to look at."
+  ],
+  "rules": [
+    "The stamp was not in the study when the police searched it at 7:40, or in the professor's clothes.",
+    "Nobody but the five suspects (and the cook, who is a witness) was in the house that night."
+  ],
+  "suspects": [
+    {
+      "id": "kemp",
+      "name": "Mrs. Agatha Kemp",
+      "role": "Housekeeper",
+      "description": "Short and brisk. Fully dressed by 6:30 every morning.",
+      "motive": "The professor has told her she'll be retired at the end of the year.",
+      "statement": "When Joss broke the door, I went straight across to the window and opened the curtains to let some light in. Then I helped Joss with the master."
+    },
+    {
+      "id": "joss",
+      "name": "Joss Tremaine",
+      "role": "Gardener",
+      "description": "Tall and strong. Was in his work clothes, having been up since six.",
+      "motive": "Bitter about being paid late.",
+      "statement": "I put my shoulder to the door, went straight to the master in his armchair to check he was breathing, then ran to the hall phone for the doctor."
+    },
+    {
+      "id": "laurence",
+      "name": "Laurence Harrow",
+      "role": "The professor's nephew",
+      "description": "Tall, charming, in debt. Wears a long silk dressing gown in the mornings.",
+      "motive": "Has borrowed heavily against 'what Uncle will leave me'.",
+      "statement": "I slept through the whole business. I didn't come down until a quarter past seven, when I heard the doctor's car."
+    },
+    {
+      "id": "arden",
+      "name": "Miss Clara Arden",
+      "role": "Secretary",
+      "description": "Small and neat. Came down in her dressing gown when she heard the crash.",
+      "motive": "Handles the professor's insurance papers.",
+      "statement": "I came to the doorway, but I can't stand sickrooms. I didn't go in. I went down to the kitchen for smelling salts."
+    },
+    {
+      "id": "venn",
+      "name": "Dr. Simon Venn",
+      "role": "The family doctor",
+      "description": "Prescribes the professor's sleeping drops. Visited on Wednesday afternoon.",
+      "motive": "Is a keen stamp collector himself.",
+      "statement": "Joss phoned me at home at about two minutes past seven. I drove over and got there at twenty past."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev1",
+      "kind": "report",
+      "title": "The study, examined",
+      "source": "Police and a locksmith, Thursday",
+      "body": [
+        "Door: the key was in the lock on the inside, turned. The iron bolt on the inside was shot. The frame splintered when Joss broke it at 7:00.",
+        "Windows: two, both fitted with fixed iron bars 10 cm apart, and latched on the inside.",
+        "Chimney: a fixed iron grate blocks it. No hidden doors (the walls were checked with the original building plans).",
+        "Conclusion: nobody could enter or leave the study between the professor bolting the door and Joss breaking it down."
+      ]
+    },
+    {
+      "id": "ev2",
+      "kind": "note",
+      "title": "The professor's diary",
+      "source": "Open on the desk",
+      "body": ["Last entry, in the professor's hand: “1:50 a.m. Admired the Swan once more before the drops take me. Put her back in the album. Too sleepy to walk to bed, the armchair will do.”"]
+    },
+    {
+      "id": "ev3",
+      "kind": "statement",
+      "title": "The cook",
+      "source": "Mrs. Pye, who stood in the doorway from 7:00 to 7:04",
+      "body": [
+        "“The study was dark as pitch when the door went, the curtains were shut. I could see the shapes of people by the light from the hall.”",
+        "“Joss went to the armchair by the fire, just inside the door. Mrs. Kemp hurried over to the window. And somebody tall in a long dressing gown pushed past me and went across to the far corner, to the desk. Just a shape, I couldn't see a face.”",
+        "“Then Mrs. Kemp opened the curtains and the light came in, and the tall one was already back out past me and gone. Miss Arden was in the doorway beside me in her dressing gown; she only comes up to my shoulder.”"
+      ]
+    },
+    {
+      "id": "ev4",
+      "kind": "log",
+      "title": "Telephone exchange",
+      "source": "Calls from the Harrow House hall phone",
+      "body": ["7:01 to 7:03: call to Dr. Venn's home number. The doctor's housekeeper confirms the doctor took the call himself, in his kitchen, 9 kilometres away."]
+    },
+    {
+      "id": "ev5",
+      "kind": "statement",
+      "title": "The kitchen maid",
+      "source": "Downstairs",
+      "body": ["“Miss Arden came running down for the smelling salts at about four minutes past seven. And just before that, I heard someone run up the back stairs, two at a time. Mr. Laurence's room is at the top of the back stairs.”"]
+    },
+    {
+      "id": "ev6",
+      "kind": "object",
+      "title": "Laurence's dressing gown",
+      "source": "Hanging in his room",
+      "body": [
+        "Long, dark green silk. In the pocket: the professor's gold stamp tweezers, which he always keeps on the desk beside the album.",
+        "Tucked into the hollow brass curtain rail in Laurence's room, found on Friday: a small glassine envelope holding the Inverted Swan."
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "Was the Inverted Swan in the study when Joss broke the door down at 7:00?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "No, it was taken during the night through a hidden passage" },
+        { "id": "b", "text": "Yes. It was there at 1:50 am, and nobody could get in or out until the door was broken" },
+        { "id": "c", "text": "No, the professor hid it before 1:50" }
+      ],
+      "answer": "b",
+      "explanation": "The diary puts the stamp back in the album at 1:50 am, and the locksmith's report shows the room was sealed until 7:00. So the stamp was still on the desk when the door burst open.",
+      "evidence": ["ev1", "ev2"]
+    },
+    {
+      "id": "q2",
+      "prompt": "So when was the stamp stolen?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "Between the door breaking at 7:00 and the police search at 7:40" },
+        { "id": "b", "text": "Between 1:50 and 7:00" },
+        { "id": "c", "text": "On Wednesday afternoon" }
+      ],
+      "answer": "a",
+      "explanation": "It was there when the room was opened and gone when the police searched. The theft is not a locked-room mystery at all. It happened in the confusion after the door broke.",
+      "evidence": ["ev1", "ev2"]
+    },
+    {
+      "id": "q3",
+      "prompt": "The cook saw a tall person in a long dressing gown go to the desk in the dark. Which two suspects are tall?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "Joss and Laurence" },
+        { "id": "b", "text": "Mrs. Kemp and Miss Arden" },
+        { "id": "c", "text": "Laurence and Miss Arden" }
+      ],
+      "answer": "a",
+      "explanation": "Joss and Laurence are tall. Mrs. Kemp and Miss Arden are short (Miss Arden only reaches the cook's shoulder). Dr. Venn wasn't there yet.",
+      "evidence": ["ev3", "ev4"]
+    },
+    {
+      "id": "q4",
+      "prompt": "Why couldn't the tall figure at the desk be Joss?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "He was at the armchair, he was in work clothes not a dressing gown, and from 7:01 he was on the hall phone" },
+        { "id": "b", "text": "He's too honest" },
+        { "id": "c", "text": "He was outside in the garden" }
+      ],
+      "answer": "a",
+      "explanation": "The cook saw Joss at the armchair at the same moment the tall figure crossed to the desk. Joss was dressed for work, and the exchange logs his call to the doctor from 7:01.",
+      "evidence": ["ev3", "ev4"]
+    },
+    {
+      "id": "q5",
+      "prompt": "Whose statement is contradicted by the kitchen maid and the cook?",
+      "kind": "suspect",
+      "answer": "laurence",
+      "explanation": "Laurence says he slept until 7:15. But a tall figure in a long dressing gown was in the study at 7:00 and ran off, and someone ran up the back stairs to his room just before 7:04.",
+      "evidence": ["ev3", "ev5"]
+    },
+    {
+      "id": "q6",
+      "prompt": "Who stole the Inverted Swan?",
+      "kind": "suspect",
+      "answer": "laurence",
+      "explanation": "The theft happened after 7:00. The only tall person in a dressing gown in the house was Laurence. He crossed to the desk in the dark, picked up the stamp with his uncle's gold tweezers and ran up the back stairs. The tweezers were in his gown and the stamp in his curtain rail.",
+      "evidence": ["ev3", "ev5", "ev6"]
+    }
+  ],
+  "hints": [
+    { "question": "q1", "level": 1, "text": "Find the last time anyone saw the stamp." },
+    { "question": "q1", "level": 2, "text": "Could anybody get into the study between 1:50 and 7:00?" },
+    { "question": "q1", "level": 3, "text": "Sealed room plus diary at 1:50: the stamp was still in the album at 7:00." },
+    { "question": "q2", "level": 1, "text": "Where was the stamp when the police arrived?" },
+    { "question": "q2", "level": 2, "text": "If it was there at 7:00 and gone at 7:40, when did it go?" },
+    { "question": "q2", "level": 3, "text": "Everyone was looking at the unconscious professor. That's when." },
+    { "question": "q3", "level": 1, "text": "Go through every description of the suspects' build." },
+    { "question": "q3", "level": 2, "text": "The cook mentions how tall Miss Arden is. And where was Dr. Venn at 7:00?" },
+    { "question": "q3", "level": 3, "text": "The gardener and the nephew." },
+    { "question": "q4", "level": 1, "text": "Where does the cook place Joss at the same moment?" },
+    { "question": "q4", "level": 2, "text": "What was Joss wearing, and what was he doing at 7:01?" },
+    { "question": "q4", "level": 3, "text": "Work clothes, by the armchair, then on the phone. Not at the desk in a gown." },
+    { "question": "q5", "level": 1, "text": "Someone says they were asleep the whole time." },
+    { "question": "q5", "level": 2, "text": "The maid heard someone run up the back stairs. Where do they lead?" },
+    { "question": "q5", "level": 3, "text": "To the room of the man who says he slept till 7:15." },
+    { "question": "q6", "level": 1, "text": "A tall figure, a long dressing gown, the desk in the dark." },
+    { "question": "q6", "level": 2, "text": "What's missing from the desk besides the stamp?" },
+    { "question": "q6", "level": 3, "text": "Search the dressing gown's pocket." }
+  ],
+  "solution": {
+    "culprit": "laurence",
+    "summary": "Nobody broke into the sealed study, because nobody needed to. When Joss smashed the door at 7:00, the Inverted Swan was still in the album on the desk. In the dark, with everyone rushing to the professor, Laurence slipped past the cook, crossed to the desk, lifted the stamp with his uncle's gold tweezers and ran up the back stairs to his room before the curtains opened. Then he 'woke up' at 7:15. The locked room was his best alibi: everyone assumed the theft happened in the night.",
+    "chain": [
+      { "step": "The study was sealed from 1:50 to 7:00, and the stamp was in the album at 1:50.", "evidence": ["ev1", "ev2"] },
+      { "step": "So it was stolen after the door broke at 7:00, in the dark.", "evidence": ["ev1", "ev3"] },
+      { "step": "The thief was tall and in a long dressing gown. Joss was tall but at the armchair, dressed for work, then on the phone. Mrs. Kemp and Miss Arden are short. Dr. Venn was 9 km away.", "evidence": ["ev3", "ev4"] },
+      { "step": "Someone ran up the back stairs to Laurence's room just before 7:04, although he claims he slept until 7:15.", "evidence": ["ev5"] },
+      { "step": "The professor's gold tweezers were in Laurence's gown and the stamp was in his curtain rail.", "evidence": ["ev6"] }
+    ],
+    "eliminations": [
+      { "suspect": "kemp", "why": "Short and fully dressed, and the cook saw her go to the window, not the desk." },
+      { "suspect": "joss", "why": "Seen at the armchair, in work clothes, then on the hall phone from 7:01." },
+      { "suspect": "arden", "why": "Stood in the doorway beside the cook, too short to be the figure, then went to the kitchen." },
+      { "suspect": "venn", "why": "Took Joss's call in his own kitchen 9 km away at 7:01 and arrived at 7:20." }
+    ]
+  },
+  "playtest": {
+    "solvePath": "Most players spend a while hunting for a secret passage. The locksmith's report and the q1 question push them to realise the stamp was still there at 7:00. After that, the cook's account narrows it fast.",
+    "pitfalls": [
+      "Players suspected the professor of an insurance fraud. The rules now say the stamp wasn't in the study or on him, and he was drugged and bolted in.",
+      "Some argued Dr. Venn could have poisoned the professor's drops. That's beside the point: the stamp was still there at 7:00, and he was 9 km away."
+    ],
+    "revisions": [
+      "Added the 1:50 diary entry so it's provable the stamp was in the room overnight.",
+      "Gave Miss Arden a dressing gown too, so 'dressing gown' alone doesn't decide it. Height and position do.",
+      "Added the phone exchange log so Joss's run to the phone has a timestamp."
+    ]
+  }
+}

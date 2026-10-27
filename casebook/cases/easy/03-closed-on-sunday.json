@@ -1,0 +1,200 @@
+{
+  "$schema": "../../schema/case.schema.json",
+  "id": "case-03",
+  "number": 3,
+  "slug": "closed-on-sunday",
+  "title": "Closed on Sunday",
+  "tier": "easy",
+  "difficulty": 1,
+  "minutes": 12,
+  "tagline": "The raffle money disappeared on the morning of the Spring Fair setup. One volunteer has a very convenient queue to blame.",
+  "crime": "theft",
+  "tags": ["alibi", "calendar"],
+  "setting": { "place": "Hollybrook Community Hall", "when": "The morning of the 14th of May" },
+  "briefing": [
+    "Every spring the Hollybrook Community Hall holds a fair, and the raffle pays for the hall's roof repairs. The raffle money is kept in a grey cash box in the hall office.",
+    "On the morning of the 14th the caretaker unlocked the hall at 9:00 and saw the cash box on the office shelf. He went out to collect chairs from the church and came back at 10:30. The office door was still locked, but the box was gone.",
+    "Only three volunteers have a key to the office. Each one says they were somewhere else that morning."
+  ],
+  "rules": ["The cash box was taken between 9:00 am and 10:30 am on the 14th.", "The office door was locked before and after. Only someone with an office key could have opened it."],
+  "suspects": [
+    {
+      "id": "agnes",
+      "name": "Agnes Thorley",
+      "role": "Raffle organiser",
+      "description": "Has run the raffle for eleven years. Very organised, always busy.",
+      "motive": "Her florist shop has had a bad winter.",
+      "statement": "I was at the post office on Elm Street from nine until half past ten, posting prize letters to the raffle winners. There's always a dreadful queue."
+    },
+    {
+      "id": "bram",
+      "name": "Bram Kessler",
+      "role": "Treasurer",
+      "description": "Counts the money after each event. Swims every week.",
+      "motive": "Was told off at the last meeting for sloppy accounts.",
+      "statement": "I was at the leisure centre for the aqua class. Nine o'clock start. I got changed and drove to the hall afterwards."
+    },
+    {
+      "id": "cass",
+      "name": "Cass Mbeki",
+      "role": "Stall coordinator",
+      "description": "Lives across town and doesn't drive.",
+      "motive": "Borrowed money from the raffle fund last year and paid it back late.",
+      "statement": "I got the bus from Riverside and arrived at the hall around twenty to eleven. The caretaker was already shouting about the box."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev1",
+      "kind": "document",
+      "title": "The hall noticeboard calendar",
+      "source": "Pinned outside the office",
+      "body": ["MAY. Each row is one week, Monday to Sunday.", "Written on the 14th in marker: “SPRING FAIR SETUP. Hall opens 9 am.”"],
+      "table": {
+        "columns": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+        "rows": [
+          ["1", "2", "3", "4", "5", "6", "7"],
+          ["8", "9", "10", "11", "12", "13", "14"],
+          ["15", "16", "17", "18", "19", "20", "21"],
+          ["22", "23", "24", "25", "26", "27", "28"],
+          ["29", "30", "31", "", "", "", ""]
+        ]
+      }
+    },
+    {
+      "id": "ev2",
+      "kind": "photo",
+      "title": "Sign on the Elm Street post office door",
+      "source": "Photographed by the detective",
+      "body": ["OPENING HOURS", "Monday to Friday: 8:30 am to 5:30 pm", "Saturday: 9:00 am to 12:30 pm", "Sunday: CLOSED"]
+    },
+    {
+      "id": "ev3",
+      "kind": "log",
+      "title": "Leisure centre sign-in sheet",
+      "source": "Hollybrook Leisure Centre, pool reception",
+      "body": ["Class: SUNDAY SPLASH aqua fitness, 9:00 to 10:00, instructor P. Nwosu.", "Instructor: “Bram was in the pool the whole hour. He's the one who always splashes.”", "The leisure centre is a 20-minute drive from the hall."],
+      "table": {
+        "columns": ["Name", "Signed in", "Signed out"],
+        "rows": [
+          ["B. Kessler", "8:52", "10:21"],
+          ["J. Ahmed", "8:55", "10:10"],
+          ["R. Lowe", "8:58", "10:12"]
+        ]
+      }
+    },
+    {
+      "id": "ev4",
+      "kind": "object",
+      "title": "Cass's bus ticket",
+      "source": "Found in her coat pocket",
+      "body": ["RIVERSIDE BUS STATION to HOLLYBROOK GREEN.", "Issued 10:14. Single journey.", "Timetable: the 10:14 from Riverside reaches Hollybrook Green at 10:38. Hollybrook Green is outside the hall."]
+    },
+    {
+      "id": "ev5",
+      "kind": "statement",
+      "title": "The caretaker",
+      "source": "Walter Finch",
+      "body": [
+        "“Cass came in at 10:40, soaked from the walk off the bus. Bram's car pulled in about five to eleven.”",
+        "“Agnes turned up at eleven with a bag from the garden centre. Said she'd been at the post office all morning.”"
+      ]
+    },
+    {
+      "id": "ev6",
+      "kind": "object",
+      "title": "Agnes's bag",
+      "source": "Searched with her permission",
+      "body": [
+        "A bundle of stamped, addressed prize letters, not posted.",
+        "A garden centre receipt timed 10:47.",
+        "Agnes's office key on her key ring."
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "What day of the week was the 14th of May?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "Friday" },
+        { "id": "b", "text": "Saturday" },
+        { "id": "c", "text": "Sunday" }
+      ],
+      "answer": "c",
+      "explanation": "On the calendar, the 14th falls at the end of the second row, in the Sunday column. The leisure centre's class is even called Sunday Splash.",
+      "evidence": ["ev1", "ev3"]
+    },
+    {
+      "id": "q2",
+      "prompt": "Whose alibi falls apart because of that?",
+      "kind": "suspect",
+      "answer": "agnes",
+      "explanation": "Agnes says she queued at the post office from nine to half past ten. The post office is closed all day on Sundays, and her prize letters were still in her bag, unposted.",
+      "evidence": ["ev2", "ev6"]
+    },
+    {
+      "id": "q3",
+      "prompt": "Why can't Cass have taken the box?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "She doesn't have an office key" },
+        { "id": "b", "text": "Her bus didn't reach the hall until 10:38, after the box was already gone" },
+        { "id": "c", "text": "She paid back the money she borrowed" }
+      ],
+      "answer": "b",
+      "explanation": "Her ticket was issued at 10:14 at Riverside, across town, and that bus arrives at 10:38. The window closed at 10:30.",
+      "evidence": ["ev4", "ev5"]
+    },
+    {
+      "id": "q4",
+      "prompt": "Who took the raffle cash box?",
+      "kind": "suspect",
+      "answer": "agnes",
+      "explanation": "Bram was in the pool until 10:00 and signed out at 10:21. Cass was on a bus until 10:38. Agnes has a key, no real alibi, and lied about where she was.",
+      "evidence": ["ev2", "ev3", "ev4", "ev6"]
+    }
+  ],
+  "hints": [
+    { "question": "q1", "level": 1, "text": "The calendar's columns have names. Find the 14th." },
+    { "question": "q1", "level": 2, "text": "Each row is a week starting on Monday. The 14th is the last number in its row." },
+    { "question": "q1", "level": 3, "text": "Last column of the row. The leisure centre's class name agrees with you." },
+    { "question": "q2", "level": 1, "text": "Now that you know the day, read every alibi again. Which place would be shut?" },
+    { "question": "q2", "level": 2, "text": "Look at the sign on the post office door." },
+    { "question": "q2", "level": 3, "text": "Nobody queues for an hour and a half at a post office that's closed. And what's still in her bag?" },
+    { "question": "q3", "level": 1, "text": "When did Cass's journey start, and where?" },
+    { "question": "q3", "level": 2, "text": "Work out when the 10:14 bus from Riverside reaches the hall." },
+    { "question": "q3", "level": 3, "text": "10:38 is after the 10:30 deadline. She was still on the bus." },
+    { "question": "q4", "level": 1, "text": "Cross off anyone who was provably elsewhere between 9:00 and 10:30." },
+    { "question": "q4", "level": 2, "text": "The pool sheet and the instructor cover Bram. The ticket covers Cass." },
+    { "question": "q4", "level": 3, "text": "One key holder is left, and their story only works on a weekday." }
+  ],
+  "solution": {
+    "culprit": "agnes",
+    "summary": "Agnes Thorley let herself into the office with her key soon after the caretaker left, took the cash box and spent the rest of the morning away from the hall. Her story of a long post office queue sounded dull enough to believe, but the 14th was a Sunday and the post office doesn't open on Sundays. Her prize letters were still in her bag.",
+    "chain": [
+      { "step": "The 14th was a Sunday.", "evidence": ["ev1", "ev3"] },
+      { "step": "The Elm Street post office is closed on Sundays, so Agnes's alibi is impossible. Her letters were never posted.", "evidence": ["ev2", "ev6"] },
+      { "step": "Bram was in the pool from 9:00 to 10:00 and signed out at 10:21.", "evidence": ["ev3"] },
+      { "step": "Cass's bus didn't reach the hall until 10:38.", "evidence": ["ev4", "ev5"] },
+      { "step": "Agnes is the only key holder without a real alibi, and she lied.", "evidence": ["ev6"] }
+    ],
+    "eliminations": [
+      { "suspect": "bram", "why": "Signed in at the pool at 8:52 and out at 10:21, and the instructor saw him in the water all hour. The hall is a 20-minute drive away, so he could not arrive before 10:41." },
+      { "suspect": "cass", "why": "Her bus left Riverside at 10:14 and reached the hall at 10:38, after the box was gone." }
+    ]
+  },
+  "playtest": {
+    "solvePath": "Solvers check the alibis one by one. Bram's and Cass's hold up with paperwork. Agnes's has nothing behind it, which sends them back to the calendar and the post office sign.",
+    "pitfalls": [
+      "In the first draft the briefing said 'Sunday morning', which gave the game away. The day now has to be read off the calendar.",
+      "Some solvers wondered if Bram could have left the pool early, or dashed over after signing out. The instructor covers the class hour, and the 20-minute drive means he could not reach the hall before 10:41."
+    ],
+    "revisions": [
+      "Removed the weekday from the briefing and added the calendar grid with labelled columns.",
+      "Added the unposted letters in Agnes's bag so the lie is confirmed by a second, physical clue.",
+      "Stated in the rules that only key holders could open the office, so the suspect list is closed."
+    ]
+  }
+}

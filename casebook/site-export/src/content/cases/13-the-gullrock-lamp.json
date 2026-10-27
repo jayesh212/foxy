@@ -1,0 +1,309 @@
+{
+  "number": 13,
+  "title": "The Gullrock Lamp",
+  "tier": "tricky",
+  "difficulty": 3,
+  "teaser": "Four people on a rock in a storm. Someone smashed the lighthouse lamp. Three of them are telling the truth.",
+  "minutes": 25,
+  "draft": false,
+  "booklet": {
+    "briefing": "At 2:02 am, in the worst storm of the year, the great lens of Gullrock Lighthouse stopped turning. Someone had smashed the lamp and jammed the clockwork with a hammer.\n\nTwenty minutes later the cargo ship Merrow, without the light to guide her, came within a hundred metres of the rocks before her captain turned away. It was very nearly a disaster.\n\nNobody could reach or leave the rock that night. Four people were on it. The inspector who arrived by boat at dawn wrote down exactly two statements from each of them.\n\nMr. Foxy has a rule for cases like this: when the stories can't all be true, find the one story that, if it were false, would make all the others fit.",
+    "rules": [
+      "The three innocent people told the complete truth. Every statement they made is true.",
+      "The saboteur lied at least once. (They may have said some true things too.)",
+      "The saboteur was in the lamp room at 2:00 am. Only these four people were on the rock."
+    ],
+    "setting": {
+      "place": "Gullrock Lighthouse, twelve miles offshore",
+      "when": "The night of the November storm, 1:00 am to 3:00 am"
+    },
+    "suspects": [
+      {
+        "id": "ansel",
+        "name": "Ansel Crowe",
+        "role": "Principal keeper",
+        "description": "Thirty years on lighthouses. Was on watch duty in the watch room, directly below the lamp room.",
+        "motive": "Has been told the lighthouse will be automated next year and he'll lose his job.",
+        "statement": "1) I was in the watch room from one until three, and nobody came up through it. 2) At about two I heard boots on the outside iron ladder."
+      },
+      {
+        "id": "bea",
+        "name": "Bea Lowry",
+        "role": "Assistant keeper",
+        "description": "Joined Gullrock this year. Off duty that night.",
+        "motive": "Unknown at first.",
+        "statement": "1) I slept in the bunk room from midnight until three, and Delphine was in there snoring the whole time. 2) Cyrus's oilskin was dripping wet when he came in at half past two."
+      },
+      {
+        "id": "cyrus",
+        "name": "Cyrus Pembe",
+        "role": "Engineer",
+        "description": "Looks after the generator in the shed at the foot of the tower.",
+        "motive": "Was blamed for a generator failure last month and is furious about it.",
+        "statement": "1) I was in the generator shed from one until half past two. 2) When I came into the bunk room at half past two, Bea's bunk was empty."
+      },
+      {
+        "id": "delphine",
+        "name": "Delphine Ashe",
+        "role": "Visiting painter",
+        "description": "Staying for a week to paint the lighthouse. Stuck on the rock by the storm.",
+        "motive": "An outsider, and nobody knows much about her.",
+        "statement": "1) I was painting in the kitchen from one until three. I didn't sleep at all. 2) At about two, Bea walked past the kitchen window in her oilskin."
+      }
+    ],
+    "witnesses": [],
+    "evidence": [
+      {
+        "id": "1",
+        "title": "How to reach the lamp room",
+        "kind": "map",
+        "source": "Lighthouse plan",
+        "body": "Route 1: the spiral stairs inside the tower. They pass straight through the watch room, where the keeper on duty sits.\n\nRoute 2: the outside iron ladder, which climbs the outside of the tower to the gallery that runs around the lamp room. You can only reach it from the yard, in the open.\n\nThe bunk room and the kitchen are in the cottage at the foot of the tower. The kitchen window looks out over the yard.",
+        "lines": [
+          "Route 1: the spiral stairs inside the tower. They pass straight through the watch room, where the keeper on duty sits.",
+          "Route 2: the outside iron ladder, which climbs the outside of the tower to the gallery that runs around the lamp room. You can only reach it from the yard, in the open.",
+          "The bunk room and the kitchen are in the cottage at the foot of the tower. The kitchen window looks out over the yard."
+        ]
+      },
+      {
+        "id": "2",
+        "title": "Lens clockwork record",
+        "kind": "log",
+        "source": "Automatic paper drum in the lamp room",
+        "body": "The lens turned normally until 2:02 am, when the trace stops in a jagged line.",
+        "lines": [
+          "The lens turned normally until 2:02 am, when the trace stops in a jagged line."
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Generator log",
+        "kind": "log",
+        "source": "Generator shed",
+        "body": "Hand-written gauge readings, initialled C.P.: 1:15, 1:45, 2:15.\n\nThe generator's own printout recorded the same three readings at those times. Each reading has to be taken standing at the gauge.",
+        "lines": [
+          "Hand-written gauge readings, initialled C.P.: 1:15, 1:45, 2:15.",
+          "The generator's own printout recorded the same three readings at those times. Each reading has to be taken standing at the gauge."
+        ]
+      },
+      {
+        "id": "4",
+        "title": "The oilskins on the cottage hooks",
+        "kind": "object",
+        "source": "Inspector's search at dawn",
+        "body": "Four oilskin coats hang by the cottage door. Cyrus's and Bea's are still damp. Ansel's and Delphine's are bone dry.\n\nIn the right pocket of Bea's oilskin: tiny slivers of thick curved glass, the same as the lamp's lens.",
+        "lines": [
+          "Four oilskin coats hang by the cottage door. Cyrus's and Bea's are still damp. Ansel's and Delphine's are bone dry.",
+          "In the right pocket of Bea's oilskin: tiny slivers of thick curved glass, the same as the lamp's lens."
+        ]
+      },
+      {
+        "id": "5",
+        "title": "Letter in Bea's kit bag",
+        "kind": "letter",
+        "source": "Found at dawn",
+        "body": "On the headed paper of KETTLE SALVAGE LTD:\n\n“As discussed, our offer stands. A ship in trouble near Gullrock means good business for us. You will be well rewarded for any 'technical difficulties'. K.”",
+        "lines": [
+          "On the headed paper of KETTLE SALVAGE LTD:",
+          "“As discussed, our offer stands. A ship in trouble near Gullrock means good business for us. You will be well rewarded for any 'technical difficulties'. K.”"
+        ]
+      },
+      {
+        "id": "6",
+        "title": "Delphine's painting",
+        "kind": "object",
+        "source": "On the easel in the kitchen",
+        "body": "A wet, half-finished watercolour of the kitchen at night by lamplight, with the dark yard through the window. Fresh brush water on the table.",
+        "lines": [
+          "A wet, half-finished watercolour of the kitchen at night by lamplight, with the dark yard through the window. Fresh brush water on the table."
+        ]
+      }
+    ],
+    "timeline": [],
+    "puzzles": [
+      {
+        "id": "q1",
+        "prompt": "Bea's first statement and Delphine's first statement can't both be true. Why not?",
+        "answer": "Bea says Delphine was snoring in the bunk room all night; Delphine says she was in the kitchen painting all night",
+        "hint": "Find two statements that describe the same person in two different places."
+      },
+      {
+        "id": "q2",
+        "prompt": "Count them up. How many other statements clash with Bea's first statement?",
+        "answer": "3",
+        "hint": "Take Bea's first statement and test it against everyone else's."
+      },
+      {
+        "id": "q3",
+        "prompt": "If Bea is the saboteur, how did she reach the lamp room without Ansel seeing her?",
+        "answer": "Up the outside iron ladder to the gallery",
+        "hint": "There are two ways up to the lamp. Look at the plan."
+      },
+      {
+        "id": "q4",
+        "prompt": "Who smashed the Gullrock lamp?",
+        "answer": "Bea Lowry",
+        "hint": "Try each person as the liar and see whether everybody else's statements can all be true together."
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "prompt": "Bea's first statement and Delphine's first statement can't both be true. Why not?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "Bea says Delphine was snoring in the bunk room all night; Delphine says she was in the kitchen painting all night"
+          },
+          {
+            "id": "b",
+            "text": "They both say they were asleep"
+          },
+          {
+            "id": "c",
+            "text": "They both mention the oilskin"
+          }
+        ],
+        "answer": "a",
+        "explanation": "Delphine can't be snoring in the bunk room and painting in the kitchen at the same time, so one of those two women is lying.",
+        "evidence": [
+          "1"
+        ],
+        "hints": [
+          "Find two statements that describe the same person in two different places.",
+          "Where does each of them say Delphine was?",
+          "Snoring in the bunk room, or painting in the kitchen. Not both."
+        ]
+      },
+      {
+        "id": "q2",
+        "prompt": "Count them up. How many other statements clash with Bea's first statement?",
+        "kind": "number",
+        "answer": "3",
+        "explanation": "Delphine 1 (she was in the kitchen, not the bunk room), Delphine 2 (Bea was outside at about two) and Cyrus 2 (Bea's bunk was empty at 2:30). If Bea were telling the truth, both Delphine and Cyrus would be liars, and there's only one liar.",
+        "evidence": [
+          "1"
+        ],
+        "hints": [
+          "Take Bea's first statement and test it against everyone else's.",
+          "Does anyone say Bea was not in her bunk? Does anyone say Delphine was not in the bunk room?",
+          "Cyrus contradicts it once and Delphine twice. That's two different people, and only one person lies."
+        ]
+      },
+      {
+        "id": "q3",
+        "prompt": "If Bea is the saboteur, how did she reach the lamp room without Ansel seeing her?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "Up the spiral stairs while Ansel was asleep"
+          },
+          {
+            "id": "b",
+            "text": "Up the outside iron ladder to the gallery"
+          },
+          {
+            "id": "c",
+            "text": "She didn't need to; she broke it from the yard"
+          }
+        ],
+        "answer": "b",
+        "explanation": "Ansel (innocent, so truthful) says nobody came through the watch room and heard boots on the outside ladder at about two. Delphine saw Bea cross the yard in her oilskin at the same time.",
+        "evidence": [
+          "1",
+          "2"
+        ],
+        "hints": [
+          "There are two ways up to the lamp. Look at the plan.",
+          "If Ansel is innocent, his statements are true. What did he hear?",
+          "Boots on the outside ladder at about two, and Delphine saw someone in an oilskin cross the yard right then."
+        ]
+      },
+      {
+        "id": "q4",
+        "prompt": "Who smashed the Gullrock lamp?",
+        "kind": "suspect",
+        "options": [
+          {
+            "id": "ansel",
+            "text": "Ansel Crowe"
+          },
+          {
+            "id": "bea",
+            "text": "Bea Lowry"
+          },
+          {
+            "id": "cyrus",
+            "text": "Cyrus Pembe"
+          },
+          {
+            "id": "delphine",
+            "text": "Delphine Ashe"
+          }
+        ],
+        "answer": "bea",
+        "explanation": "Bea's story is the only one whose falseness makes every other statement fit. Her damp oilskin holds lens glass, and a salvage company was paying her to cause 'technical difficulties'.",
+        "evidence": [
+          "3",
+          "4",
+          "5"
+        ],
+        "hints": [
+          "Try each person as the liar and see whether everybody else's statements can all be true together.",
+          "Only one choice of liar leaves no contradictions. Then check the coats for proof.",
+          "What's in the pocket of the damp oilskin that isn't Cyrus's?"
+        ]
+      }
+    ],
+    "solution": {
+      "culprit": "Bea Lowry",
+      "culpritId": "bea",
+      "explanation": "Bea Lowry had taken money from Kettle Salvage, who profit when ships get into trouble. At about two she slipped out of the bunk room, crossed the yard in her oilskin past Delphine's lit window, and climbed the outside ladder to avoid Ansel in the watch room. She smashed the lamp at 2:02 and was back before anyone noticed, but not before Cyrus came in at 2:30 and saw her bunk empty. Then she lied, claiming she'd slept all night and that Delphine had been snoring beside her.",
+      "chain": [
+        {
+          "step": "Bea 1 contradicts Delphine 1, Delphine 2 and Cyrus 2.",
+          "evidence": [
+            "1"
+          ]
+        },
+        {
+          "step": "If Bea were innocent, both Delphine and Cyrus would be lying. There is only one liar, so Bea is the liar.",
+          "evidence": [
+            "1"
+          ]
+        },
+        {
+          "step": "With Bea as the liar, every other statement fits: Ansel guarded the stairs, the saboteur used the outside ladder at about two, Delphine saw Bea cross the yard, and Cyrus found her bunk empty at 2:30.",
+          "evidence": [
+            "1",
+            "2"
+          ]
+        },
+        {
+          "step": "Physical proof: Cyrus's gauge readings put him in the shed; Bea's damp oilskin has lens glass in the pocket; the salvage letter gives her motive.",
+          "evidence": [
+            "3",
+            "4",
+            "5"
+          ]
+        }
+      ],
+      "eliminations": [
+        {
+          "name": "Ansel Crowe",
+          "why": "His statements are consistent with everyone else's. If he were the liar, Bea's and Delphine's stories would still clash, making two liars. His oilskin was bone dry."
+        },
+        {
+          "name": "Cyrus Pembe",
+          "why": "The generator printout confirms his readings at 1:15, 1:45 and 2:15 in the shed. His oilskin is damp because the shed is outside."
+        },
+        {
+          "name": "Delphine Ashe",
+          "why": "If she were the liar, Cyrus's statement that Bea's bunk was empty would still contradict Bea, making two liars. Her wet painting and dry oilskin fit a night in the kitchen."
+        }
+      ]
+    }
+  }
+}

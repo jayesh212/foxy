@@ -1,0 +1,407 @@
+{
+  "number": 29,
+  "title": "The Last Broadcast",
+  "tier": "hard",
+  "difficulty": 4,
+  "teaser": "Thousands of listeners heard the host live on air while his rival's studio was wrecked. Listen again. Count the bells.",
+  "minutes": 40,
+  "draft": false,
+  "booklet": {
+    "briefing": "Danny Vale hosts Nightline, the most popular late show on Radio Wren, every weeknight from 10 pm. The studio is on Church Lane, right opposite St. Mary's Church, whose bell strikes every hour. Listeners love hearing it on air.\n\nDanny is fighting a bitter court case against Rhona Keel, his old band's producer, over who wrote their hit songs. The only proof is on master tapes in Rhona's studio on Mill Road.\n\nAt 10:22 pm on Thursday, the back door of Keel Sound Studios was forced and the master tapes were cut to ribbons. Danny says he was on air, live, in front of thousands of listeners. Mr. Foxy has the recording of the show, and a pencil for counting.",
+    "rules": [
+      "The tapes were destroyed at about 10:22 pm, when the studio alarm went off.",
+      "Radio Wren to Mill Road is a 12-minute drive at night."
+    ],
+    "setting": {
+      "place": "Radio Wren, Church Lane, and Keel Sound Studios, Mill Road",
+      "when": "Thursday night"
+    },
+    "suspects": [
+      {
+        "id": "danny",
+        "name": "Danny Vale",
+        "role": "Radio host",
+        "description": "Charming, quick-witted, and desperate to win his court case.",
+        "motive": "The tapes would prove Rhona co-wrote the songs.",
+        "statement": "I was in the booth from ten until eleven, live. You can hear me. Thousands of people can hear me."
+      },
+      {
+        "id": "gemma",
+        "name": "Gemma Hart",
+        "role": "Nightline producer",
+        "description": "Usually sits at the desk outside Danny's booth. Had Thursday off.",
+        "motive": "Her job depends on Danny staying out of trouble.",
+        "statement": "It was my night off. I was at my sister's birthday dinner in Ferrybridge until half eleven."
+      },
+      {
+        "id": "kofi",
+        "name": "Kofi Asante",
+        "role": "Sound engineer",
+        "description": "Has keys to both Radio Wren and Keel Sound, where he sometimes freelances.",
+        "motive": "Rhona owes him money for freelance work.",
+        "statement": "I was mixing a live concert at the Corn Exchange from nine till midnight. You'd have heard me swearing at the monitors."
+      },
+      {
+        "id": "lars",
+        "name": "Lars Eide",
+        "role": "Rhona's studio assistant",
+        "description": "Locked up Keel Sound on Thursday evening.",
+        "motive": "Rhona refused him a pay rise.",
+        "statement": "I set the alarm at half nine and went to the Bell & Anchor for the quiz. I was there till closing."
+      },
+      {
+        "id": "ruth",
+        "name": "Ruth Okoye",
+        "role": "Rhona's business manager",
+        "description": "Handles the money side of Keel Sound, including its insurance.",
+        "motive": "The studio's insurance would pay out for the damage.",
+        "statement": "I was flying back from Dublin. I landed at quarter to eleven."
+      }
+    ],
+    "witnesses": [],
+    "evidence": [
+      {
+        "id": "1",
+        "title": "Nightline, Thursday, first half hour",
+        "kind": "transcript",
+        "source": "Radio Wren's broadcast recording, as aired from 10:00 pm",
+        "body": "[Theme music]\n\n[In the background, St. Mary's bell: BONG ... BONG ... BONG ... BONG ... BONG ... BONG ... BONG ... BONG ... BONG]\n\nDANNY: Good evening, night owls, and welcome to Nightline! It's just this minute started raining here on Church Lane, so get your brollies out.\n\nDANNY: First caller tonight, it's Maureen from Elm Street. Maureen, how's that cat of yours?\n\nMAUREEN: Oh Danny, he's been sick on the sofa again...\n\n[Music, adverts and chat continue until 10:30, when a pre-recorded interview begins.]",
+        "lines": [
+          "[Theme music]",
+          "[In the background, St. Mary's bell: BONG ... BONG ... BONG ... BONG ... BONG ... BONG ... BONG ... BONG ... BONG]",
+          "DANNY: Good evening, night owls, and welcome to Nightline! It's just this minute started raining here on Church Lane, so get your brollies out.",
+          "DANNY: First caller tonight, it's Maureen from Elm Street. Maureen, how's that cat of yours?",
+          "MAUREEN: Oh Danny, he's been sick on the sofa again...",
+          "[Music, adverts and chat continue until 10:30, when a pre-recorded interview begins.]"
+        ]
+      },
+      {
+        "id": "2",
+        "title": "St. Mary's Church notice",
+        "kind": "document",
+        "source": "Church porch",
+        "body": "“Our bell strikes once for each hour: once at 1 o'clock, twice at 2 o'clock, and so on, up to twelve. It is silent between 11 pm and 7 am.”",
+        "lines": [
+          "“Our bell strikes once for each hour: once at 1 o'clock, twice at 2 o'clock, and so on, up to twelve. It is silent between 11 pm and 7 am.”"
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Weather station",
+        "kind": "report",
+        "source": "Church Lane rain gauge",
+        "body": "Thursday: dry all day. Rain began at 21:02 and fell without a break until 23:40.",
+        "lines": [
+          "Thursday: dry all day. Rain began at 21:02 and fell without a break until 23:40."
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Nightline phone-in line",
+        "kind": "log",
+        "source": "Phone company record",
+        "body": "Incoming calls to the Nightline phone-in number on Thursday.\n\nTime | Caller | Length\n21:06 | M. Pritchard, Elm Street | 4 minutes\n22:00 to 23:00 | No calls connected | Line set to 'busy' by the studio",
+        "lines": [
+          "Incoming calls to the Nightline phone-in number on Thursday."
+        ],
+        "table": {
+          "columns": [
+            "Time",
+            "Caller",
+            "Length"
+          ],
+          "rows": [
+            [
+              "21:06",
+              "M. Pritchard, Elm Street",
+              "4 minutes"
+            ],
+            [
+              "22:00 to 23:00",
+              "No calls connected",
+              "Line set to 'busy' by the studio"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "5",
+        "title": "Radio Wren car park barrier",
+        "kind": "log",
+        "source": "Number-plate camera",
+        "body": "Danny Vale's car: OUT 22:08. IN 22:41.",
+        "lines": [
+          "Danny Vale's car: OUT 22:08. IN 22:41."
+        ]
+      },
+      {
+        "id": "6",
+        "title": "The station cleaner",
+        "kind": "statement",
+        "source": "Mrs. Okon, cleans Radio Wren from 10 pm to 11 pm",
+        "body": "“The ON AIR light was lit over Danny's booth, so I didn't go in. But I could see through the glass at about quarter past ten: the booth was dark and the chair was empty. I thought he'd gone to the gents.”",
+        "lines": [
+          "“The ON AIR light was lit over Danny's booth, so I didn't go in. But I could see through the glass at about quarter past ten: the booth was dark and the chair was empty. I thought he'd gone to the gents.”"
+        ]
+      },
+      {
+        "id": "7",
+        "title": "Other alibis",
+        "kind": "document",
+        "source": "Checked by police",
+        "body": "Gemma Hart: restaurant receipt in Ferrybridge (40 minutes away), 21:45 and 23:20; photos of her at the table at 22:15.\n\nKofi Asante: Corn Exchange concert footage shows him at the mixing desk throughout the second half, 21:45 to 23:30.\n\nLars Eide: Bell & Anchor quiz sheets in his handwriting handed in at 22:05, 22:20 and 22:35; quizmaster confirms.\n\nRuth Okoye: flight from Dublin landed 22:44; she was on board (airline passenger list).",
+        "lines": [
+          "Gemma Hart: restaurant receipt in Ferrybridge (40 minutes away), 21:45 and 23:20; photos of her at the table at 22:15.",
+          "Kofi Asante: Corn Exchange concert footage shows him at the mixing desk throughout the second half, 21:45 to 23:30.",
+          "Lars Eide: Bell & Anchor quiz sheets in his handwriting handed in at 22:05, 22:20 and 22:35; quizmaster confirms.",
+          "Ruth Okoye: flight from Dublin landed 22:44; she was on board (airline passenger list)."
+        ]
+      },
+      {
+        "id": "8",
+        "title": "Danny's car",
+        "kind": "object",
+        "source": "Searched Friday",
+        "body": "In the footwell: a curl of brown magnetic recording tape, the same type as Rhona's master tapes.",
+        "lines": [
+          "In the footwell: a curl of brown magnetic recording tape, the same type as Rhona's master tapes."
+        ]
+      }
+    ],
+    "timeline": [],
+    "puzzles": [
+      {
+        "id": "q1",
+        "prompt": "How many times does St. Mary's bell strike at the start of the 'live' show?",
+        "answer": "9",
+        "hint": "The transcript writes out the background sounds."
+      },
+      {
+        "id": "q2",
+        "prompt": "So when was the start of the show really recorded? (24-hour clock.)",
+        "answer": "21:00",
+        "hint": "Read the notice in the church porch."
+      },
+      {
+        "id": "q3",
+        "prompt": "Which two other clues in the recording agree that it was made at about 9 pm?",
+        "answer": "The rain 'just this minute' starting (it started at 21:02) and Maureen's call (connected at 21:06)",
+        "hint": "What else does Danny talk about that happened at a known time?"
+      },
+      {
+        "id": "q4",
+        "prompt": "Which records show Danny was not at the station during the burglary?",
+        "answer": "The car park barrier (out 22:08, back 22:41) and the cleaner's view of an empty, dark booth",
+        "hint": "If the show was pre-recorded, was Danny actually in the building?"
+      },
+      {
+        "id": "q5",
+        "prompt": "Who destroyed the master tapes?",
+        "answer": "Danny Vale",
+        "hint": "Check every other suspect's alibi in the police notes."
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "prompt": "How many times does St. Mary's bell strike at the start of the 'live' show?",
+        "kind": "number",
+        "answer": "9",
+        "explanation": "Count the BONGs in the transcript: nine.",
+        "evidence": [
+          "1"
+        ],
+        "hints": [
+          "The transcript writes out the background sounds.",
+          "Count every BONG.",
+          "Count them in threes, it's easier."
+        ]
+      },
+      {
+        "id": "q2",
+        "prompt": "So when was the start of the show really recorded? (24-hour clock.)",
+        "kind": "time",
+        "answer": "21:00",
+        "accept": [
+          "9:00",
+          "9:00 pm",
+          "9pm",
+          "9 pm"
+        ],
+        "explanation": "The bell strikes once per hour number. Nine strikes is 9 o'clock. At 10 pm it would have struck ten times.",
+        "evidence": [
+          "1",
+          "2"
+        ],
+        "hints": [
+          "Read the notice in the church porch.",
+          "How many times should the bell strike at 10 o'clock?",
+          "Nine strikes means nine o'clock. The show 'starts' at ten."
+        ]
+      },
+      {
+        "id": "q3",
+        "prompt": "Which two other clues in the recording agree that it was made at about 9 pm?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "The rain 'just this minute' starting (it started at 21:02) and Maureen's call (connected at 21:06)"
+          },
+          {
+            "id": "b",
+            "text": "The theme music and the adverts"
+          },
+          {
+            "id": "c",
+            "text": "The pre-recorded interview at 10:30"
+          }
+        ],
+        "answer": "a",
+        "explanation": "By 10 pm it had been raining for an hour, and the phone-in line took no calls at all between 22:00 and 23:00. Maureen's call was at 21:06.",
+        "evidence": [
+          "1",
+          "3",
+          "4"
+        ],
+        "hints": [
+          "What else does Danny talk about that happened at a known time?",
+          "Check the weather station and the phone-in log.",
+          "'Just started raining' fits 21:02. A caller fits 21:06, and no calls came in after 22:00."
+        ]
+      },
+      {
+        "id": "q4",
+        "prompt": "Which records show Danny was not at the station during the burglary?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "The car park barrier (out 22:08, back 22:41) and the cleaner's view of an empty, dark booth"
+          },
+          {
+            "id": "b",
+            "text": "The church notice"
+          },
+          {
+            "id": "c",
+            "text": "Nothing, the broadcast proves he was there"
+          }
+        ],
+        "answer": "a",
+        "explanation": "His car left at 22:08: a 12-minute drive gets him to Mill Road by about 22:20, in time for 22:22, and back by 22:41. The cleaner saw the booth empty at 22:15.",
+        "evidence": [
+          "5",
+          "6"
+        ],
+        "hints": [
+          "If the show was pre-recorded, was Danny actually in the building?",
+          "Check the car park camera and the cleaner.",
+          "Out at 22:08, back at 22:41, a 12-minute drive each way. The alarm went at 22:22."
+        ]
+      },
+      {
+        "id": "q5",
+        "prompt": "Who destroyed the master tapes?",
+        "kind": "suspect",
+        "options": [
+          {
+            "id": "danny",
+            "text": "Danny Vale"
+          },
+          {
+            "id": "gemma",
+            "text": "Gemma Hart"
+          },
+          {
+            "id": "kofi",
+            "text": "Kofi Asante"
+          },
+          {
+            "id": "lars",
+            "text": "Lars Eide"
+          },
+          {
+            "id": "ruth",
+            "text": "Ruth Okoye"
+          }
+        ],
+        "answer": "danny",
+        "explanation": "Danny recorded the start of his show at 9 pm and let it play at 10 pm as if live. The bell, the rain and the caller all betray the real time. His car was out from 22:08 to 22:41, the booth was empty, and there was master tape in his footwell. Every other suspect has a checked alibi.",
+        "evidence": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8"
+        ],
+        "hints": [
+          "Check every other suspect's alibi in the police notes.",
+          "Four have checked alibis. One has a recording that lies.",
+          "What was curled up in his car's footwell?"
+        ]
+      }
+    ],
+    "solution": {
+      "culprit": "Danny Vale",
+      "culpritId": "danny",
+      "explanation": "At 9 pm Danny Vale sat in his booth and recorded the opening half hour of Nightline, even taking a caller, then set it to play at 10 pm as if live. When it went out, he slipped to his car, drove to Mill Road, forced the back door of Keel Sound and destroyed the master tapes at 10:22, then drove back before the 10:30 interview. It nearly worked. But St. Mary's bell can't lie: it struck nine on a show that was supposed to start at ten.",
+      "chain": [
+        {
+          "step": "The bell strikes nine times on the 'live' 10 pm show, so the opening was recorded at 9 pm.",
+          "evidence": [
+            "1",
+            "2"
+          ]
+        },
+        {
+          "step": "The rain 'just started' at 21:02, and Maureen's call connected at 21:06. No calls came in after 22:00.",
+          "evidence": [
+            "3",
+            "4"
+          ]
+        },
+        {
+          "step": "Danny's car was out from 22:08 to 22:41, long enough to reach Mill Road for 22:22 and get back. The cleaner saw his booth empty at 22:15.",
+          "evidence": [
+            "5",
+            "6"
+          ]
+        },
+        {
+          "step": "Every other suspect has a checked alibi.",
+          "evidence": [
+            "7"
+          ]
+        },
+        {
+          "step": "Master tape was in Danny's footwell.",
+          "evidence": [
+            "8"
+          ]
+        }
+      ],
+      "eliminations": [
+        {
+          "name": "Gemma Hart",
+          "why": "At a restaurant in Ferrybridge, 40 minutes away, photographed at 22:15."
+        },
+        {
+          "name": "Kofi Asante",
+          "why": "On concert footage at the Corn Exchange mixing desk from 21:45 to 23:30."
+        },
+        {
+          "name": "Lars Eide",
+          "why": "Handed in quiz sheets in his handwriting at 22:05, 22:20 and 22:35."
+        },
+        {
+          "name": "Ruth Okoye",
+          "why": "On a flight from Dublin until it landed at 22:44."
+        }
+      ]
+    }
+  }
+}

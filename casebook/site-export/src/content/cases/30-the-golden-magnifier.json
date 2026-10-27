@@ -1,0 +1,474 @@
+{
+  "number": 30,
+  "title": "The Golden Magnifier",
+  "tier": "hard",
+  "difficulty": 5,
+  "teaser": "On the eve of the Bureau's ceremony, its famous trophy vanished. The thief left a note signed by Mr. Foxy himself.",
+  "minutes": 50,
+  "draft": false,
+  "booklet": {
+    "briefing": "Every Midsummer the Foxy Detective Bureau awards the Golden Magnifier to its finest detective. Between awards it sits in a glass case in the Hall of Cases.\n\nAt 9:00 pm on Midsummer Eve the night porter saw it gleaming in its case. At 11:00 pm, on his last round, he found the case open and empty. Inside lay a card with a line of strange capitals, and a pawprint drawn at the bottom.\n\nSomebody wants you to believe Mr. Foxy took his own trophy. Mr. Foxy is offended, and asks you to use everything you've learned in the other 29 cases.",
+    "rules": [
+      "The trophy was taken between 9:00 pm and 11:00 pm.",
+      "The front door is the only way in or out of the Bureau after 6:00 pm, and every badge in and out is logged.",
+      "Every innocent inspector told the complete truth. The thief may lie.",
+      "The thief acted alone and is one of the six inspectors below."
+    ],
+    "setting": {
+      "place": "The Foxy Detective Bureau, 7 Lantern Street",
+      "when": "Midsummer Eve, 9:00 pm to 11:00 pm"
+    },
+    "suspects": [
+      {
+        "id": "amara",
+        "name": "Inspector Amara Bell",
+        "role": "Head of the cipher room",
+        "description": "Could crack a code in her sleep.",
+        "motive": "Won the Magnifier last year and wanted to keep it.",
+        "statement": "I went home before nine. Coding a note to frame a fox is beneath me."
+      },
+      {
+        "id": "cedric",
+        "name": "Inspector Cedric Pine",
+        "role": "Head of maps and routes",
+        "description": "Tidy, slow-spoken and a creature of habit. Spends every evening in the map room.",
+        "motive": "Has been told he's 'not quite' Magnifier material.",
+        "statement": "I was in the map room from half past nine until after eleven. I never went near the Hall of Cases."
+      },
+      {
+        "id": "dora",
+        "name": "Inspector Dora Lark",
+        "role": "Head of interviews",
+        "description": "Notices everything about people.",
+        "motive": "Was tipped to win, then heard a rumour she wasn't.",
+        "statement": "When I left at ten, Cedric was in the map room with me, and he was settling in for the night."
+      },
+      {
+        "id": "rufus",
+        "name": "Inspector Rufus Thorne",
+        "role": "Head of the library",
+        "description": "Brilliant, vain, and sure the Magnifier should have been his years ago.",
+        "motive": "Has never won, and this year's winner is not him.",
+        "statement": "I was in the library from ten until I left the building at ten to eleven. Cedric popped in at ten past ten to borrow an atlas."
+      },
+      {
+        "id": "saskia",
+        "name": "Inspector Saskia Holt",
+        "role": "Head of evidence",
+        "description": "Came back late to collect a forgotten file.",
+        "motive": "Thinks the award causes nothing but jealousy and should be scrapped.",
+        "statement": "When I came in at half past ten, I saw Rufus walking out of the Hall of Cases, looking pleased with himself."
+      },
+      {
+        "id": "bastian",
+        "name": "Inspector Bastian Moor",
+        "role": "Head of timetables and tides",
+        "description": "Lives by the clock. Came in late to prepare the ceremony hall.",
+        "motive": "Bet a colleague that the Magnifier would 'go missing' before the ceremony. He says it was a joke.",
+        "statement": "I didn't arrive until twenty past eleven. The porter had already raised the alarm."
+      }
+    ],
+    "witnesses": [],
+    "evidence": [
+      {
+        "id": "1",
+        "title": "The card in the empty case",
+        "kind": "note",
+        "source": "Hall of Cases, 11:00 pm",
+        "body": "WKH IRA WRRN LW DW WHQ SDVW WHQ\n\nBelow it, a drawn pawprint and the words, in plain writing: “Every letter took three steps forward.”",
+        "lines": [
+          "WKH IRA WRRN LW DW WHQ SDVW WHQ",
+          "Below it, a drawn pawprint and the words, in plain writing: “Every letter took three steps forward.”"
+        ]
+      },
+      {
+        "id": "2",
+        "title": "The night porter",
+        "kind": "statement",
+        "source": "Mr. Wilkins, front desk",
+        "body": "“I saw the Magnifier in its case at nine on my round. At about ten past ten I heard the little chime the Hall of Cases door makes when it opens. I didn't think anything of it. At eleven the case was empty.”\n\n“Nobody got past my desk without badging. The back door has been bricked up since the flood.”",
+        "lines": [
+          "“I saw the Magnifier in its case at nine on my round. At about ten past ten I heard the little chime the Hall of Cases door makes when it opens. I didn't think anything of it. At eleven the case was empty.”",
+          "“Nobody got past my desk without badging. The back door has been bricked up since the flood.”"
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Front door badge log",
+        "kind": "log",
+        "source": "Midsummer Eve",
+        "body": "Every entry and exit after 6:00 pm.\n\nInspector | In | Out\nAmara Bell | 18:00 | 20:45\nCedric Pine | 19:30 | 23:30\nDora Lark | 20:00 | 22:00\nRufus Thorne | 21:30 | 22:50\nSaskia Holt | 22:30 | 23:10\nBastian Moor | 23:20 | 23:50",
+        "lines": [
+          "Every entry and exit after 6:00 pm."
+        ],
+        "table": {
+          "columns": [
+            "Inspector",
+            "In",
+            "Out"
+          ],
+          "rows": [
+            [
+              "Amara Bell",
+              "18:00",
+              "20:45"
+            ],
+            [
+              "Cedric Pine",
+              "19:30",
+              "23:30"
+            ],
+            [
+              "Dora Lark",
+              "20:00",
+              "22:00"
+            ],
+            [
+              "Rufus Thorne",
+              "21:30",
+              "22:50"
+            ],
+            [
+              "Saskia Holt",
+              "22:30",
+              "23:10"
+            ],
+            [
+              "Bastian Moor",
+              "23:20",
+              "23:50"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "4",
+        "title": "Bureau floor plan",
+        "kind": "map",
+        "source": "Fire safety plan",
+        "body": "Ground floor: front desk, Hall of Cases, library.\n\nFirst floor: map room, cipher room, evidence store.\n\nThe front door opens into the lobby, with the Hall of Cases straight ahead.",
+        "lines": [
+          "Ground floor: front desk, Hall of Cases, library.",
+          "First floor: map room, cipher room, evidence store.",
+          "The front door opens into the lobby, with the Hall of Cases straight ahead."
+        ]
+      },
+      {
+        "id": "5",
+        "title": "Search of the building, Midsummer morning",
+        "kind": "report",
+        "source": "Bureau evidence team",
+        "body": "Library: the big antique globe on its stand opens at the equator. Inside, wrapped in a library dust sheet: the Golden Magnifier.\n\nRufus Thorne's coat, on the library coat stand: tiny flakes of gold leaf in the right pocket. The Magnifier's handle is flaking gold leaf.",
+        "lines": [
+          "Library: the big antique globe on its stand opens at the equator. Inside, wrapped in a library dust sheet: the Golden Magnifier.",
+          "Rufus Thorne's coat, on the library coat stand: tiny flakes of gold leaf in the right pocket. The Magnifier's handle is flaking gold leaf."
+        ]
+      }
+    ],
+    "timeline": [],
+    "puzzles": [
+      {
+        "id": "q1",
+        "prompt": "Decode the card. Each letter 'took three steps forward', so step each one back three. What does it say?",
+        "answer": "THE FOX TOOK IT AT TEN PAST TEN",
+        "hint": "This is a shift cipher. The note tells you which way and how far to shift."
+      },
+      {
+        "id": "q2",
+        "prompt": "Can you trust the time in the note?",
+        "answer": "Yes. The porter heard the Hall of Cases door chime at about ten past ten",
+        "hint": "A thief's boast on its own is not proof. Is there anything that agrees?"
+      },
+      {
+        "id": "q3",
+        "prompt": "Which two inspectors were inside the Bureau at 10:10 pm?",
+        "answer": "Cedric and Rufus",
+        "hint": "For each inspector, was 22:10 between their 'In' and 'Out'?"
+      },
+      {
+        "id": "q4",
+        "prompt": "Saskia's statement and Rufus's statement can't both be true. Why not?",
+        "answer": "Rufus says he stayed in the library from ten until he left; Saskia saw him walking out of the Hall of Cases at half past ten",
+        "hint": "Find where each of them places Rufus at 10:30."
+      },
+      {
+        "id": "q5",
+        "prompt": "Which of the two is lying?",
+        "answer": "Inspector Rufus Thorne",
+        "hint": "Could Saskia be the thief? Check when she arrived."
+      },
+      {
+        "id": "q6",
+        "prompt": "Who stole the Golden Magnifier?",
+        "answer": "Inspector Rufus Thorne",
+        "hint": "Put the time, the log and the lie together."
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "prompt": "Decode the card. Each letter 'took three steps forward', so step each one back three. What does it say?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "THE FOX TOOK IT AT TEN PAST TEN"
+          },
+          {
+            "id": "b",
+            "text": "THE FOX HID IT IN THE MAP ROOM"
+          },
+          {
+            "id": "c",
+            "text": "THE FOX WAS HERE AT NINE"
+          }
+        ],
+        "answer": "a",
+        "explanation": "W−3 = T, K−3 = H, H−3 = E: THE. I−3 = F, R−3 = O, A−3 = X (wrapping round): FOX. And so on: THE FOX TOOK IT AT TEN PAST TEN.",
+        "evidence": [
+          "1"
+        ],
+        "hints": [
+          "This is a shift cipher. The note tells you which way and how far to shift.",
+          "Count three letters back for each letter: W, V, U, T. So W becomes T.",
+          "When you step back from A, wrap round to the end: A becomes X. The second word is FOX."
+        ]
+      },
+      {
+        "id": "q2",
+        "prompt": "Can you trust the time in the note?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "No, the thief could be lying"
+          },
+          {
+            "id": "b",
+            "text": "Yes. The porter heard the Hall of Cases door chime at about ten past ten"
+          },
+          {
+            "id": "c",
+            "text": "Only if Mr. Foxy wrote it"
+          }
+        ],
+        "answer": "b",
+        "explanation": "A thief's boast is weak evidence on its own, but the porter independently heard the Hall of Cases door at about 10:10.",
+        "evidence": [
+          "1",
+          "2"
+        ],
+        "hints": [
+          "A thief's boast on its own is not proof. Is there anything that agrees?",
+          "What did the porter hear, and when?",
+          "The chime of the Hall of Cases door at about ten past ten."
+        ]
+      },
+      {
+        "id": "q3",
+        "prompt": "Which two inspectors were inside the Bureau at 10:10 pm?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "Cedric and Rufus"
+          },
+          {
+            "id": "b",
+            "text": "Dora and Saskia"
+          },
+          {
+            "id": "c",
+            "text": "Rufus and Saskia"
+          }
+        ],
+        "answer": "a",
+        "explanation": "From the badge log: Amara left at 20:45, Dora at 22:00, Saskia only arrived at 22:30 and Bastian at 23:20. Cedric (19:30 to 23:30) and Rufus (21:30 to 22:50) were inside.",
+        "evidence": [
+          "3"
+        ],
+        "hints": [
+          "For each inspector, was 22:10 between their 'In' and 'Out'?",
+          "Watch Dora (out at 22:00) and Saskia (in at 22:30) carefully.",
+          "Two names are left: the map man and the library man."
+        ]
+      },
+      {
+        "id": "q4",
+        "prompt": "Saskia's statement and Rufus's statement can't both be true. Why not?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "Rufus says he stayed in the library from ten until he left; Saskia saw him walking out of the Hall of Cases at half past ten"
+          },
+          {
+            "id": "b",
+            "text": "They both say they were in the library"
+          },
+          {
+            "id": "c",
+            "text": "They both mention Cedric"
+          }
+        ],
+        "answer": "a",
+        "explanation": "If Rufus was in the library the whole time from 10:00 to 10:50, he can't have been walking out of the Hall of Cases at 10:30.",
+        "evidence": [
+          "3",
+          "4"
+        ],
+        "hints": [
+          "Find where each of them places Rufus at 10:30.",
+          "Rufus says one room the whole time. Saskia saw him leaving another.",
+          "Library all evening, or walking out of the Hall of Cases? Not both."
+        ]
+      },
+      {
+        "id": "q5",
+        "prompt": "Which of the two is lying?",
+        "kind": "suspect",
+        "options": [
+          {
+            "id": "amara",
+            "text": "Inspector Amara Bell"
+          },
+          {
+            "id": "cedric",
+            "text": "Inspector Cedric Pine"
+          },
+          {
+            "id": "dora",
+            "text": "Inspector Dora Lark"
+          },
+          {
+            "id": "rufus",
+            "text": "Inspector Rufus Thorne"
+          },
+          {
+            "id": "saskia",
+            "text": "Inspector Saskia Holt"
+          },
+          {
+            "id": "bastian",
+            "text": "Inspector Bastian Moor"
+          }
+        ],
+        "answer": "rufus",
+        "explanation": "Saskia arrived at 10:30, twenty minutes after the theft, so she can't be the thief. That makes her innocent and truthful. So Rufus is lying, and his tale that Cedric came to the library at 10:10 is a lie too, which fits Dora's and Cedric's matching accounts of the map room.",
+        "evidence": [
+          "3"
+        ],
+        "hints": [
+          "Could Saskia be the thief? Check when she arrived.",
+          "If she's innocent, the rules say she tells the truth.",
+          "So the other one is lying."
+        ]
+      },
+      {
+        "id": "q6",
+        "prompt": "Who stole the Golden Magnifier?",
+        "kind": "suspect",
+        "options": [
+          {
+            "id": "amara",
+            "text": "Inspector Amara Bell"
+          },
+          {
+            "id": "cedric",
+            "text": "Inspector Cedric Pine"
+          },
+          {
+            "id": "dora",
+            "text": "Inspector Dora Lark"
+          },
+          {
+            "id": "rufus",
+            "text": "Inspector Rufus Thorne"
+          },
+          {
+            "id": "saskia",
+            "text": "Inspector Saskia Holt"
+          },
+          {
+            "id": "bastian",
+            "text": "Inspector Bastian Moor"
+          }
+        ],
+        "answer": "rufus",
+        "explanation": "The trophy went at 10:10, when only Cedric and Rufus were inside. Rufus lied about his movements and tried to drag Cedric into the story. The Magnifier was hidden in the library globe, and its gold leaf was in Rufus's pocket.",
+        "evidence": [
+          "1",
+          "2",
+          "3",
+          "5"
+        ],
+        "hints": [
+          "Put the time, the log and the lie together.",
+          "Where would you hide a trophy if you 'never left the library'?",
+          "Open the globe, then check the coat pocket."
+        ]
+      }
+    ],
+    "solution": {
+      "culprit": "Inspector Rufus Thorne",
+      "culpritId": "rufus",
+      "explanation": "Rufus Thorne learned he'd been passed over for the Golden Magnifier yet again. At ten past ten he slipped from the library into the Hall of Cases, took the trophy and left a shift-cipher card signed with a pawprint to make it look like Mr. Foxy's prank. He hid the Magnifier in the library globe and told everyone he'd been in the library all evening, adding that Cedric had dropped by, to muddy the waters. Saskia, arriving at half past ten, saw him strolling out of the Hall of Cases. The note's own boast gave away the time, and the time gave away the thief.",
+      "chain": [
+        {
+          "step": "The card decodes to THE FOX TOOK IT AT TEN PAST TEN, confirmed by the porter hearing the Hall door at about 10:10.",
+          "evidence": [
+            "1",
+            "2"
+          ]
+        },
+        {
+          "step": "At 22:10 only Cedric and Rufus were inside the Bureau.",
+          "evidence": [
+            "3"
+          ]
+        },
+        {
+          "step": "Saskia arrived at 22:30 so she's innocent and truthful. She saw Rufus leaving the Hall of Cases, which contradicts his story, so Rufus is lying.",
+          "evidence": [
+            "3",
+            "4"
+          ]
+        },
+        {
+          "step": "Dora and Cedric both put Cedric in the map room. Rufus's claim that Cedric came to the library is part of his lie.",
+          "evidence": [
+            "3"
+          ]
+        },
+        {
+          "step": "The Magnifier was in the library globe, and its gold leaf was in Rufus's pocket.",
+          "evidence": [
+            "5"
+          ]
+        }
+      ],
+      "eliminations": [
+        {
+          "name": "Inspector Amara Bell",
+          "why": "Left at 20:45 and didn't come back. Being good at ciphers isn't evidence."
+        },
+        {
+          "name": "Inspector Cedric Pine",
+          "why": "Inside at 22:10, but innocent people tell the truth, and if he were the thief, Saskia and Rufus (both then innocent) would contradict each other."
+        },
+        {
+          "name": "Inspector Dora Lark",
+          "why": "Left at 22:00, ten minutes before the theft."
+        },
+        {
+          "name": "Inspector Saskia Holt",
+          "why": "Arrived at 22:30, twenty minutes after the theft."
+        },
+        {
+          "name": "Inspector Bastian Moor",
+          "why": "Arrived at 23:20, after the porter found the case empty. His bet was a joke in poor taste."
+        }
+      ]
+    }
+  }
+}

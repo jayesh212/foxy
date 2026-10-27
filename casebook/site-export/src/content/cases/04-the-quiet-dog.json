@@ -1,0 +1,344 @@
+{
+  "number": 4,
+  "title": "The Quiet Dog",
+  "tier": "warm",
+  "difficulty": 1,
+  "teaser": "Biscuit barks at everybody. On the night the farm money vanished, she didn't make a sound.",
+  "minutes": 12,
+  "draft": false,
+  "booklet": {
+    "briefing": "Joan Applewood runs a farm stand at the end of her lane. Each evening she counts the takings into an old biscuit tin and leaves it in the cupboard on the farmhouse porch.\n\nBiscuit, Joan's collie, sleeps on the porch mat right in front of that cupboard. She is a very good guard dog: she barks at anyone she doesn't know.\n\nOn Thursday morning the tin was gone. Nobody heard a thing. That, Mr. Foxy says, is the most interesting clue of all.",
+    "rules": [
+      "The tin was taken between 11:00 pm Wednesday and 6:00 am Thursday.",
+      "Biscuit was on the porch all night. She was not drugged or tied up (checked by the vet)."
+    ],
+    "setting": {
+      "place": "Applewood Farm",
+      "when": "Wednesday night, 11:00 pm to 6:00 am"
+    },
+    "suspects": [
+      {
+        "id": "hank",
+        "name": "Hank Doyle",
+        "role": "Farmhand",
+        "description": "Has worked at Applewood for five years and lives in the cottage across the yard.",
+        "motive": "Asked Joan for an advance on his wages last week. She said no.",
+        "statement": "I went to bed at ten and slept like a log. Didn't hear a thing. Didn't go near the house."
+      },
+      {
+        "id": "olive",
+        "name": "Olive Applewood",
+        "role": "Joan's niece",
+        "description": "Arrived on Monday to stay for a fortnight. Sleeps in the spare room upstairs.",
+        "motive": "Has been complaining that her student loan is huge.",
+        "statement": "I was in my room all night with headphones on. I haven't been near that dog more than I have to, she hates me."
+      },
+      {
+        "id": "quill",
+        "name": "Mr. Edmund Quill",
+        "role": "Egg buyer",
+        "description": "Buys eggs for his deli in town. Visited the farm for the first time on Tuesday.",
+        "motive": "Saw Joan count the money into the tin on Tuesday evening.",
+        "statement": "I was at home in town. I've only been to that farm once and I didn't enjoy it. That dog nearly took my sleeve off."
+      },
+      {
+        "id": "rory",
+        "name": "Rory Applewood",
+        "role": "Joan's son",
+        "description": "Grew up on the farm. Works nights as a hospital porter in the city.",
+        "motive": "Wants to buy a motorbike his mum won't pay for.",
+        "statement": "I was at work. Ten till six, same as every Wednesday."
+      }
+    ],
+    "witnesses": [],
+    "evidence": [
+      {
+        "id": "1",
+        "title": "Joan Applewood on Biscuit",
+        "kind": "statement",
+        "source": "Farm owner",
+        "body": "“Biscuit knows the family and Hank. She'll roll over for Hank and Rory, she's known them since she was a puppy.”\n\n“Olive's only been here since Monday. Biscuit still barks at her every single time she steps outside. I've had to shush her three times a day.”\n\n“And when Mr. Quill came on Tuesday, Biscuit went wild. I had to drag her inside.”\n\n“I put the tin in the cupboard at eleven and Biscuit was asleep on her mat right in front of it.”",
+        "lines": [
+          "“Biscuit knows the family and Hank. She'll roll over for Hank and Rory, she's known them since she was a puppy.”",
+          "“Olive's only been here since Monday. Biscuit still barks at her every single time she steps outside. I've had to shush her three times a day.”",
+          "“And when Mr. Quill came on Tuesday, Biscuit went wild. I had to drag her inside.”",
+          "“I put the tin in the cupboard at eleven and Biscuit was asleep on her mat right in front of it.”"
+        ]
+      },
+      {
+        "id": "2",
+        "title": "The neighbour",
+        "kind": "statement",
+        "source": "Mr. Penrose, Ridge Cottage, 100 m up the lane",
+        "body": "“I don't sleep much. I sat up with the radio and the window open from eleven until dawn.”\n\n“That collie barks at foxes, cars, the wind. Last night? Not one bark. Not until half five, when the milk lorry came up the lane.”",
+        "lines": [
+          "“I don't sleep much. I sat up with the radio and the window open from eleven until dawn.”",
+          "“That collie barks at foxes, cars, the wind. Last night? Not one bark. Not until half five, when the milk lorry came up the lane.”"
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Vet's check on Biscuit",
+        "kind": "report",
+        "source": "Thursday, 8:00 am",
+        "body": "Biscuit is healthy and alert. No sign of sedatives in a blood test. No marks from a lead, muzzle or rope.",
+        "lines": [
+          "Biscuit is healthy and alert. No sign of sedatives in a blood test. No marks from a lead, muzzle or rope."
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Hospital staff swipe card",
+        "kind": "log",
+        "source": "St. Brigid's Hospital, 20 km from the farm",
+        "body": "Swipe card: R. Applewood, porter.\n\nNight supervisor: “Rory was on my ward all night. He fetched me coffee at three.”\n\nTime | Door | Direction\n9:52 pm | Staff entrance | In\n6:07 am | Staff entrance | Out",
+        "lines": [
+          "Swipe card: R. Applewood, porter.",
+          "Night supervisor: “Rory was on my ward all night. He fetched me coffee at three.”"
+        ],
+        "table": {
+          "columns": [
+            "Time",
+            "Door",
+            "Direction"
+          ],
+          "rows": [
+            [
+              "9:52 pm",
+              "Staff entrance",
+              "In"
+            ],
+            [
+              "6:07 am",
+              "Staff entrance",
+              "Out"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "5",
+        "title": "The tin",
+        "kind": "object",
+        "source": "Found Thursday 10 am",
+        "body": "The biscuit tin was found empty, pushed under the feed sacks in the hay barn.\n\nJoan: “Hank does the feeding. Nobody else goes in that barn.”",
+        "lines": [
+          "The biscuit tin was found empty, pushed under the feed sacks in the hay barn.",
+          "Joan: “Hank does the feeding. Nobody else goes in that barn.”"
+        ]
+      },
+      {
+        "id": "6",
+        "title": "A marked note",
+        "kind": "note",
+        "source": "Ridge Road fuel station, Thursday",
+        "body": "Joan pencils a tiny letter J in the corner of every banknote from the stand, so she can tell her takings apart.\n\nAt 7:10 am on Thursday the fuel station took a J-marked note for diesel. The cashier remembers the customer: “Hank from Applewood. Always buys diesel for the tractor.”",
+        "lines": [
+          "Joan pencils a tiny letter J in the corner of every banknote from the stand, so she can tell her takings apart.",
+          "At 7:10 am on Thursday the fuel station took a J-marked note for diesel. The cashier remembers the customer: “Hank from Applewood. Always buys diesel for the tractor.”"
+        ]
+      }
+    ],
+    "timeline": [],
+    "puzzles": [
+      {
+        "id": "q1",
+        "prompt": "What does Biscuit's silence tell you about the thief?",
+        "answer": "The thief was someone Biscuit already knew and trusted",
+        "hint": "Think about what a guard dog does when a stranger walks up to her."
+      },
+      {
+        "id": "q2",
+        "prompt": "Which two suspects would Biscuit have barked at?",
+        "answer": "Olive and Mr. Quill",
+        "hint": "Joan tells you exactly how Biscuit reacts to each person."
+      },
+      {
+        "id": "q3",
+        "prompt": "Biscuit trusts Rory. Why couldn't he have done it?",
+        "answer": "He was on shift at a hospital 20 km away until 6:07 am",
+        "hint": "Being trusted by the dog gives Rory the chance. Did he have the time?"
+      },
+      {
+        "id": "q4",
+        "prompt": "Who took the tin?",
+        "answer": "Hank Doyle",
+        "hint": "Biscuit trusts two people. One has an alibi."
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "prompt": "What does Biscuit's silence tell you about the thief?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "The thief was someone Biscuit already knew and trusted"
+          },
+          {
+            "id": "b",
+            "text": "Biscuit was drugged"
+          },
+          {
+            "id": "c",
+            "text": "The thief came while Biscuit was inside"
+          }
+        ],
+        "answer": "a",
+        "explanation": "Biscuit was on the porch, undrugged and untied, and she barks at strangers and even at Olive. Someone walked up to her mat and she didn't bark, so she knew them well.",
+        "evidence": [
+          "1",
+          "2",
+          "3"
+        ],
+        "hints": [
+          "Think about what a guard dog does when a stranger walks up to her.",
+          "The vet rules out one explanation. The neighbour tells you Biscuit didn't bark all night.",
+          "If she wasn't drugged or tied and she didn't bark, she wasn't worried. Who doesn't worry Biscuit?"
+        ]
+      },
+      {
+        "id": "q2",
+        "prompt": "Which two suspects would Biscuit have barked at?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "Hank and Rory"
+          },
+          {
+            "id": "b",
+            "text": "Olive and Mr. Quill"
+          },
+          {
+            "id": "c",
+            "text": "Olive and Hank"
+          }
+        ],
+        "answer": "b",
+        "explanation": "Joan says Biscuit still barks at Olive every time and went wild at Mr. Quill.",
+        "evidence": [
+          "1"
+        ],
+        "hints": [
+          "Joan tells you exactly how Biscuit reacts to each person.",
+          "Who has Biscuit known for years, and who has she only just met?",
+          "A stranger from Tuesday and a guest from Monday. Biscuit barks at both."
+        ]
+      },
+      {
+        "id": "q3",
+        "prompt": "Biscuit trusts Rory. Why couldn't he have done it?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "He was on shift at a hospital 20 km away until 6:07 am"
+          },
+          {
+            "id": "b",
+            "text": "He doesn't need money"
+          },
+          {
+            "id": "c",
+            "text": "He doesn't know where the tin is kept"
+          }
+        ],
+        "answer": "a",
+        "explanation": "His swipe card shows him inside the hospital from 9:52 pm to 6:07 am, and the supervisor saw him at 3 am.",
+        "evidence": [
+          "4"
+        ],
+        "hints": [
+          "Being trusted by the dog gives Rory the chance. Did he have the time?",
+          "Check his swipe card times against the theft window.",
+          "In at 9:52 pm, out at 6:07 am, 20 km away. The window is 11 to 6."
+        ]
+      },
+      {
+        "id": "q4",
+        "prompt": "Who took the tin?",
+        "kind": "suspect",
+        "options": [
+          {
+            "id": "hank",
+            "text": "Hank Doyle"
+          },
+          {
+            "id": "olive",
+            "text": "Olive Applewood"
+          },
+          {
+            "id": "quill",
+            "text": "Mr. Edmund Quill"
+          },
+          {
+            "id": "rory",
+            "text": "Rory Applewood"
+          }
+        ],
+        "answer": "hank",
+        "explanation": "Only Hank and Rory could pass Biscuit in silence, and Rory was at work. The tin was hidden in the barn only Hank uses, and he spent one of Joan's marked notes the next morning.",
+        "evidence": [
+          "1",
+          "4",
+          "5",
+          "6"
+        ],
+        "hints": [
+          "Biscuit trusts two people. One has an alibi.",
+          "Where was the empty tin hidden, and who uses that place?",
+          "Joan marks her notes. Who spent one at the fuel station?"
+        ]
+      }
+    ],
+    "solution": {
+      "culprit": "Hank Doyle",
+      "culpritId": "hank",
+      "explanation": "Hank Doyle crossed the yard in the small hours, gave Biscuit a scratch behind the ears and lifted the tin out of the cupboard. Biscuit didn't bark because she'd known him for five years. He stuffed the empty tin under the feed sacks in his barn and spent one of Joan's pencil-marked notes on diesel the next morning.",
+      "chain": [
+        {
+          "step": "Biscuit was on the porch, healthy and free, and didn't bark once all night.",
+          "evidence": [
+            "2",
+            "3"
+          ]
+        },
+        {
+          "step": "So the thief was someone Biscuit trusts: Hank or Rory. She barks at Olive and Mr. Quill.",
+          "evidence": [
+            "1"
+          ]
+        },
+        {
+          "step": "Rory was at the hospital 20 km away from 9:52 pm to 6:07 am.",
+          "evidence": [
+            "4"
+          ]
+        },
+        {
+          "step": "The tin turned up in Hank's barn, and Hank spent a J-marked note at 7:10 am.",
+          "evidence": [
+            "5",
+            "6"
+          ]
+        }
+      ],
+      "eliminations": [
+        {
+          "name": "Olive Applewood",
+          "why": "Biscuit barks at her every time she steps outside, and there wasn't a single bark all night."
+        },
+        {
+          "name": "Mr. Edmund Quill",
+          "why": "A near stranger whom Biscuit attacked on sight. She would have woken the whole lane."
+        },
+        {
+          "name": "Rory Applewood",
+          "why": "On shift at St. Brigid's Hospital, 20 km away, from 9:52 pm to 6:07 am."
+        }
+      ]
+    }
+  }
+}

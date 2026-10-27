@@ -1,0 +1,322 @@
+{
+  "number": 18,
+  "title": "The Blinking Clock",
+  "tier": "tricky",
+  "difficulty": 3,
+  "teaser": "When the power failed, every lock in Elm Court clicked open. The oven clock knows exactly how long it lasted.",
+  "minutes": 25,
+  "draft": false,
+  "booklet": {
+    "briefing": "Elm Court's flat doors have magnetic locks. For fire safety they unlock automatically whenever the power fails.\n\nAt 6:15 pm on Tuesday the whole street lost power. When Mr. Fairley came home to Flat 4 at 8:40 pm, his cabinet of rare coins was empty. His front door had simply opened during the blackout.\n\nThe electricity company can only say power came back 'between 6:45 and 7:30'. That isn't good enough for Mr. Foxy. Something in Flat 4 kept better time.",
+    "rules": [
+      "The door of Flat 4 was only unlocked while the power was off, so the burglary happened during the power cut.",
+      "Only the four people below were in the building that evening (the street door has a separate battery lock and a logged keypad)."
+    ],
+    "setting": {
+      "place": "Elm Court, a small block of flats",
+      "when": "Tuesday evening, during a power cut"
+    },
+    "suspects": [
+      {
+        "id": "hazel",
+        "name": "Hazel Brooke",
+        "role": "Flat 2",
+        "description": "Retired. Has complained about Mr. Fairley's late-night coin polishing (it squeaks).",
+        "motive": "Her pension has been cut and she's two months behind on rent.",
+        "statement": "When the lights went I lit some candles. Then at ten to seven I put the telly on for Brainbox, and I watched until half past. I didn't leave my flat."
+      },
+      {
+        "id": "ian",
+        "name": "Ian Castell",
+        "role": "Flat 3",
+        "description": "A student who was coming home with shopping when the lights went.",
+        "motive": "Knows Mr. Fairley's collection is valuable; he helped carry the cabinet upstairs.",
+        "statement": "I got stuck in the lift! It stopped between floors when the power went and I was in there for over an hour."
+      },
+      {
+        "id": "jolene",
+        "name": "Jolene Sweeney",
+        "role": "Flat 5",
+        "description": "A nurse who works shifts. Was home that evening.",
+        "motive": "Mr. Fairley reported her to the landlord for a noisy party.",
+        "statement": "I was in bed resting before a night shift. The ward sister video-called me on my phone about a patient handover and we talked for ages."
+      },
+      {
+        "id": "karl",
+        "name": "Karl Dent",
+        "role": "Caretaker",
+        "description": "Lives in the basement flat and looks after the building.",
+        "motive": "Has keys to everything, and knew the locks would open in a power cut.",
+        "statement": "I went to the basement office to check the fuse board and rang the electricity company. I was on hold for ages."
+      }
+    ],
+    "witnesses": [],
+    "evidence": [
+      {
+        "id": "1",
+        "title": "The oven clock in Flat 4",
+        "kind": "photo",
+        "source": "Police photo, 8:47 pm",
+        "body": "The digital clock on Mr. Fairley's oven is flashing 1:47.\n\nFrom the oven manual: “After a power cut, the clock restarts from 0:00 and counts up, flashing, until you set the time.”\n\nNobody had touched it. The police photo is stamped 8:47 pm.",
+        "lines": [
+          "The digital clock on Mr. Fairley's oven is flashing 1:47.",
+          "From the oven manual: “After a power cut, the clock restarts from 0:00 and counts up, flashing, until you set the time.”",
+          "Nobody had touched it. The police photo is stamped 8:47 pm."
+        ]
+      },
+      {
+        "id": "2",
+        "title": "Electricity company report",
+        "kind": "report",
+        "source": "Valley Power, fault 2291",
+        "body": "Power lost on Elm Street: 6:15 pm.\n\nPower restored: estimated between 6:45 pm and 7:30 pm (exact time not recorded).",
+        "lines": [
+          "Power lost on Elm Street: 6:15 pm.",
+          "Power restored: estimated between 6:45 pm and 7:30 pm (exact time not recorded)."
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Lift company",
+        "kind": "log",
+        "source": "LiftCare emergency line",
+        "body": "6:16 pm: emergency phone call from the Elm Court lift. Caller I. Castell, trapped between floors 1 and 2.\n\n7:20 pm: engineer arrives. Power is on, but the lift has to be reset by hand. Passenger freed at 7:24 pm.",
+        "lines": [
+          "6:16 pm: emergency phone call from the Elm Court lift. Caller I. Castell, trapped between floors 1 and 2.",
+          "7:20 pm: engineer arrives. Power is on, but the lift has to be reset by hand. Passenger freed at 7:24 pm."
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Basement office phone",
+        "kind": "log",
+        "source": "Phone company record",
+        "body": "Landline, Elm Court basement office (fixed desk phone).\n\nCall to Valley Power fault line: 6:22 pm to 7:03 pm (41 minutes, on hold).",
+        "lines": [
+          "Landline, Elm Court basement office (fixed desk phone).",
+          "Call to Valley Power fault line: 6:22 pm to 7:03 pm (41 minutes, on hold)."
+        ]
+      },
+      {
+        "id": "5",
+        "title": "The corridor",
+        "kind": "report",
+        "source": "Police, 9:00 pm",
+        "body": "Drops of red candle wax on the second-floor corridor carpet, in a line from the door of Flat 4 to the door of Flat 2.\n\nRed candles in a holder on Hazel Brooke's table, burned down by about an hour.",
+        "lines": [
+          "Drops of red candle wax on the second-floor corridor carpet, in a line from the door of Flat 4 to the door of Flat 2.",
+          "Red candles in a holder on Hazel Brooke's table, burned down by about an hour."
+        ]
+      },
+      {
+        "id": "6",
+        "title": "Jolene's video call",
+        "kind": "report",
+        "source": "St. Anne's Hospital, ward sister and phone record",
+        "body": "Video call from Ward 6 to J. Sweeney's mobile: 6:24 pm to 7:02 pm.\n\nWard sister: “Jolene was sitting on her bed with a little battery lantern the whole time, with that big seagull poster behind her. She never got up. We went through every patient on the ward.”",
+        "lines": [
+          "Video call from Ward 6 to J. Sweeney's mobile: 6:24 pm to 7:02 pm.",
+          "Ward sister: “Jolene was sitting on her bed with a little battery lantern the whole time, with that big seagull poster behind her. She never got up. We went through every patient on the ward.”"
+        ]
+      }
+    ],
+    "timeline": [],
+    "puzzles": [
+      {
+        "id": "q1",
+        "prompt": "At what time did the power come back on? (24-hour clock.)",
+        "answer": "19:00",
+        "hint": "Read the oven manual's sentence about power cuts."
+      },
+      {
+        "id": "q2",
+        "prompt": "Whose story is impossible?",
+        "answer": "Hazel Brooke",
+        "hint": "Now you know exactly when the power was off. Check every statement against it."
+      },
+      {
+        "id": "q3",
+        "prompt": "Karl knew the locks would open and has no witness. What clears him?",
+        "answer": "He was on the fixed basement phone from 6:22 to 7:03, the whole time the doors were unlocked except the first seven minutes",
+        "hint": "Karl says he was on the phone. Can the phone company confirm it?"
+      },
+      {
+        "id": "q4",
+        "prompt": "Who stole Mr. Fairley's coins?",
+        "answer": "Hazel Brooke",
+        "hint": "Clear the people with records first: the lift, the basement phone, the video call."
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "prompt": "At what time did the power come back on? (24-hour clock.)",
+        "kind": "time",
+        "answer": "19:00",
+        "accept": [
+          "7:00",
+          "7:00 pm",
+          "7pm",
+          "7 pm"
+        ],
+        "explanation": "The oven clock restarted from 0:00 when power returned and showed 1:47 at 8:47 pm. 8:47 minus 1 hour 47 minutes is 7:00 pm.",
+        "evidence": [
+          "1"
+        ],
+        "hints": [
+          "Read the oven manual's sentence about power cuts.",
+          "The clock started counting from 0:00 when the power came back. How long had it been counting by 8:47?",
+          "Take 1 hour 47 minutes away from 8:47 pm."
+        ]
+      },
+      {
+        "id": "q2",
+        "prompt": "Whose story is impossible?",
+        "kind": "suspect",
+        "options": [
+          {
+            "id": "hazel",
+            "text": "Hazel Brooke"
+          },
+          {
+            "id": "ian",
+            "text": "Ian Castell"
+          },
+          {
+            "id": "jolene",
+            "text": "Jolene Sweeney"
+          },
+          {
+            "id": "karl",
+            "text": "Karl Dent"
+          }
+        ],
+        "answer": "hazel",
+        "explanation": "Hazel says she put the TV on at 6:50. The power was off until 7:00, so her TV couldn't have worked.",
+        "evidence": [
+          "1"
+        ],
+        "hints": [
+          "Now you know exactly when the power was off. Check every statement against it.",
+          "Which suspect says they used something that needs electricity?",
+          "A television at ten to seven, with the power off until seven."
+        ]
+      },
+      {
+        "id": "q3",
+        "prompt": "Karl knew the locks would open and has no witness. What clears him?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "He's the caretaker"
+          },
+          {
+            "id": "b",
+            "text": "He was on the fixed basement phone from 6:22 to 7:03, the whole time the doors were unlocked except the first seven minutes"
+          },
+          {
+            "id": "c",
+            "text": "He had a torch, not a candle"
+          }
+        ],
+        "answer": "b",
+        "explanation": "The doors were open from 6:15 to 7:00. Karl was on a fixed desk phone in the basement from 6:22, and the red wax trail leads to Flat 2, not the basement.",
+        "evidence": [
+          "4",
+          "5"
+        ],
+        "hints": [
+          "Karl says he was on the phone. Can the phone company confirm it?",
+          "Compare his call times with the time the doors were unlocked.",
+          "On a fixed desk phone from 6:22 to 7:03. Then follow the wax."
+        ]
+      },
+      {
+        "id": "q4",
+        "prompt": "Who stole Mr. Fairley's coins?",
+        "kind": "suspect",
+        "options": [
+          {
+            "id": "hazel",
+            "text": "Hazel Brooke"
+          },
+          {
+            "id": "ian",
+            "text": "Ian Castell"
+          },
+          {
+            "id": "jolene",
+            "text": "Jolene Sweeney"
+          },
+          {
+            "id": "karl",
+            "text": "Karl Dent"
+          }
+        ],
+        "answer": "hazel",
+        "explanation": "Ian was trapped in the lift, Karl was on the basement phone, and Jolene was on a video call sitting on her bed. Hazel lied about watching TV during the power cut, and a trail of her red candle wax leads from Flat 4 to her door.",
+        "evidence": [
+          "1",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "hints": [
+          "Clear the people with records first: the lift, the basement phone, the video call.",
+          "Who was carrying a candle around in the dark?",
+          "Red wax drips from Flat 4's door to the door of the person who lied."
+        ]
+      }
+    ],
+    "solution": {
+      "culprit": "Hazel Brooke",
+      "culpritId": "hazel",
+      "explanation": "When the lights went out, Hazel Brooke realised every door in the building had just unlocked. She took a red candle, crept down the corridor into Flat 4 and emptied Mr. Fairley's coin cabinet, dripping wax as she went. Then she invented an evening in front of the TV. She didn't know the oven clock in Flat 4 had quietly timed the power cut: the power came back at exactly 7:00, ten minutes after she 'switched on' her television.",
+      "chain": [
+        {
+          "step": "The oven clock showed 1:47 at 8:47 pm, so the power came back at 7:00 pm. The doors were unlocked from 6:15 to 7:00.",
+          "evidence": [
+            "1",
+            "2"
+          ]
+        },
+        {
+          "step": "Hazel says she watched TV from 6:50. Impossible with no power.",
+          "evidence": [
+            "1"
+          ]
+        },
+        {
+          "step": "Ian was in the lift from 6:16 to 7:24. Karl was on the basement phone from 6:22 to 7:03. Jolene was on a video call from her bed from 6:24 to 7:02.",
+          "evidence": [
+            "3",
+            "4",
+            "6"
+          ]
+        },
+        {
+          "step": "Red candle wax runs from Flat 4 to Flat 2, and Hazel's red candles had burned for about an hour.",
+          "evidence": [
+            "5"
+          ]
+        }
+      ],
+      "eliminations": [
+        {
+          "name": "Ian Castell",
+          "why": "Trapped in the lift from 6:16 until the engineer freed him at 7:24."
+        },
+        {
+          "name": "Jolene Sweeney",
+          "why": "On a video call from 6:24 to 7:02, seen sitting on her bed the whole time. That leaves only the first nine minutes of the power cut, and the wax trail leads to Flat 2."
+        },
+        {
+          "name": "Karl Dent",
+          "why": "On the fixed basement phone from 6:22 to 7:03, and the wax trail doesn't lead to him."
+        }
+      ]
+    }
+  }
+}

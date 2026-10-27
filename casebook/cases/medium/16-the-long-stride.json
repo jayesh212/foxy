@@ -1,0 +1,196 @@
+{
+  "$schema": "../../schema/case.schema.json",
+  "id": "case-16",
+  "number": 16,
+  "slug": "the-long-stride",
+  "title": "The Long Stride",
+  "tier": "medium",
+  "difficulty": 2,
+  "minutes": 20,
+  "tagline": "Twelve muddy footprints lead away from the boathouse. Everyone at the club wears the same shoes. Not everyone has the same legs.",
+  "crime": "theft",
+  "tags": ["footprints", "measurement", "arithmetic"],
+  "setting": { "place": "Riverside Rowing Club boathouse", "when": "Sunday, 6:00 am to 6:30 am" },
+  "briefing": [
+    "The Founders' Cup is a solid silver trophy that has stood on the boathouse shelf for ninety years. On Sunday it disappeared just after dawn.",
+    "The rain stopped at 5:30 am, leaving the towpath outside the boathouse soft and muddy. A trail of twelve footprints leads from the boathouse side door along the towpath to the gravel car park, where they stop.",
+    "Every club member owns the same club-issue trainers, so the tread pattern alone won't help. Mr. Foxy has borrowed a tape measure."
+  ],
+  "rules": [
+    "The cup was taken between 6:00 am and 6:30 am.",
+    "The footprints were made by the thief. Nobody else used the side door or the towpath that morning (the groundsman watched the car park from his hut)."
+  ],
+  "suspects": [
+    {
+      "id": "juno",
+      "name": "Juno Kim",
+      "role": "Cox",
+      "description": "Small, loud and in charge of steering the boat. 171 cm tall. Shoe size 7.",
+      "motive": "Was dropped from the first boat last month.",
+      "statement": "I got here at quarter past six and went straight to the changing room."
+    },
+    {
+      "id": "callum",
+      "name": "Callum Reid",
+      "role": "Stroke rower",
+      "description": "The club's best rower. 179 cm tall. Shoe size 10.",
+      "motive": "Behind on payments for his new racing boat.",
+      "statement": "I was warming up on the jetty from six. I didn't go into the boathouse until the others arrived."
+    },
+    {
+      "id": "darius",
+      "name": "Darius Obi",
+      "role": "Bow rower",
+      "description": "Joined this year. 181 cm tall. Shoe size 10.",
+      "motive": "Has said the old cup 'belongs in a museum, not on a shelf'.",
+      "statement": "I was on the rowing machine in the gym from ten past six. Ask the coach."
+    },
+    {
+      "id": "bryony",
+      "name": "Bryony Wexley",
+      "role": "Head coach",
+      "description": "Former Olympic rower. 188 cm tall. Shoe size 10.",
+      "motive": "The club committee voted against renewing her contract.",
+      "statement": "I opened up at six and was in the gym setting up the machines. Darius was there with me."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev1",
+      "kind": "report",
+      "title": "The trail of prints",
+      "source": "Measured by the detective",
+      "body": [
+        "Twelve clear prints from the side door to the car park. Size 10, club-issue tread.",
+        "Every print shows a full heel, then the toe, pressed evenly. The prints are evenly spaced. The walker was walking, not running.",
+        "Step length (heel of one print to the heel of the next): 73, 75, 74, 74, 73, 75, 74, 74, 75, 73, 74 cm. Average: 74 cm."
+      ]
+    },
+    {
+      "id": "ev2",
+      "kind": "document",
+      "title": "Footprint guide",
+      "source": "County police training booklet",
+      "body": [
+        "For an adult walking at a normal pace on level ground:",
+        "Height ≈ step length ÷ 0.415",
+        "Allow 5 cm either way. Do not use this for running prints."
+      ]
+    },
+    {
+      "id": "ev3",
+      "kind": "log",
+      "title": "Gym rowing machine",
+      "source": "Machine 3 session record",
+      "body": [
+        "User: D. Obi (logged in with his own heart-rate strap).",
+        "Session: 6:10 am to 6:41 am, no pauses longer than 20 seconds. Heart rate recorded throughout.",
+        "The gym is on the far side of the clubhouse from the boathouse, a 3-minute walk."
+      ]
+    },
+    {
+      "id": "ev4",
+      "kind": "statement",
+      "title": "The groundsman",
+      "source": "From his hut by the car park",
+      "body": [
+        "“Callum's car was here before six. Juno came on her bike at quarter past.”",
+        "“At about twenty past six somebody tall came off the towpath onto the gravel, walking quickly with a sports bag. I only saw their back. Club jacket, hood up.”"
+      ]
+    },
+    {
+      "id": "ev5",
+      "kind": "object",
+      "title": "Callum's car",
+      "source": "Searched Sunday afternoon",
+      "body": ["In the boot, wrapped in a club towel: the Founders' Cup.", "On the boot mat: smears of towpath mud."]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "Using the guide, about how tall is the thief? (Whole centimetres.)",
+      "kind": "number",
+      "answer": "178",
+      "accept": ["178.3", "178.31", "178.33"],
+      "explanation": "74 ÷ 0.415 = 178.3 cm. Allowing 5 cm either way, the thief is between about 173 and 183 cm tall.",
+      "evidence": ["ev1", "ev2"]
+    },
+    {
+      "id": "q2",
+      "prompt": "Which two suspects are inside that height range?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "Juno and Callum" },
+        { "id": "b", "text": "Callum and Darius" },
+        { "id": "c", "text": "Darius and Bryony" }
+      ],
+      "answer": "b",
+      "explanation": "173 to 183 cm takes in Callum (179) and Darius (181). Juno (171) is too short and her feet are size 7. Bryony (188) is too tall.",
+      "evidence": ["ev1", "ev2"]
+    },
+    {
+      "id": "q3",
+      "prompt": "Why can't Darius be the thief?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "He's new to the club" },
+        { "id": "b", "text": "He was rowing on the machine with his own heart-rate strap from 6:10 to 6:41 without stopping" },
+        { "id": "c", "text": "He thinks the cup belongs in a museum" }
+      ],
+      "answer": "b",
+      "explanation": "The thief walked out onto the car park at about 6:20. Darius never paused for more than 20 seconds between 6:10 and 6:41, and the boathouse is a 3-minute walk away.",
+      "evidence": ["ev3", "ev4"]
+    },
+    {
+      "id": "q4",
+      "prompt": "Who stole the Founders' Cup?",
+      "kind": "suspect",
+      "answer": "callum",
+      "explanation": "The stride gives a walker of about 178 cm in size 10s: Callum or Darius. Darius was on the rowing machine. Callum's 'warming up on the jetty' has no witness, and the cup was in the boot of his car.",
+      "evidence": ["ev1", "ev2", "ev3", "ev5"]
+    }
+  ],
+  "hints": [
+    { "question": "q1", "level": 1, "text": "The guide gives you a formula. You have the step length already." },
+    { "question": "q1", "level": 2, "text": "Divide 74 by 0.415." },
+    { "question": "q1", "level": 3, "text": "It's a little over 178. Remember to allow 5 cm either way for the next question." },
+    { "question": "q2", "level": 1, "text": "Turn your answer into a range: 5 cm below to 5 cm above." },
+    { "question": "q2", "level": 2, "text": "Check each suspect's height against 173 to 183 cm. Check shoe sizes too." },
+    { "question": "q2", "level": 3, "text": "Two rowers fit. The coach is too tall and the cox is too short." },
+    { "question": "q3", "level": 1, "text": "When did the thief reach the car park?" },
+    { "question": "q3", "level": 2, "text": "Check the rowing machine's record. Could he slip away for a few minutes?" },
+    { "question": "q3", "level": 3, "text": "No pauses longer than 20 seconds, and the boathouse is a 3-minute walk each way." },
+    { "question": "q4", "level": 1, "text": "Two suspects fit the stride. One has an alibi." },
+    { "question": "q4", "level": 2, "text": "Whose car was in the car park before six?" },
+    { "question": "q4", "level": 3, "text": "Check the boot of that car." }
+  ],
+  "solution": {
+    "culprit": "callum",
+    "summary": "Callum Reid arrived early, let himself in through the boathouse side door and lifted the Founders' Cup into his sports bag. He walked briskly down the muddy towpath to his car and hid the cup in the boot under a club towel. He thought identical club trainers made him invisible, but the length of his stride put his height at about 178 cm, and only two members are that tall.",
+    "chain": [
+      { "step": "The prints are walking prints with an average step of 74 cm.", "evidence": ["ev1"] },
+      { "step": "74 ÷ 0.415 = 178 cm, so the thief is about 173 to 183 cm tall.", "evidence": ["ev2"] },
+      { "step": "That fits Callum (179) and Darius (181) only.", "evidence": ["ev1"] },
+      { "step": "Darius was on a logged rowing machine without a break from 6:10 to 6:41.", "evidence": ["ev3"] },
+      { "step": "Callum's car was there before six, a tall figure left the towpath at about 6:20, and the cup was in his boot.", "evidence": ["ev4", "ev5"] }
+    ],
+    "eliminations": [
+      { "suspect": "juno", "why": "171 cm and size 7 feet, outside the height range and the wrong shoe size." },
+      { "suspect": "darius", "why": "Rowing on Machine 3 with his own heart-rate strap from 6:10 to 6:41, never pausing more than 20 seconds." },
+      { "suspect": "bryony", "why": "At 188 cm she's too tall for a 74 cm step." }
+    ]
+  },
+  "playtest": {
+    "solvePath": "Solvers enjoy doing the maths. Once they have 178 cm the field shrinks to two and the rowing machine log finishes it. Most need a calculator; the booklet should allow one.",
+    "pitfalls": [
+      "Some testers measured from toe to heel instead of heel to heel. The evidence now spells out that steps are heel to heel and already measured.",
+      "Players asked whether the thief could have been running to disguise their height. The prints are described as walking prints."
+    ],
+    "revisions": [
+      "Gave the formula an explicit ±5 cm allowance so 179 and 181 are both 'in' and the alibi has to do the final work.",
+      "Made every member wear identical size 10 club trainers except the cox, so the tread can't solve it.",
+      "Gave Darius a heart-rate strap login, so nobody can argue someone else used his account."
+    ]
+  }
+}

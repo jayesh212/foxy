@@ -1,0 +1,451 @@
+{
+  "number": 26,
+  "title": "Harbour at Dusk",
+  "tier": "hard",
+  "difficulty": 4,
+  "teaser": "The museum paid millions for a painting from 1890. The paint is younger than the lighthouse in it.",
+  "minutes": 40,
+  "draft": false,
+  "booklet": {
+    "briefing": "Elise Varga, who died in 1898, painted the sea like nobody else. Last year the Kestrel Museum bought her 'Harbour at Dusk' for a record price.\n\nThis spring the museum's new scientist tested a speck of paint from the edge. The result made the director sit down.\n\nEvery painting has a paper trail, called its provenance: who owned it, when, and what they wrote about it. Somewhere in this one, the real painting stopped and a copy began. Find where, and you'll find who.",
+    "rules": [
+      "Elise Varga painted the original 'Harbour at Dusk' before her death in 1898.",
+      "The documents below are genuine unless the evidence shows otherwise."
+    ],
+    "setting": {
+      "place": "Kestrel Museum of Art, conservation lab",
+      "when": "This spring"
+    },
+    "suspects": [
+      {
+        "id": "felicity",
+        "name": "Felicity Dane",
+        "role": "Previous owner",
+        "description": "Inherited the painting from her grandfather, who bought it in 1962. Sold it in 2019.",
+        "motive": "Needed money for her failing hotel.",
+        "statement": "It hung in Grandpa's dining room my whole life. I sold the real thing, I'd swear to it."
+      },
+      {
+        "id": "marcus",
+        "name": "Marcus Vell",
+        "role": "Art dealer",
+        "description": "Bought it from Felicity in 2019 and sold it to the museum in 2024. Trained as a painter before he became a dealer.",
+        "motive": "Bought for a modest price and sold for a record one.",
+        "statement": "I bought it, I had it cleaned, I sold it. I'm a dealer, not a magician."
+      },
+      {
+        "id": "orla",
+        "name": "Dr. Orla Quist",
+        "role": "Varga expert",
+        "description": "Wrote the book on Varga. Signed the certificate saying the painting was genuine.",
+        "motive": "Her reputation, and her fee, depend on finding 'lost' Vargas.",
+        "statement": "I judged it by eye and by style, as experts always have. It looked exactly right."
+      },
+      {
+        "id": "tobias",
+        "name": "Tobias Wren",
+        "role": "Picture restorer",
+        "description": "Cleaned the painting for Marcus in 2023. Has a studio full of paints and old canvases.",
+        "motive": "Could paint a copy better than anyone.",
+        "statement": "I clean pictures. I wrote down exactly what came through my door."
+      },
+      {
+        "id": "nadia",
+        "name": "Nadia Bloom",
+        "role": "Museum curator",
+        "description": "Pushed the museum to buy the painting. Now the scandal is hers.",
+        "motive": "Would have liked a famous acquisition on her record.",
+        "statement": "I trusted the certificate and the dealer. I never touched the painting before it arrived here."
+      }
+    ],
+    "witnesses": [],
+    "evidence": [
+      {
+        "id": "1",
+        "title": "Paint analysis",
+        "kind": "report",
+        "source": "Kestrel Museum conservation lab, this spring",
+        "body": "Pigments found: lead white, ultramarine, and also titanium white and phthalocyanine blue throughout the whole picture, not just in a repaired patch.\n\nReference table from the lab's handbook: titanium white first sold to artists in 1921. Phthalocyanine blue first sold in 1935.",
+        "lines": [
+          "Pigments found: lead white, ultramarine, and also titanium white and phthalocyanine blue throughout the whole picture, not just in a repaired patch.",
+          "Reference table from the lab's handbook: titanium white first sold to artists in 1921. Phthalocyanine blue first sold in 1935."
+        ]
+      },
+      {
+        "id": "2",
+        "title": "Grey Point lighthouse",
+        "kind": "document",
+        "source": "Harbour board history leaflet",
+        "body": "The museum painting clearly shows a tall white lighthouse on the point.\n\nLeaflet: “Grey Point lighthouse was built in 1949. Before that the point was bare rock.”",
+        "lines": [
+          "The museum painting clearly shows a tall white lighthouse on the point.",
+          "Leaflet: “Grey Point lighthouse was built in 1949. Before that the point was bare rock.”"
+        ]
+      },
+      {
+        "id": "3",
+        "title": "The paper trail",
+        "kind": "log",
+        "source": "Documents gathered by the museum",
+        "body": "Each document records the painting's size, height × width.\n\nYear | Document | Size recorded | Notes\n1962 | Auction catalogue, Varga family sale | 40 × 50 cm | “Harbour at dusk, fishing boats, the bare point beyond.” Bought by Arthur Dane.\n2015 | Photo of the Dane dining room, for a magazine | Looks about the size of the sideboard mirror beside it, 40 × 50 cm | The bare point is visible. No lighthouse.\n2019 | Sale receipt, Felicity Dane to Marcus Vell | 40 × 50 cm | Signed by both.\n2023 | Restorer's condition report, on arrival from Marcus Vell | 46 × 61 cm | “Light grime. Lighthouse on the point is crisp.”\n2024 | Certificate of authenticity, Dr. Orla Quist | 46 × 61 cm | “A fine, lost Varga.”\n2024 | Sale, Marcus Vell to Kestrel Museum | 46 × 61 cm | ",
+        "lines": [
+          "Each document records the painting's size, height × width."
+        ],
+        "table": {
+          "columns": [
+            "Year",
+            "Document",
+            "Size recorded",
+            "Notes"
+          ],
+          "rows": [
+            [
+              "1962",
+              "Auction catalogue, Varga family sale",
+              "40 × 50 cm",
+              "“Harbour at dusk, fishing boats, the bare point beyond.” Bought by Arthur Dane."
+            ],
+            [
+              "2015",
+              "Photo of the Dane dining room, for a magazine",
+              "Looks about the size of the sideboard mirror beside it, 40 × 50 cm",
+              "The bare point is visible. No lighthouse."
+            ],
+            [
+              "2019",
+              "Sale receipt, Felicity Dane to Marcus Vell",
+              "40 × 50 cm",
+              "Signed by both."
+            ],
+            [
+              "2023",
+              "Restorer's condition report, on arrival from Marcus Vell",
+              "46 × 61 cm",
+              "“Light grime. Lighthouse on the point is crisp.”"
+            ],
+            [
+              "2024",
+              "Certificate of authenticity, Dr. Orla Quist",
+              "46 × 61 cm",
+              "“A fine, lost Varga.”"
+            ],
+            [
+              "2024",
+              "Sale, Marcus Vell to Kestrel Museum",
+              "46 × 61 cm",
+              ""
+            ]
+          ]
+        }
+      },
+      {
+        "id": "4",
+        "title": "X-ray and canvas",
+        "kind": "report",
+        "source": "Kestrel Museum conservation lab",
+        "body": "The canvas is machine-woven and stamped on the back, under the frame: CANVASCO · PRIMED LINEN · BATCH 2016-114.\n\nNo other painting lies underneath.",
+        "lines": [
+          "The canvas is machine-woven and stamped on the back, under the frame: CANVASCO · PRIMED LINEN · BATCH 2016-114.",
+          "No other painting lies underneath."
+        ]
+      },
+      {
+        "id": "5",
+        "title": "Marcus Vell's bank record",
+        "kind": "document",
+        "source": "Obtained by the police",
+        "body": "March 2020: payment received from a private collector in Geneva, reference “VARGA – HARBOUR – 40x50”.",
+        "lines": [
+          "March 2020: payment received from a private collector in Geneva, reference “VARGA – HARBOUR – 40x50”."
+        ]
+      },
+      {
+        "id": "6",
+        "title": "Dr. Quist's appointment diary",
+        "kind": "document",
+        "source": "2024",
+        "body": "One viewing of the painting, two hours, at Marcus Vell's gallery. No paint tests requested. Fee paid by Marcus Vell: her standard fee.",
+        "lines": [
+          "One viewing of the painting, two hours, at Marcus Vell's gallery. No paint tests requested. Fee paid by Marcus Vell: her standard fee."
+        ]
+      }
+    ],
+    "timeline": [],
+    "puzzles": [
+      {
+        "id": "q1",
+        "prompt": "What is the earliest year the museum's painting could have been painted?",
+        "answer": "1949",
+        "hint": "Two things in the evidence have a 'first ever' date."
+      },
+      {
+        "id": "q2",
+        "prompt": "What size was the real 'Harbour at Dusk'?",
+        "answer": "40 × 50 cm",
+        "hint": "Look at the sizes in the paper trail, oldest first."
+      },
+      {
+        "id": "q3",
+        "prompt": "Between which two documents was the real painting swapped for the copy?",
+        "answer": "Between the 2019 receipt and the 2023 restorer's report",
+        "hint": "Find the first record where the size changes."
+      },
+      {
+        "id": "q4",
+        "prompt": "Who had the painting between those two documents?",
+        "answer": "Marcus Vell",
+        "hint": "Read the 'Notes' column: who received it in 2019, and who sent it in 2023?"
+      },
+      {
+        "id": "q5",
+        "prompt": "What does the canvas stamp add?",
+        "answer": "The canvas was made in 2016 or later, so the copy was painted recently, after the 2015 photo, which fits a swap after 2019",
+        "hint": "What does 'BATCH 2016-114' suggest?"
+      },
+      {
+        "id": "q6",
+        "prompt": "Who forged 'Harbour at Dusk'?",
+        "answer": "Marcus Vell",
+        "hint": "Who had the chance, the skill and something to sell?"
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "prompt": "What is the earliest year the museum's painting could have been painted?",
+        "kind": "number",
+        "answer": "1949",
+        "explanation": "The pigments mean after 1935, but the picture also shows Grey Point lighthouse, built in 1949. It can't be earlier than 1949, half a century after Varga died.",
+        "evidence": [
+          "1",
+          "2"
+        ],
+        "hints": [
+          "Two things in the evidence have a 'first ever' date.",
+          "The pigments give one date. What's painted on the point?",
+          "You can't paint a lighthouse before it exists."
+        ]
+      },
+      {
+        "id": "q2",
+        "prompt": "What size was the real 'Harbour at Dusk'?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "40 × 50 cm"
+          },
+          {
+            "id": "b",
+            "text": "46 × 61 cm"
+          },
+          {
+            "id": "c",
+            "text": "We can't tell"
+          }
+        ],
+        "answer": "a",
+        "explanation": "The 1962 catalogue, the 2015 photo and the 2019 receipt all record 40 × 50 cm, and the earlier records describe the bare point with no lighthouse.",
+        "evidence": [
+          "3"
+        ],
+        "hints": [
+          "Look at the sizes in the paper trail, oldest first.",
+          "Which records also say the point is bare?",
+          "The three oldest records agree."
+        ]
+      },
+      {
+        "id": "q3",
+        "prompt": "Between which two documents was the real painting swapped for the copy?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "Between the 1962 catalogue and the 2015 photo"
+          },
+          {
+            "id": "b",
+            "text": "Between the 2019 receipt and the 2023 restorer's report"
+          },
+          {
+            "id": "c",
+            "text": "Between the 2023 report and the 2024 certificate"
+          }
+        ],
+        "answer": "b",
+        "explanation": "In 2019 Felicity sold a 40 × 50 cm painting. By 2023, when it arrived at the restorer's from Marcus, it was 46 × 61 cm with a lighthouse.",
+        "evidence": [
+          "3"
+        ],
+        "hints": [
+          "Find the first record where the size changes.",
+          "2019 says one size, 2023 says another.",
+          "Between Felicity's sale and the restorer's door."
+        ]
+      },
+      {
+        "id": "q4",
+        "prompt": "Who had the painting between those two documents?",
+        "kind": "suspect",
+        "options": [
+          {
+            "id": "felicity",
+            "text": "Felicity Dane"
+          },
+          {
+            "id": "marcus",
+            "text": "Marcus Vell"
+          },
+          {
+            "id": "orla",
+            "text": "Dr. Orla Quist"
+          },
+          {
+            "id": "tobias",
+            "text": "Tobias Wren"
+          },
+          {
+            "id": "nadia",
+            "text": "Nadia Bloom"
+          }
+        ],
+        "answer": "marcus",
+        "explanation": "Marcus bought it in 2019 and sent it to the restorer in 2023. Felicity had already sold it, and Tobias, Orla and Nadia only saw it after it was 46 × 61 cm.",
+        "evidence": [
+          "3"
+        ],
+        "hints": [
+          "Read the 'Notes' column: who received it in 2019, and who sent it in 2023?",
+          "The restorer says it 'arrived from' someone.",
+          "The buyer on the 2019 receipt."
+        ]
+      },
+      {
+        "id": "q5",
+        "prompt": "What does the canvas stamp add?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "Nothing"
+          },
+          {
+            "id": "b",
+            "text": "The canvas was made in 2016 or later, so the copy was painted recently, after the 2015 photo, which fits a swap after 2019"
+          },
+          {
+            "id": "c",
+            "text": "It proves Felicity painted it"
+          }
+        ],
+        "answer": "b",
+        "explanation": "Batch 2016-114 dates the canvas to 2016 or later. The copy was painted recently, not in the 1950s.",
+        "evidence": [
+          "4",
+          "3"
+        ],
+        "hints": [
+          "What does 'BATCH 2016-114' suggest?",
+          "A canvas can't be painted on before it was made.",
+          "So the copy is a modern fake, painted in 2016 or later."
+        ]
+      },
+      {
+        "id": "q6",
+        "prompt": "Who forged 'Harbour at Dusk'?",
+        "kind": "suspect",
+        "options": [
+          {
+            "id": "felicity",
+            "text": "Felicity Dane"
+          },
+          {
+            "id": "marcus",
+            "text": "Marcus Vell"
+          },
+          {
+            "id": "orla",
+            "text": "Dr. Orla Quist"
+          },
+          {
+            "id": "tobias",
+            "text": "Tobias Wren"
+          },
+          {
+            "id": "nadia",
+            "text": "Nadia Bloom"
+          }
+        ],
+        "answer": "marcus",
+        "explanation": "The swap happened while Marcus owned the painting. He trained as a painter, and in March 2020 he sold a 40 × 50 cm 'Varga harbour', the real one, to a collector in Geneva. Then he sold his own copy to the museum.",
+        "evidence": [
+          "3",
+          "4",
+          "5"
+        ],
+        "hints": [
+          "Who had the chance, the skill and something to sell?",
+          "Look at the bank record. What size did he sell in Geneva?",
+          "40 × 50: the real one went to Geneva, and the fake went to the museum."
+        ]
+      }
+    ],
+    "solution": {
+      "culprit": "Marcus Vell",
+      "culpritId": "marcus",
+      "explanation": "Marcus Vell bought the real 'Harbour at Dusk' from Felicity Dane in 2019 for a modest price. He quietly sold it to a private collector in Geneva in 2020, then used his old painter's training to make a copy on a modern canvas. Working from the present-day harbour, he painted in the lighthouse that wasn't there in Varga's time, and made it a little larger to look grander. He had it cleaned to give it a history, got Dr. Quist's certificate after a two-hour look, and sold the fake to the museum. He was paid twice for one painting.",
+      "chain": [
+        {
+          "step": "The museum's painting has 1921 and 1935 pigments throughout and shows a lighthouse built in 1949: it's a fake.",
+          "evidence": [
+            "1",
+            "2"
+          ]
+        },
+        {
+          "step": "The real one was 40 × 50 cm with a bare point (1962, 2015, 2019). The fake is 46 × 61 cm.",
+          "evidence": [
+            "3"
+          ]
+        },
+        {
+          "step": "The size changes between the 2019 receipt and the 2023 restorer's report, while Marcus owned it.",
+          "evidence": [
+            "3"
+          ]
+        },
+        {
+          "step": "The canvas is from 2016 or later.",
+          "evidence": [
+            "4"
+          ]
+        },
+        {
+          "step": "Marcus sold a 40 × 50 cm Varga harbour to Geneva in 2020.",
+          "evidence": [
+            "5"
+          ]
+        }
+      ],
+      "eliminations": [
+        {
+          "name": "Felicity Dane",
+          "why": "The 2019 receipt, signed by both, records the true 40 × 50 cm size; she sold the real painting."
+        },
+        {
+          "name": "Dr. Orla Quist",
+          "why": "Careless, not a forger: she saw it once, in 2024, already 46 × 61 cm."
+        },
+        {
+          "name": "Tobias Wren",
+          "why": "His 2023 report records it arriving at 46 × 61 cm with the lighthouse, so it was already the fake."
+        },
+        {
+          "name": "Nadia Bloom",
+          "why": "Only received it in 2024, long after the swap."
+        }
+      ]
+    }
+  }
+}

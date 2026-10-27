@@ -1,0 +1,196 @@
+{
+  "$schema": "../../schema/case.schema.json",
+  "id": "case-07",
+  "number": 7,
+  "slug": "slip-of-the-tongue",
+  "title": "Slip of the Tongue",
+  "tier": "easy",
+  "difficulty": 2,
+  "minutes": 15,
+  "tagline": "Something small was stolen from Case 7. The police kept quiet about what. One suspect didn't.",
+  "crime": "theft",
+  "tags": ["interview", "guilty knowledge"],
+  "setting": { "place": "Harrowgate Museum, East Gallery", "when": "Thursday, 10:40 pm" },
+  "briefing": [
+    "At 10:40 pm on Thursday the glass of display Case 7 in Harrowgate Museum's East Gallery was smashed and the case alarm went off. Whatever was inside was gone.",
+    "Inspector Kaur arrived at 11:15 and decided to keep one fact secret: what had been stolen. She interviewed each of the three staff still in the building and told every one of them exactly the same thing.",
+    "Read the interviews carefully. The thief always knows something the innocent don't."
+  ],
+  "rules": ["The three suspects below were the only people in the museum after 9:00 pm, apart from the police after 11:15.", "Inspector Kaur told each of them only: “An item was taken from display Case 7 in the East Gallery.”"],
+  "suspects": [
+    {
+      "id": "victor",
+      "name": "Victor Osei",
+      "role": "Night security guard",
+      "description": "Has guarded the museum for twelve years. Watches the cameras from the control room.",
+      "motive": "Knows every alarm and blind spot.",
+      "statement": "I was in the control room when the alarm went. The East Gallery camera has been broken for a month, I've reported it three times."
+    },
+    {
+      "id": "rosa",
+      "name": "Rosa Quint",
+      "role": "Evening cleaner",
+      "description": "Cleans from 9 pm until midnight. Saw a delivery crate arrive that afternoon.",
+      "motive": "Was recently told her hours will be cut.",
+      "statement": "I was mopping the West Gallery, at the other end of the building. I heard the alarm and ran to the control room."
+    },
+    {
+      "id": "felix",
+      "name": "Felix Brandt",
+      "role": "Gift shop manager",
+      "description": "Was staying late for the quarterly stocktake. The gift shop is next to the East Gallery.",
+      "motive": "The gift shop's takings are down and he's been warned.",
+      "statement": "I was counting fridge magnets in the gift shop all evening. I've never set foot in the East Gallery tonight."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev1",
+      "kind": "statement",
+      "title": "The curator",
+      "source": "Dr. Imogen Faye, called from the museum's charity dinner at the Grand Hotel",
+      "body": [
+        "“Case 7 had been empty for a week. The new piece arrived today: a small carved jade frog, about the size of a plum, on loan from a collector.”",
+        "“The courier brought it in an old reused crate stencilled CERAMICS, FRAGILE. I unpacked it myself at a quarter past six, after the staff had gone, put it in Case 7 and pulled the gallery shutter down.”",
+        "“There's no label yet, and I haven't told a soul what it is. The paperwork is locked in my office. Then I went to the dinner, where I've been all evening.”"
+      ]
+    },
+    {
+      "id": "ev2",
+      "kind": "transcript",
+      "title": "Interview: Victor Osei",
+      "source": "Inspector Kaur, 11:20 pm",
+      "body": [
+        "HALE: An item was taken from display Case 7 in the East Gallery.",
+        "OSEI: Case 7? That's been empty since the coin exhibition left. What was in it?",
+        "HALE: I can't say yet.",
+        "OSEI: Well, I hope it wasn't valuable. I told them about that broken camera."
+      ]
+    },
+    {
+      "id": "ev3",
+      "kind": "transcript",
+      "title": "Interview: Rosa Quint",
+      "source": "Inspector Kaur, 11:35 pm",
+      "body": [
+        "HALE: An item was taken from display Case 7 in the East Gallery.",
+        "QUINT: Oh no. Was it the new thing from the crate this afternoon? It said ceramics on it. A vase, was it?",
+        "HALE: I can't say yet.",
+        "QUINT: Poor Dr. Faye. She'll be heartbroken."
+      ]
+    },
+    {
+      "id": "ev4",
+      "kind": "transcript",
+      "title": "Interview: Felix Brandt",
+      "source": "Inspector Kaur, 11:50 pm",
+      "body": [
+        "HALE: An item was taken from display Case 7 in the East Gallery.",
+        "BRANDT: Well, it wasn't me. I've been in the shop all night.",
+        "HALE: Did you hear anything?",
+        "BRANDT: Only the alarm. Look, why would I want a little green frog? I sell hundreds of the plastic ones for two pounds each."
+      ]
+    },
+    {
+      "id": "ev5",
+      "kind": "log",
+      "title": "Security company radio log",
+      "source": "Castle Alarms monitoring centre, recorded",
+      "body": ["Scheduled radio check with the Harrowgate night guard.", "10:37 pm to 10:44 pm: V. Osei on the control room radio, reading out the alarm panel status zone by zone. At 10:40 he reports: “Case 7 alarm just went off, East Gallery.”"]
+    },
+    {
+      "id": "ev6",
+      "kind": "report",
+      "title": "UV powder check",
+      "source": "Museum security policy and police check at midnight",
+      "body": [
+        "Every display case is dusted with an invisible powder that glows under ultraviolet light. Anyone who touches a case gets it on their skin.",
+        "Under a UV lamp: Victor Osei, no glow. Rosa Quint, no glow. Felix Brandt, glowing powder on the fingertips of both hands and on his right cuff."
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "Apart from the curator, who could know what was in Case 7 on Thursday night?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "Anyone who worked at the museum" },
+        { "id": "b", "text": "Only the person who smashed the case" },
+        { "id": "c", "text": "Anyone who saw the crate arrive" }
+      ],
+      "answer": "b",
+      "explanation": "The frog arrived in a crate marked CERAMICS, was unpacked after staff left, had no label, and the curator told no one. Only someone who looked inside Case 7 that night could know.",
+      "evidence": ["ev1"]
+    },
+    {
+      "id": "q2",
+      "prompt": "Which suspect knew what was stolen?",
+      "kind": "suspect",
+      "answer": "felix",
+      "explanation": "Felix says “a little green frog” even though the Inspector only said “an item from Case 7”. A jade frog is small and green.",
+      "evidence": ["ev4"]
+    },
+    {
+      "id": "q3",
+      "prompt": "Rosa mentions the crate too. Why doesn't that make her guilty?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "She guessed what the crate's label said, a ceramic vase, which was wrong" },
+        { "id": "b", "text": "She was the one who unpacked it" },
+        { "id": "c", "text": "Cleaners aren't allowed in the East Gallery" }
+      ],
+      "answer": "a",
+      "explanation": "Rosa only knew what the outside of the crate said. Her guess, a vase, is wrong. That's exactly what an innocent person who saw the delivery would think.",
+      "evidence": ["ev1", "ev3"]
+    },
+    {
+      "id": "q4",
+      "prompt": "Who stole the jade frog?",
+      "kind": "suspect",
+      "answer": "felix",
+      "explanation": "Felix knew it was a small green frog, which only the thief could know. He has the case's UV powder on his fingertips. Victor was on a recorded radio call at 10:40.",
+      "evidence": ["ev4", "ev5", "ev6"]
+    }
+  ],
+  "hints": [
+    { "question": "q1", "level": 1, "text": "Read the curator's account. What did the crate say on the outside?" },
+    { "question": "q1", "level": 2, "text": "Was there a label? Did she tell anyone?" },
+    { "question": "q1", "level": 3, "text": "The crate lied, there was no label and nobody was told. You'd have to see inside the case." },
+    { "question": "q2", "level": 1, "text": "Compare what the Inspector said with what each person said back." },
+    { "question": "q2", "level": 2, "text": "Someone describes the stolen item. Who?" },
+    { "question": "q2", "level": 3, "text": "“A little green frog.” Who told him it was green, or a frog?" },
+    { "question": "q3", "level": 1, "text": "Is what Rosa says actually right?" },
+    { "question": "q3", "level": 2, "text": "Compare her guess with what was really in the case." },
+    { "question": "q3", "level": 3, "text": "She guessed from the outside of the crate, and got it wrong. That's innocent." },
+    { "question": "q4", "level": 1, "text": "Check each suspect's whereabouts at 10:40 and anything they touched." },
+    { "question": "q4", "level": 2, "text": "One suspect was on a recorded radio call. The UV lamp tells you about the other two." },
+    { "question": "q4", "level": 3, "text": "Glowing fingertips and a slip about a green frog. Case closed?" }
+  ],
+  "solution": {
+    "culprit": "felix",
+    "summary": "Felix Brandt slipped out of the gift shop, ducked under the East Gallery shutter and smashed Case 7, expecting something he could sell. He found a small jade frog and pocketed it. In his interview he tried to sound bored and gave himself away: nobody had told him the stolen item was a frog, or that it was green.",
+    "chain": [
+      { "step": "Only the curator and whoever looked into Case 7 that night could know what was in it.", "evidence": ["ev1"] },
+      { "step": "The Inspector told everyone only “an item from Case 7”.", "evidence": ["ev2", "ev3", "ev4"] },
+      { "step": "Felix called it “a little green frog”. Rosa guessed a vase from the crate label. Victor didn't know the case was full.", "evidence": ["ev2", "ev3", "ev4"] },
+      { "step": "Victor was on a recorded radio check at 10:40. Felix has the case's UV powder on his fingers.", "evidence": ["ev5", "ev6"] }
+    ],
+    "eliminations": [
+      { "suspect": "victor", "why": "On a recorded radio call with the alarm company from 10:37 to 10:44, reporting the alarm as it happened. No UV powder." },
+      { "suspect": "rosa", "why": "She only knew the crate's misleading label and guessed wrong. No UV powder." }
+    ]
+  },
+  "playtest": {
+    "solvePath": "Solvers read the three interviews side by side. About half spot 'green frog' straight away; the rest find it after the level-2 hint. Rosa's crate comment is a good fake-out for those who rush.",
+    "pitfalls": [
+      "Early on, players argued Felix could have seen the frog through the gallery doorway earlier. The curator now says she installed it after staff left and pulled the shutter down.",
+      "Some suspected Victor because of the broken camera. The radio log clears him."
+    ],
+    "revisions": [
+      "Made the crate say CERAMICS so that seeing the delivery tells you nothing true.",
+      "Added the UV powder so the case isn't decided on one slip of the tongue alone.",
+      "Stated in the rules that the Inspector told all three exactly the same sentence."
+    ]
+  }
+}

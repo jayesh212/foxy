@@ -1,0 +1,220 @@
+{
+  "$schema": "../../schema/case.schema.json",
+  "id": "case-11",
+  "number": 11,
+  "slug": "the-mirror-selfie",
+  "title": "The Mirror Selfie",
+  "tier": "medium",
+  "difficulty": 2,
+  "minutes": 20,
+  "tagline": "A tiny painting vanished during a gallery party. One guest has a photo that proves he was across town. Or does it?",
+  "crime": "art theft",
+  "tags": ["photo analysis", "alibi", "timeline"],
+  "setting": { "place": "The Bellamy Gallery, Old Town", "when": "Friday, private viewing from 8:00 pm to 10:00 pm" },
+  "briefing": [
+    "The Bellamy Gallery's star piece is The Wren, a painting of a bird no bigger than a postcard, worth more than most houses. During Friday's private viewing it hung alone in the small Side Room.",
+    "Lucia, the gallery assistant, checked the Side Room at 9:00 pm and The Wren was there. At 9:20 pm a guest wandered in and found an empty hook.",
+    "The owner locked the front door at once and security searched everyone still inside. Nothing. So the painting left another way, or with someone who had already gone.",
+    "Four people had reason to want The Wren. One of them has a perfect alibi on his phone. Look at it closely."
+  ],
+  "rules": ["The Wren was taken between 9:00 pm and 9:20 pm.", "Everyone in the gallery at 9:20 pm was searched before leaving."],
+  "suspects": [
+    {
+      "id": "jasper",
+      "name": "Jasper Vane",
+      "role": "Art dealer",
+      "description": "Bid for The Wren at auction last year and lost to the gallery. Sharp suit, size 10 brogues.",
+      "motive": "He has a buyer abroad who still wants The Wren.",
+      "statement": "I left at quarter to nine and went to Café Orbit on the other side of town. Look, here's my selfie in the café mirror. The clock says ten past nine. I couldn't have been in two places."
+    },
+    {
+      "id": "lucia",
+      "name": "Lucia Ferro",
+      "role": "Gallery assistant",
+      "description": "Hung The Wren herself and checked on it every twenty minutes.",
+      "motive": "Underpaid, and knows exactly what The Wren is worth.",
+      "statement": "After my 9:00 check I went straight back to the drinks table. I was pouring wine until the alarm was raised."
+    },
+    {
+      "id": "omar",
+      "name": "Dr. Omar Rahe",
+      "role": "Gallery owner",
+      "description": "Bought The Wren at auction. Insured it for a great deal of money.",
+      "motive": "The insurance payout would clear the gallery's debts.",
+      "statement": "I was giving my speech in the main room from five past nine. Fifty people watched me."
+    },
+    {
+      "id": "penny",
+      "name": "Penny Shaw",
+      "role": "Guest, collector",
+      "description": "Arrived with an enormous tote bag. Asked twice about The Wren's insurance.",
+      "motive": "Collects bird paintings obsessively.",
+      "statement": "I was in the front row for Omar's speech. And yes, my bag is big. Search it."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev1",
+      "kind": "log",
+      "title": "Guest book and front door",
+      "source": "Front desk",
+      "body": ["Everyone signs in and out at the front desk."],
+      "table": {
+        "columns": ["Name", "Signed in", "Signed out"],
+        "rows": [
+          ["Jasper Vane", "8:05 pm", "8:45 pm"],
+          ["Penny Shaw", "8:20 pm", "Searched at 9:25 pm, then left"],
+          ["Lucia Ferro", "Staff", "Searched at 9:40 pm"],
+          ["Omar Rahe", "Owner", "Searched at 9:40 pm"]
+        ]
+      }
+    },
+    {
+      "id": "ev2",
+      "kind": "log",
+      "title": "Alarm panel",
+      "source": "Bellamy Gallery security system",
+      "body": [
+        "The alarm was set to 'party mode': sensors record but the siren stays silent.",
+        "Side Room window (opens onto Lantern Alley): OPENED 9:12:40 pm. CLOSED 9:14:05 pm.",
+        "No other windows or fire doors opened all evening."
+      ]
+    },
+    {
+      "id": "ev3",
+      "kind": "photo",
+      "title": "Jasper's 'alibi' selfie",
+      "source": "Sent by Jasper as a screenshot (the original photo's time data is not included)",
+      "body": [
+        "Jasper stands in front of a large wall mirror, holding his phone up. Behind him, a big round clock with no numbers, only a tick mark at the top for 12.",
+        "As it appears in the photo: the short hand points just past the 9 position and the long hand points at the 2 position. It looks like ten past nine.",
+        "Also behind him, a neon sign on the café wall that reads: TIBRO ÉFAC.",
+        "Through the café window: bright daylight and a blue sky."
+      ]
+    },
+    {
+      "id": "ev4",
+      "kind": "statement",
+      "title": "Café Orbit manager",
+      "source": "Interviewed Saturday",
+      "body": [
+        "“Our hours are 7 am to 6 pm, every day. We were locked up by ten past six on Friday.”",
+        "“That gentleman? He came in on Friday afternoon, had an espresso, took a lot of pictures in our mirror and left.”"
+      ]
+    },
+    {
+      "id": "ev5",
+      "kind": "object",
+      "title": "Jasper's wallet",
+      "source": "Searched at his flat on Saturday",
+      "body": ["A Café Orbit receipt: 1 espresso, Friday, 14:47.", "The cuffs of his trousers have fresh soil and a crushed red geranium petal caught in the turn-up."]
+    },
+    {
+      "id": "ev6",
+      "kind": "photo",
+      "title": "Below the Side Room window",
+      "source": "Lantern Alley, Saturday morning",
+      "body": ["A flower bed of red geraniums runs under the Side Room window. Several plants are trampled. Two deep prints of a size 10 smooth-soled shoe."]
+    },
+    {
+      "id": "ev7",
+      "kind": "log",
+      "title": "Main room camera and speech video",
+      "source": "Gallery camera and a guest's phone video",
+      "body": [
+        "Camera (time-stamped): Lucia Ferro is behind the drinks table pouring wine without a break from 9:01 to 9:21.",
+        "Video of the speech, 9:05 to 9:20: Omar speaks the entire time. Penny Shaw is visible in the front row throughout.",
+        "Penny's tote bag, searched at 9:25: a scarf, a catalogue, reading glasses, a hairbrush. No painting."
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "What tells you Jasper's photo shows things back to front?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "The neon sign is reversed: TIBRO ÉFAC is CAFÉ ORBIT backwards" },
+        { "id": "b", "text": "The clock has no numbers" },
+        { "id": "c", "text": "It's a screenshot" }
+      ],
+      "answer": "a",
+      "explanation": "A mirror swaps left and right, so writing appears backwards. TIBRO ÉFAC is CAFÉ ORBIT reflected, so the clock is reflected too.",
+      "evidence": ["ev3"]
+    },
+    {
+      "id": "q2",
+      "prompt": "What time did the café clock really show? (Use the 24-hour clock.)",
+      "kind": "time",
+      "answer": "14:50",
+      "accept": ["2:50", "02:50", "2:50 pm", "ten to three"],
+      "explanation": "Flip the hands left to right. The long hand at the 2 position becomes the 10 position: 50 minutes. The short hand just past 9 becomes just before 3. That's ten to three, and with daylight outside it's 2:50 pm, which matches the 14:47 espresso receipt.",
+      "evidence": ["ev3", "ev4", "ev5"]
+    },
+    {
+      "id": "q3",
+      "prompt": "How did the painting leave the gallery?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "In a guest's bag through the front door" },
+        { "id": "b", "text": "Through the Side Room window onto Lantern Alley, opened at 9:12 pm" },
+        { "id": "c", "text": "Through the fire door" }
+      ],
+      "answer": "b",
+      "explanation": "Everyone still inside at 9:20 was searched. The only opening all evening was the Side Room window, from 9:12:40 to 9:14:05.",
+      "evidence": ["ev2", "ev7"]
+    },
+    {
+      "id": "q4",
+      "prompt": "Who stole The Wren?",
+      "kind": "suspect",
+      "answer": "jasper",
+      "explanation": "Jasper's selfie was taken at 2:50 pm, so he has no alibi for 9:12. Lucia, Omar and Penny were all on camera. The geranium bed under the window was trampled by size 10 smooth soles, and Jasper's cuffs carry soil and a geranium petal.",
+      "evidence": ["ev3", "ev5", "ev6", "ev7"]
+    }
+  ],
+  "hints": [
+    { "question": "q1", "level": 1, "text": "Read everything written in the photo, letter by letter." },
+    { "question": "q1", "level": 2, "text": "Try reading that neon sign from right to left." },
+    { "question": "q1", "level": 3, "text": "If the writing is backwards, the photo is a reflection. And so is the clock." },
+    { "question": "q2", "level": 1, "text": "A mirror swaps left and right. It doesn't swap top and bottom." },
+    { "question": "q2", "level": 2, "text": "Imagine the clock face drawn on glass and turned over. Where does a hand at the 2 position end up? And a hand just past 9?" },
+    { "question": "q2", "level": 3, "text": "The 2 position mirrors to the 10 position, and 'just past 9' mirrors to 'just before 3'. Now check what the sky and the receipt say about morning or afternoon." },
+    { "question": "q3", "level": 1, "text": "Nobody inside at 9:20 had it. So how did it get out?" },
+    { "question": "q3", "level": 2, "text": "The alarm was silent, but it still recorded." },
+    { "question": "q3", "level": 3, "text": "One window opened for under two minutes, right in the middle of the window of time." },
+    { "question": "q4", "level": 1, "text": "Whose alibi has actually been proved?" },
+    { "question": "q4", "level": 2, "text": "Three suspects are on camera. What did the thief walk through outside?" },
+    { "question": "q4", "level": 3, "text": "Trampled geraniums under the window, a geranium petal in a trouser cuff. Whose cuff?" }
+  ],
+  "solution": {
+    "culprit": "jasper",
+    "summary": "Jasper Vane set up his alibi that afternoon: at 2:50 pm he took a selfie in Café Orbit's mirror, knowing the clock with no numbers would look like 9:10 when reflected. At the party he unlatched the Side Room window, signed out loudly at 8:45 and waited in Lantern Alley. At 9:12 he climbed in through the window, lifted The Wren and was gone ninety seconds later, trampling the geraniums. The reversed neon sign gave the mirror trick away.",
+    "chain": [
+      { "step": "The neon sign reads backwards, so the photo is a mirror image.", "evidence": ["ev3"] },
+      { "step": "Un-mirrored, the clock reads 2:50. Daylight, a café that closes at 6 pm and a 14:47 receipt all agree: the photo is from the afternoon.", "evidence": ["ev3", "ev4", "ev5"] },
+      { "step": "So Jasper has no alibi for the evening.", "evidence": ["ev1"] },
+      { "step": "The painting left through the Side Room window at 9:12. Everyone inside was searched.", "evidence": ["ev2", "ev7"] },
+      { "step": "Lucia, Omar and Penny were all on camera from 9:05 to 9:20.", "evidence": ["ev7"] },
+      { "step": "Size 10 prints in the trampled geraniums under the window, and geranium and soil in Jasper's cuffs.", "evidence": ["ev5", "ev6"] }
+    ],
+    "eliminations": [
+      { "suspect": "lucia", "why": "On the time-stamped camera at the drinks table from 9:01 to 9:21." },
+      { "suspect": "omar", "why": "Giving his speech on video from 9:05 to 9:20. The insurance motive is a red herring." },
+      { "suspect": "penny", "why": "In the front row on the speech video throughout, and her bag was searched." }
+    ]
+  },
+  "playtest": {
+    "solvePath": "Many solvers first notice that the café shuts at 6 pm and know Jasper is lying, then use the mirror question to work out exactly when the photo was taken. The neon sign is the clue that makes the mirror click.",
+    "pitfalls": [
+      "Playtesters weren't sure whether 'mirror' meant the time should be read upside down. The hint now says a mirror swaps left and right only.",
+      "One tester answered 9:50. The explanation walks through both hands separately."
+    ],
+    "revisions": [
+      "Gave the clock no numbers, because a numbered clock in a mirror shows backwards numerals and gives the trick away too easily.",
+      "Made the photo a screenshot so its hidden time data is missing. Otherwise a real detective would just check the metadata.",
+      "Put Lucia and Omar on camera so the insurance and staff motives don't leave two possible thieves.",
+      "Added the geranium bed for physical proof linking Jasper to the window."
+    ]
+  }
+}

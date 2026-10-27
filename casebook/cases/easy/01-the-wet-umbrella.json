@@ -1,0 +1,209 @@
+{
+  "$schema": "../../schema/case.schema.json",
+  "id": "case-01",
+  "number": 1,
+  "slug": "the-wet-umbrella",
+  "title": "The Wet Umbrella",
+  "tier": "easy",
+  "difficulty": 1,
+  "minutes": 10,
+  "tagline": "The tip jar vanished from a bakery counter in ten quiet minutes. Outside, it was pouring.",
+  "crime": "theft",
+  "tags": ["alibi", "weather", "timeline"],
+  "setting": { "place": "Rosie's Bakery, 12 Larkspur Lane", "when": "Tuesday afternoon, 3:00 pm to 4:00 pm" },
+  "briefing": [
+    "Rosie Hale keeps a big glass tip jar on the counter of her bakery. On Tuesday it held the whole week's tips for her two staff.",
+    "At 3:35 pm Rosie served a customer and saw the jar on the counter. She then spent several minutes in the storeroom at the back. When she came out at 3:45 pm, the jar was gone.",
+    "Ten minutes later a neighbour found the jar in the alley bin behind the bakery, empty.",
+    "Three people were in or near the bakery that afternoon. Read the evidence, find the statement that cannot be true, and name the thief."
+  ],
+  "rules": [
+    "The jar was taken between 3:35 pm and 3:45 pm.",
+    "The bakery has two doors: the front door onto Larkspur Lane and a side door onto the alley. Only the front door has a camera."
+  ],
+  "suspects": [
+    {
+      "id": "mia",
+      "name": "Mia Ortega",
+      "role": "Regular customer",
+      "description": "Comes in most afternoons with a book. Always sits at the window table beside the side door.",
+      "motive": "Told Rosie last week she was behind on her rent.",
+      "statement": "I got here at about three and sat at my table reading the whole time. I never went outside. I didn't see anyone touch the jar."
+    },
+    {
+      "id": "tom",
+      "name": "Tom Briggs",
+      "role": "Delivery driver",
+      "description": "Brings the bakery's milk and butter twice a week. Arrived soaked to the skin.",
+      "motive": "Complained loudly last month that Rosie paid his invoice late.",
+      "statement": "I was finishing a drop on Oak Street. I parked on Larkspur Lane a few minutes before quarter to four and ran in through the front door. I got drenched."
+    },
+    {
+      "id": "leo",
+      "name": "Leo Park",
+      "role": "Apprentice baker",
+      "description": "Works in the kitchen behind the counter. Half of the tips in the jar were his.",
+      "motive": "None obvious. Half the money was his own.",
+      "statement": "I was on the kitchen phone with the flour supplier for ages. I didn't come out front until Rosie shouted."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev1",
+      "kind": "statement",
+      "title": "Rosie Hale's account",
+      "source": "Owner",
+      "body": [
+        "“The first drops hit the window right as I served Mrs. Abara, about half past three. By the time she left it was bucketing down.”",
+        "“I saw the jar at 3:35 when I gave Mia her second coffee. Then I went to the storeroom to drag out two sacks of flour. I came back at 3:45 and the jar was gone.”",
+        "“Mia always puts her umbrella in the stand by the side door.”"
+      ]
+    },
+    {
+      "id": "ev2",
+      "kind": "log",
+      "title": "Front door camera log",
+      "source": "Doorbell camera, Larkspur Lane entrance",
+      "body": ["Every opening of the front door between 3:00 pm and 4:00 pm."],
+      "table": {
+        "columns": ["Time", "Direction", "Who", "Notes"],
+        "rows": [
+          ["3:02 pm", "In", "Mia Ortega", "Dry. Carrying a folded, strapped-up umbrella. Sky grey, no rain yet."],
+          ["3:31 pm", "Out", "Mrs. Abara", "Heavy rain visible on the pavement."],
+          ["3:52 pm", "In", "Tom Briggs", "Jacket soaked through."],
+          ["3:58 pm", "In", "Constable Reyes", "Responding to Rosie's call."]
+        ]
+      }
+    },
+    {
+      "id": "ev3",
+      "kind": "report",
+      "title": "Town weather station",
+      "source": "Larkspur Hill rain gauge",
+      "body": ["Rain began: 3:29 pm.", "Heavy, continuous rain from 3:30 pm until 4:20 pm."]
+    },
+    {
+      "id": "ev4",
+      "kind": "note",
+      "title": "Constable Reyes's notebook",
+      "source": "Written at 4:00 pm",
+      "body": [
+        "Umbrella stand by the side door: one umbrella only, green with white dots (owner: M. Ortega). Unstrapped and open to dry. Dripping, a puddle underneath.",
+        "M. Ortega: shoes damp, hem of her coat wet.",
+        "Side door: unlocked. It opens straight onto the alley, three steps from the bin where the jar was found.",
+        "Wet footprints on the tiles between the side door and the window table."
+      ]
+    },
+    {
+      "id": "ev5",
+      "kind": "log",
+      "title": "Delivery van GPS",
+      "source": "Briggs Dairy fleet tracker",
+      "body": ["Oak Street to Larkspur Lane is a 9-minute drive."],
+      "table": {
+        "columns": ["Time", "Event"],
+        "rows": [
+          ["3:20 pm", "Stopped, 41 Oak Street"],
+          ["3:39 pm", "Moving, leaving Oak Street"],
+          ["3:48 pm", "Parked, Larkspur Lane"]
+        ]
+      }
+    },
+    {
+      "id": "ev6",
+      "kind": "log",
+      "title": "Kitchen phone record",
+      "source": "Bakery landline (wall phone, fixed cord, kitchen)",
+      "body": [
+        "Call to Grainhouse Flour: 3:33 pm to 3:51 pm (18 minutes).",
+        "Grainhouse's sales rep: “Leo read me the batch numbers off every sack on the kitchen shelf. He was right there the whole call.”"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "Which suspect's statement cannot be true?",
+      "kind": "suspect",
+      "answer": "mia",
+      "explanation": "Mia says she never went outside. But she arrived at 3:02, before the rain, with a dry, strapped-up umbrella. At 4:00 it was open and dripping. The only way an umbrella gets wet is by being used in the rain, which started at 3:29.",
+      "evidence": ["ev2", "ev3", "ev4"]
+    },
+    {
+      "id": "q2",
+      "prompt": "Which clue proves that statement is false?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "Mia ordered a second coffee" },
+        { "id": "b", "text": "Mia's umbrella was dry when she arrived and dripping at 4:00" },
+        { "id": "c", "text": "Mia was behind on her rent" },
+        { "id": "d", "text": "Mia sits by the side door" }
+      ],
+      "answer": "b",
+      "explanation": "Rent is a motive and the table is an opportunity, but neither proves a lie. The umbrella does: it went out into the rain after 3:29 while Mia claims she never left her seat.",
+      "evidence": ["ev2", "ev4"]
+    },
+    {
+      "id": "q3",
+      "prompt": "How did the thief get the jar to the alley bin without the camera seeing?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "Through the front door, while the camera was off" },
+        { "id": "b", "text": "Through the side door, which opens onto the alley" },
+        { "id": "c", "text": "Through the kitchen window" }
+      ],
+      "answer": "b",
+      "explanation": "The camera log shows nobody leaving by the front door between 3:31 and 3:52. The side door has no camera and opens three steps from the bin.",
+      "evidence": ["ev2", "ev4"]
+    },
+    {
+      "id": "q4",
+      "prompt": "Who stole the tip jar?",
+      "kind": "suspect",
+      "answer": "mia",
+      "explanation": "Tom was still driving until 3:48, after the jar was gone. Leo was stuck on a fixed kitchen phone. Mia slipped out the side door with the jar under her umbrella, emptied it into her bag, dumped the jar in the bin and came back in.",
+      "evidence": ["ev4", "ev5", "ev6"]
+    }
+  ],
+  "hints": [
+    { "question": "q1", "level": 1, "text": "Start with the weather. When did the rain begin, and who was already inside by then?" },
+    { "question": "q1", "level": 2, "text": "Compare what the camera saw at 3:02 with what the constable found in the umbrella stand at 4:00." },
+    { "question": "q1", "level": 3, "text": "An umbrella that came in dry before the rain can only be dripping if somebody took it out into the rain. Whose umbrella is it?" },
+    { "question": "q2", "level": 1, "text": "A motive or a chance to do it isn't proof of a lie. Look for a clue that contradicts what was said." },
+    { "question": "q2", "level": 2, "text": "The statement says “I never went outside.” Which object says otherwise?" },
+    { "question": "q2", "level": 3, "text": "Folded and dry at 3:02, open and dripping at 4:00. Hmm, I wonder what that umbrella was up to." },
+    { "question": "q3", "level": 1, "text": "Count the doors in the rules." },
+    { "question": "q3", "level": 2, "text": "Check the camera log between 3:35 and 3:45. Did anyone use the front door?" },
+    { "question": "q3", "level": 3, "text": "The constable found wet footprints between one particular door and the window table. Which door?" },
+    { "question": "q4", "level": 1, "text": "Check each suspect against the window of 3:35 to 3:45." },
+    { "question": "q4", "level": 2, "text": "Where was Tom's van at 3:40? Could Leo carry a fixed wall phone into the alley?" },
+    { "question": "q4", "level": 3, "text": "Two suspects can't have done it. The third told you a lie about going outside." }
+  ],
+  "solution": {
+    "culprit": "mia",
+    "summary": "Mia Ortega arrived before the storm with a dry umbrella and swore she never left her seat. When Rosie went to the storeroom, Mia tipped the jar into her bag, stepped out of the side door under her umbrella, dropped the empty jar into the alley bin and came back in. The rain gave her away: her umbrella was dripping.",
+    "chain": [
+      { "step": "The jar disappeared between 3:35 and 3:45.", "evidence": ["ev1"] },
+      { "step": "Rain began at 3:29. Mia arrived at 3:02 with a dry, strapped-up umbrella.", "evidence": ["ev2", "ev3"] },
+      { "step": "At 4:00 her umbrella was open and dripping, her shoes and coat were wet, and wet prints led from the side door to her table. She had been outside in the rain.", "evidence": ["ev4"] },
+      { "step": "Nobody used the front door during the theft window, so the jar left through the side door, which opens next to the bin.", "evidence": ["ev2", "ev4"] },
+      { "step": "Tom's van only parked at 3:48, and Leo was on a fixed kitchen phone from 3:33 to 3:51. Only Mia could have done it, and she lied about going out.", "evidence": ["ev5", "ev6"] }
+    ],
+    "eliminations": [
+      { "suspect": "tom", "why": "His van left Oak Street at 3:39 and parked at 3:48, after the jar was gone. He came in at 3:52." },
+      { "suspect": "leo", "why": "He was on the fixed-cord kitchen phone from 3:33 to 3:51, reading out sack labels. Half the money was his anyway." }
+    ]
+  },
+  "playtest": {
+    "solvePath": "Most solvers read Rosie's line about the rain starting at half past three, then spot that Mia came in at 3:02. The constable's note about the dripping umbrella clicks it into place in under five minutes.",
+    "pitfalls": [
+      "Tom arrives soaked and looks guilty. His GPS was added so the soaking is explained and his timing is clearly wrong for the theft.",
+      "Some solvers asked whether Tom could have sneaked in the side door earlier. The GPS shows his van away until 3:48, which closes that door."
+    ],
+    "revisions": [
+      "First draft only said Mia 'had an umbrella'. Added the camera detail that it was folded, strapped and dry at 3:02, so the contradiction no longer relies on assumptions.",
+      "Changed Leo's alibi from a mobile to a fixed-cord wall phone with the rep confirming he read sack labels, so he can't have walked to the counter.",
+      "Added the wet footprints from the side door so the escape route is evidenced, not guessed."
+    ]
+  }
+}

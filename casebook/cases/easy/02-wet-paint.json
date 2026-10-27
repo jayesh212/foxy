@@ -1,0 +1,195 @@
+{
+  "$schema": "../../schema/case.schema.json",
+  "id": "case-02",
+  "number": 2,
+  "slug": "wet-paint",
+  "title": "Wet Paint",
+  "tier": "easy",
+  "difficulty": 1,
+  "minutes": 10,
+  "tagline": "A brass plaque vanished from the town fountain overnight. Somebody ignored the sign.",
+  "crime": "theft",
+  "tags": ["physical evidence", "footwear"],
+  "setting": { "place": "Market Square, Pennick", "when": "Thursday night into Friday morning" },
+  "briefing": [
+    "Pennick's Founders' Fountain has carried a brass plaque since 1902. It is fixed with four screws to the stone pillar, high above head height.",
+    "On Thursday evening a council painter gave the bench beside the fountain a fresh coat of green paint. On Friday at dawn the street sweeper found the four screws on the ground and the plaque gone.",
+    "Scrap brass sells well, and antique brass sells even better. Three people had reasons to be in the square. Find the one who left their mark."
+  ],
+  "rules": ["The plaque was stolen between 9:00 pm Thursday and 6:00 am Friday."],
+  "suspects": [
+    {
+      "id": "gus",
+      "name": "Gus Ferreira",
+      "role": "Council painter",
+      "description": "Painted the bench on Thursday evening. Green paint all over his overalls.",
+      "statement": "I painted the bench from six until half six, put my Wet Paint sign up and went home. I never touched the plaque."
+    },
+    {
+      "id": "dana",
+      "name": "Dana Whitlock",
+      "role": "Antiques dealer",
+      "description": "Runs the shop on the corner of the square. Offered the council money for the plaque last year and was turned down.",
+      "motive": "Wanted the plaque for her shop window.",
+      "statement": "Yes, I wanted that plaque. I asked politely and they said no. I had supper at the café and went home before nine."
+    },
+    {
+      "id": "corwin",
+      "name": "Corwin Mays",
+      "role": "Scrap-metal collector",
+      "description": "Drives a flatbed truck around town buying old metal. Tall, wears heavy work boots.",
+      "motive": "Brass fetches a high price at the scrapyard.",
+      "statement": "I wasn't anywhere near the fountain last night. If there's paint on my boots, it's from home."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev1",
+      "kind": "photo",
+      "title": "The fountain pillar",
+      "source": "Police photo, 6:30 am Friday",
+      "body": [
+        "Four empty screw holes. The bottom of the plaque's outline is 2.1 metres above the ground. Nobody can reach the top screws without standing on something.",
+        "The only thing within reach is the bench, pushed right up against the pillar."
+      ]
+    },
+    {
+      "id": "ev2",
+      "kind": "photo",
+      "title": "The bench seat",
+      "source": "Police photo, 6:30 am Friday",
+      "body": [
+        "The seat is made of four wooden slats with gaps between them.",
+        "Two boot prints are pressed into the paint on the seat, side by side, as if someone stood there facing the pillar.",
+        "Prints: size 11, a sole with straight ridges running across it."
+      ]
+    },
+    {
+      "id": "ev3",
+      "kind": "object",
+      "title": "Label on the paint tin",
+      "source": "Found in Gus's van",
+      "body": ["COUNCIL GREEN No. 4. Exterior wood paint.", "Touch dry: 12 hours. Do not sit, lean or stand on surfaces before then."]
+    },
+    {
+      "id": "ev4",
+      "kind": "note",
+      "title": "Witness: café owner",
+      "source": "Café Lune, Market Square",
+      "body": [
+        "“I locked up at nine o'clock sharp. The plaque was still on the fountain, I always look at it. Mrs. Whitlock paid for her supper at 8:40 and walked home up Hill Street.”"
+      ]
+    },
+    {
+      "id": "ev5",
+      "kind": "report",
+      "title": "Footwear examination",
+      "source": "Pennick police, Friday afternoon",
+      "body": ["Each suspect's footwear from Thursday night was collected and examined."],
+      "table": {
+        "columns": ["Suspect", "Shoes", "Size", "Sole", "Paint found"],
+        "rows": [
+          ["Gus Ferreira", "Canvas sneakers", "9", "Smooth rubber", "Small green specks on the toes and laces only. Soles clean."],
+          ["Dana Whitlock", "Leather heels", "6", "Smooth leather", "None."],
+          ["Corwin Mays", "Work boots", "11", "Straight ridges across the sole", "Four green stripes across each sole, evenly spaced. Matches Council Green No. 4 and was still slightly tacky."]
+        ]
+      }
+    },
+    {
+      "id": "ev6",
+      "kind": "photo",
+      "title": "Corwin's yard",
+      "source": "Police search, Friday",
+      "body": ["Corwin's shed door is painted dark brown. No green paint of any kind was found on his property.", "Under a tarp on the flatbed truck: a screwdriver and a sack of mixed brass."]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "What did the thief stand on to reach the plaque?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "A ladder" },
+        { "id": "b", "text": "The freshly painted bench" },
+        { "id": "c", "text": "The rim of the fountain" }
+      ],
+      "answer": "b",
+      "explanation": "The plaque was 2.1 m up, the bench was pushed against the pillar, and two boot prints were pressed into its wet paint facing the pillar.",
+      "evidence": ["ev1", "ev2"]
+    },
+    {
+      "id": "q2",
+      "prompt": "Gus has green paint on him. Why doesn't it match the thief?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "His paint is a different colour" },
+        { "id": "b", "text": "His paint is only on the tops of his shoes, his soles are clean, and he wears smooth size 9s" },
+        { "id": "c", "text": "He has an alibi" }
+      ],
+      "answer": "b",
+      "explanation": "Painting splashes paint downwards onto toes and laces. Standing on a wet bench presses paint onto the soles. Gus's soles are clean and the wrong size and pattern.",
+      "evidence": ["ev2", "ev5"]
+    },
+    {
+      "id": "q3",
+      "prompt": "What do the four stripes on Corwin's soles match?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "His brown shed door" },
+        { "id": "b", "text": "The four painted slats of the bench seat" },
+        { "id": "c", "text": "The four screws from the plaque" }
+      ],
+      "answer": "b",
+      "explanation": "Four evenly spaced stripes are what four wet slats leave on a sole. The paint is Council Green No. 4 and still tacky, so it is from Thursday night, not from his brown shed.",
+      "evidence": ["ev2", "ev5", "ev6"]
+    },
+    {
+      "id": "q4",
+      "prompt": "Who stole the plaque?",
+      "kind": "suspect",
+      "answer": "corwin",
+      "explanation": "Size 11 ridged boots match the prints on the bench, the slats left four fresh green stripes on his soles, and the brass was on his truck.",
+      "evidence": ["ev2", "ev5", "ev6"]
+    }
+  ],
+  "hints": [
+    { "question": "q1", "level": 1, "text": "How high is the plaque? Could you reach it from the ground?" },
+    { "question": "q1", "level": 2, "text": "Look at what's right beside the pillar, and what's printed on it." },
+    { "question": "q1", "level": 3, "text": "Boot prints in wet paint, facing the pillar. Someone used the bench as a step." },
+    { "question": "q2", "level": 1, "text": "Painting a bench and standing on a bench leave paint in different places." },
+    { "question": "q2", "level": 2, "text": "Check where the paint is on each pair of shoes in the footwear report, and the size." },
+    { "question": "q2", "level": 3, "text": "Drips land on your toes. Standing on wet paint marks your soles. Which does Gus have?" },
+    { "question": "q3", "level": 1, "text": "Count the stripes. Now count something on the bench." },
+    { "question": "q3", "level": 2, "text": "Corwin blames home. What colour is the only painted thing at his home?" },
+    { "question": "q3", "level": 3, "text": "Four wet slats, four stripes, and the paint is still tacky. That's last night's bench." },
+    { "question": "q4", "level": 1, "text": "Match the prints on the bench to the footwear report." },
+    { "question": "q4", "level": 2, "text": "Size 11 with straight ridges. Whose boots are those?" },
+    { "question": "q4", "level": 3, "text": "Only one suspect has fresh Council Green on the soles. Check the back of his truck too." }
+  ],
+  "solution": {
+    "culprit": "corwin",
+    "summary": "Corwin Mays came to the square after the café shut, climbed onto the bench to reach the plaque and unscrewed it. He ignored the Wet Paint sign, and the bench printed four green stripes across his soles while he stood there. The plaque was in a sack of brass on his truck.",
+    "chain": [
+      { "step": "The plaque is too high to reach without standing on the bench, which was still wet all night.", "evidence": ["ev1", "ev3"] },
+      { "step": "Size 11 prints with straight ridges were left in the paint on the seat.", "evidence": ["ev2"] },
+      { "step": "Only Corwin's boots are size 11 with straight ridges, and they carry four fresh green stripes that match the four slats and Council Green No. 4.", "evidence": ["ev5"] },
+      { "step": "He has no green paint at home, and brass and a screwdriver were on his truck.", "evidence": ["ev6"] }
+    ],
+    "eliminations": [
+      { "suspect": "gus", "why": "His paint specks are on top of his shoes from painting, his soles are clean, and his shoes are smooth size 9s." },
+      { "suspect": "dana", "why": "The plaque was still there at 9:00 pm after she'd left at 8:40, and her size 6 heels carry no paint." }
+    ]
+  },
+  "playtest": {
+    "solvePath": "Solvers usually jump to Gus because he's covered in paint, then the footwear table makes them compare where the paint is. The four stripes on four slats is the satisfying 'aha'.",
+    "pitfalls": [
+      "Gus is the obvious first guess. The footwear report deliberately separates paint on the tops from paint on the soles.",
+      "Dana has the strongest motive. The café owner's 9:00 pm sighting rules her out without needing a lie."
+    ],
+    "revisions": [
+      "Added the paint tin label so solvers know the paint was still wet all night, rather than assuming it.",
+      "Added the photo of Corwin's brown shed door so his 'it's from home' excuse can be tested.",
+      "Gave the plaque a measured height so it's clear the bench had to be stood on."
+    ]
+  }
+}

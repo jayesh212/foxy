@@ -1,0 +1,349 @@
+{
+  "number": 5,
+  "title": "The Smudged Note",
+  "tier": "warm",
+  "difficulty": 1,
+  "teaser": "Professor Nibbles, the class hamster, has been kidnapped. The ransom: no spelling test on Friday.",
+  "minutes": 12,
+  "draft": false,
+  "booklet": {
+    "briefing": "Room 4's hamster, Professor Nibbles, lives in a cage by the window. At morning break Ms. Lund checked on him, then went out to playground duty.\n\nWhen she came back at 10:50, the cage door was open and Nibbles was gone. Tucked into the bars was a note written in blue gel pen, smudged all over:\n\n“NIBBLES IS SAFE. CANCEL THE SPELLING TEST AND YOU WILL GET HIM BACK.”\n\nFour pupils had permission to stay in Room 4 at break to finish their art projects. One of them wrote that note.",
+    "rules": [
+      "Nibbles was taken between 10:30 and 10:50 am.",
+      "Only the four pupils below were allowed in Room 4 during break. The corridor monitor confirms no one else went in."
+    ],
+    "setting": {
+      "place": "Room 4, Brookside Primary School",
+      "when": "Morning break, 10:30 am to 10:50 am"
+    },
+    "suspects": [
+      {
+        "id": "ava",
+        "name": "Ava Lindqvist",
+        "role": "Pupil",
+        "description": "Top of the class at spelling. Feeds Nibbles on Mondays.",
+        "statement": "I was painting my volcano the whole time. I'd never hurt Nibbles. I actually like spelling tests."
+      },
+      {
+        "id": "ben",
+        "name": "Ben Achterberg",
+        "role": "Pupil",
+        "description": "Funny, restless and dreading Friday. Has a recorder lesson in the music room straight after break.",
+        "motive": "Got 3 out of 20 in the last spelling test.",
+        "statement": "I was gluing my collage. I didn't see anything. Maybe Nibbles escaped by himself?"
+      },
+      {
+        "id": "chloe",
+        "name": "Chloe Mensah",
+        "role": "Pupil",
+        "description": "Sits nearest the cage. Wants to be a vet.",
+        "motive": "Has said the cage is too small and Nibbles should be set free.",
+        "statement": "I was cutting out my butterflies. I only looked up when Ben dropped the glue pot."
+      },
+      {
+        "id": "dev",
+        "name": "Dev Raman",
+        "role": "Pupil",
+        "description": "Quiet, loves drawing. Felt poorly this morning.",
+        "motive": "Also hates spelling tests.",
+        "statement": "I felt sick so I went to the nurse almost straight away. I wasn't even in the room."
+      }
+    ],
+    "witnesses": [],
+    "evidence": [
+      {
+        "id": "1",
+        "title": "The ransom note",
+        "kind": "object",
+        "source": "Found in the cage bars",
+        "body": "Written in capitals with a blue gel pen from the class pen pot.\n\nEvery line is smeared. The smears run from left to right across letters that were already written.",
+        "lines": [
+          "Written in capitals with a blue gel pen from the class pen pot.",
+          "Every line is smeared. The smears run from left to right across letters that were already written."
+        ]
+      },
+      {
+        "id": "2",
+        "title": "What the art teacher says about the smudges",
+        "kind": "report",
+        "source": "Mr. Ocampo, art and handwriting",
+        "body": "“Gel ink stays wet for a few seconds. A right-handed writer's hand moves ahead of the words, so it doesn't touch what they've just written.”\n\n“A left-handed writer's hand slides over the words they've just written. That smears wet ink from left to right, exactly like this note.”\n\n“This note was written by a left-handed person.”",
+        "lines": [
+          "“Gel ink stays wet for a few seconds. A right-handed writer's hand moves ahead of the words, so it doesn't touch what they've just written.”",
+          "“A left-handed writer's hand slides over the words they've just written. That smears wet ink from left to right, exactly like this note.”",
+          "“This note was written by a left-handed person.”"
+        ]
+      },
+      {
+        "id": "3",
+        "title": "The 'Helping Hands' poster",
+        "kind": "photo",
+        "source": "Room 4 wall display",
+        "body": "Each pupil drew around the hand they write with and labelled it.\n\nPupil | Hand traced\nAva | Right\nBen | Left\nChloe | Right\nDev | Left",
+        "lines": [
+          "Each pupil drew around the hand they write with and labelled it."
+        ],
+        "table": {
+          "columns": [
+            "Pupil",
+            "Hand traced"
+          ],
+          "rows": [
+            [
+              "Ava",
+              "Right"
+            ],
+            [
+              "Ben",
+              "Left"
+            ],
+            [
+              "Chloe",
+              "Right"
+            ],
+            [
+              "Dev",
+              "Left"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "4",
+        "title": "School nurse's visitor book",
+        "kind": "log",
+        "source": "Nurse's office, ground floor",
+        "body": "Nurse: “Dev lay down on the bed the whole time. I gave him water and walked him back to class.”\n\nName | Arrived | Left | Reason\nDev Raman, Room 4 | 10:31 | 10:52 | Tummy ache",
+        "lines": [
+          "Nurse: “Dev lay down on the bed the whole time. I gave him water and walked him back to class.”"
+        ],
+        "table": {
+          "columns": [
+            "Name",
+            "Arrived",
+            "Left",
+            "Reason"
+          ],
+          "rows": [
+            [
+              "Dev Raman, Room 4",
+              "10:31",
+              "10:52",
+              "Tummy ache"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "5",
+        "title": "Where Nibbles was found",
+        "kind": "note",
+        "source": "Ms. Lund, 11:30 am",
+        "body": "During Ben's recorder lesson, the music teacher heard scratching from the drum cupboard. Nibbles was inside a lunchbox with air holes, munching a carrot stick.\n\nThe lunchbox has a name sticker: B. ACHTERBERG.",
+        "lines": [
+          "During Ben's recorder lesson, the music teacher heard scratching from the drum cupboard. Nibbles was inside a lunchbox with air holes, munching a carrot stick.",
+          "The lunchbox has a name sticker: B. ACHTERBERG."
+        ]
+      }
+    ],
+    "timeline": [],
+    "puzzles": [
+      {
+        "id": "q1",
+        "prompt": "What do the smudges tell you about the note's writer?",
+        "answer": "They are left-handed",
+        "hint": "Read Mr. Ocampo's note slowly. He's describing a habit of the writer's hand."
+      },
+      {
+        "id": "q2",
+        "prompt": "Which two pupils are left-handed?",
+        "answer": "Ben and Dev",
+        "hint": "Somewhere in Room 4, every pupil has shown which hand they write with."
+      },
+      {
+        "id": "q3",
+        "prompt": "Why can't Dev have written the note?",
+        "answer": "He was lying down in the nurse's office from 10:31 to 10:52",
+        "hint": "Dev says he wasn't even in the room. Can anyone back that up?"
+      },
+      {
+        "id": "q4",
+        "prompt": "Who took Professor Nibbles?",
+        "answer": "Ben Achterberg",
+        "hint": "Two pupils write left-handed. Only one was in Room 4."
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "prompt": "What do the smudges tell you about the note's writer?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "They were in a hurry"
+          },
+          {
+            "id": "b",
+            "text": "They are left-handed"
+          },
+          {
+            "id": "c",
+            "text": "They used a leaking pen"
+          }
+        ],
+        "answer": "b",
+        "explanation": "Smears running left to right across fresh words happen when the writing hand slides over what was just written, which is what a left-handed writer's hand does.",
+        "evidence": [
+          "1",
+          "2"
+        ],
+        "hints": [
+          "Read Mr. Ocampo's note slowly. He's describing a habit of the writer's hand.",
+          "Which hand slides over words that were just written?",
+          "Smudges left to right over fresh words: that's the hand of a left-hander."
+        ]
+      },
+      {
+        "id": "q2",
+        "prompt": "Which two pupils are left-handed?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "Ava and Chloe"
+          },
+          {
+            "id": "b",
+            "text": "Ben and Dev"
+          },
+          {
+            "id": "c",
+            "text": "Ben and Chloe"
+          }
+        ],
+        "answer": "b",
+        "explanation": "The Helping Hands poster: Ben and Dev traced their left hands.",
+        "evidence": [
+          "3"
+        ],
+        "hints": [
+          "Somewhere in Room 4, every pupil has shown which hand they write with.",
+          "Look at the poster on the wall.",
+          "Read down the Hand traced column and look for Left."
+        ]
+      },
+      {
+        "id": "q3",
+        "prompt": "Why can't Dev have written the note?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "He is right-handed"
+          },
+          {
+            "id": "b",
+            "text": "He was lying down in the nurse's office from 10:31 to 10:52"
+          },
+          {
+            "id": "c",
+            "text": "He likes spelling tests"
+          }
+        ],
+        "answer": "b",
+        "explanation": "The nurse's book and the nurse herself put Dev on the ground floor for the whole break.",
+        "evidence": [
+          "4"
+        ],
+        "hints": [
+          "Dev says he wasn't even in the room. Can anyone back that up?",
+          "The nurse keeps a visitor book.",
+          "10:31 to 10:52 is the whole of break, and he was lying down."
+        ]
+      },
+      {
+        "id": "q4",
+        "prompt": "Who took Professor Nibbles?",
+        "kind": "suspect",
+        "options": [
+          {
+            "id": "ava",
+            "text": "Ava Lindqvist"
+          },
+          {
+            "id": "ben",
+            "text": "Ben Achterberg"
+          },
+          {
+            "id": "chloe",
+            "text": "Chloe Mensah"
+          },
+          {
+            "id": "dev",
+            "text": "Dev Raman"
+          }
+        ],
+        "answer": "ben",
+        "explanation": "The writer is left-handed, Dev was at the nurse's, and Nibbles turned up in Ben's lunchbox in the music room where Ben went straight after break.",
+        "evidence": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "hints": [
+          "Two pupils write left-handed. Only one was in Room 4.",
+          "Where did Nibbles turn up, and who went there after break?",
+          "Check the name sticker on the lunchbox."
+        ]
+      }
+    ],
+    "solution": {
+      "culprit": "Ben Achterberg",
+      "culpritId": "ben",
+      "explanation": "Ben Achterberg popped Professor Nibbles into his own lunchbox, poked in a carrot stick and scribbled the ransom note left-handed in a hurry. His hand dragged across the wet gel ink and smudged every line. He hid Nibbles in the music room's drum cupboard, where he went straight after break. Nibbles is fine, and the spelling test is still on.",
+      "chain": [
+        {
+          "step": "The smudges show the note was written by a left-handed person.",
+          "evidence": [
+            "1",
+            "2"
+          ]
+        },
+        {
+          "step": "Ben and Dev are the left-handers.",
+          "evidence": [
+            "3"
+          ]
+        },
+        {
+          "step": "Dev was at the nurse's office for the whole break.",
+          "evidence": [
+            "4"
+          ]
+        },
+        {
+          "step": "Nibbles was found in Ben's lunchbox in the music room.",
+          "evidence": [
+            "5"
+          ]
+        }
+      ],
+      "eliminations": [
+        {
+          "name": "Ava Lindqvist",
+          "why": "Right-handed, so her writing wouldn't smudge like this."
+        },
+        {
+          "name": "Chloe Mensah",
+          "why": "Right-handed. She does have a motive about the cage, which makes her a nice red herring."
+        },
+        {
+          "name": "Dev Raman",
+          "why": "Lying down in the nurse's office from 10:31 to 10:52."
+        }
+      ]
+    }
+  }
+}

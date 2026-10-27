@@ -1,0 +1,401 @@
+{
+  "number": 14,
+  "title": "The Cookbook Code",
+  "tier": "tricky",
+  "difficulty": 3,
+  "teaser": "A sapphire brooch disappears from a tea room. Under the sugar bowl, a note made of nothing but numbers.",
+  "minutes": 25,
+  "draft": false,
+  "booklet": {
+    "briefing": "Mrs. Abernathy has taken tea at the Copper Kettle every Saturday for twenty years. On Saturday she wore her late husband's sapphire brooch pinned to her coat. When she put the coat back on at 3:30, the brooch was gone.\n\nThat evening the cleaner found a slip of green paper under the sugar bowl on table 6. It was covered in numbers, in groups of three.\n\nOn table 6, as on every table, sits a copy of the tea room's favourite book: Grandma Pell's Kitchen. Mr. Foxy thinks the two might be related.",
+    "rules": [
+      "The brooch was taken from Mrs. Abernathy's coat between 2:00 pm and 3:30 pm, while the coat hung on the stand by the door.",
+      "Each number group in the note is page.line.word in Grandma Pell's Kitchen."
+    ],
+    "setting": {
+      "place": "The Copper Kettle tea room",
+      "when": "Saturday afternoon"
+    },
+    "suspects": [
+      {
+        "id": "ollie",
+        "name": "Ollie Vance",
+        "role": "Waiter",
+        "description": "Ponytail, quick smile. Works the front of the tea room with an order pad in his apron.",
+        "motive": "Owes rent and has asked for extra shifts.",
+        "statement": "I took Mrs. A's coat and fetched it for her afterwards, same as every week. I never touched the brooch."
+      },
+      {
+        "id": "priya",
+        "name": "Priya Nair",
+        "role": "Waitress",
+        "description": "Works the back half of the room. Also carries an order pad.",
+        "motive": "Was told off by Mrs. Abernathy for slow service last month.",
+        "statement": "I served tables 7 to 12 all afternoon. I didn't go near the coat stand."
+      },
+      {
+        "id": "sam",
+        "name": "Sam Cole",
+        "role": "Baker",
+        "description": "Bakes the scones and cakes in the kitchen behind the counter.",
+        "motive": "Has been warned that the Copper Kettle may close and he'll lose his job.",
+        "statement": "I was in the kitchen all day. You can't leave scones in the oven."
+      },
+      {
+        "id": "leonard",
+        "name": "Leonard Pell-Kaplan",
+        "role": "Regular customer",
+        "description": "Grandson of the real Grandma Pell, who wrote the cookbook. Knows it by heart.",
+        "motive": "Collects antique jewellery.",
+        "statement": "I sat at table 2 by the window with the crossword. I've no need to steal brooches; I buy them."
+      }
+    ],
+    "witnesses": [],
+    "evidence": [
+      {
+        "id": "1",
+        "title": "The note under the sugar bowl",
+        "kind": "note",
+        "source": "Green order-pad sheet, numbered 0457 in the corner",
+        "body": "14.3.5   22.1.3   9.4.3   9.1.1   22.5.2   22.5.3   22.5.4\n\n22.3.5   14.5.8   22.3.8   22.3.9",
+        "lines": [
+          "14.3.5   22.1.3   9.4.3   9.1.1   22.5.2   22.5.3   22.5.4",
+          "22.3.5   14.5.8   22.3.8   22.3.9"
+        ]
+      },
+      {
+        "id": "2",
+        "title": "Grandma Pell's Kitchen, page 9: Scones",
+        "kind": "document",
+        "source": "The copy on table 6",
+        "body": "Line 1: The secret of a good scone is cold butter\n\nLine 2: and a light hand. Never twist the cutter.\n\nLine 3: Brush the tops with milk, not egg,\n\nLine 4: and bake in a hot oven until golden.\n\nLine 5: Keep them in a tin lined with a napkin.\n\nLine 6: They are best eaten on the day.",
+        "lines": [
+          "Line 1: The secret of a good scone is cold butter",
+          "Line 2: and a light hand. Never twist the cutter.",
+          "Line 3: Brush the tops with milk, not egg,",
+          "Line 4: and bake in a hot oven until golden.",
+          "Line 5: Keep them in a tin lined with a napkin.",
+          "Line 6: They are best eaten on the day."
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Grandma Pell's Kitchen, page 14: Lemon Curd",
+        "kind": "document",
+        "source": "The copy on table 6",
+        "body": "Line 1: Lemon curd keeps for two weeks in the cold.\n\nLine 2: Stir it slowly over gentle heat,\n\nLine 3: under no circumstances let it boil.\n\nLine 4: Strain into warm jars and seal at once.\n\nLine 5: Spread it thick on hot toast on Sunday.\n\nLine 6: A spoonful in the cake makes it sing.",
+        "lines": [
+          "Line 1: Lemon curd keeps for two weeks in the cold.",
+          "Line 2: Stir it slowly over gentle heat,",
+          "Line 3: under no circumstances let it boil.",
+          "Line 4: Strain into warm jars and seal at once.",
+          "Line 5: Spread it thick on hot toast on Sunday.",
+          "Line 6: A spoonful in the cake makes it sing."
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Grandma Pell's Kitchen, page 22: Afternoon Tea",
+        "kind": "document",
+        "source": "The copy on table 6",
+        "body": "Line 1: Afternoon tea is the best meal of the week.\n\nLine 2: Lay the table early and warm the pot.\n\nLine 3: Ask a friend to collect the cream at noon.\n\nLine 4: Cut the sandwiches into neat triangles.\n\nLine 5: The old blue teapot pours best of all.\n\nLine 6: Put the sugar bowl in the middle.",
+        "lines": [
+          "Line 1: Afternoon tea is the best meal of the week.",
+          "Line 2: Lay the table early and warm the pot.",
+          "Line 3: Ask a friend to collect the cream at noon.",
+          "Line 4: Cut the sandwiches into neat triangles.",
+          "Line 5: The old blue teapot pours best of all.",
+          "Line 6: Put the sugar bowl in the middle."
+        ]
+      },
+      {
+        "id": "5",
+        "title": "Order pads",
+        "kind": "document",
+        "source": "Manager's stock book",
+        "body": "Each waiter has their own numbered green pad and keeps it in their apron pocket all shift.\n\nOllie Vance: sheets 0401 to 0500. Priya Nair: sheets 0501 to 0600.\n\nSam and Mrs. Dunmore, the manager, don't use order pads.",
+        "lines": [
+          "Each waiter has their own numbered green pad and keeps it in their apron pocket all shift.",
+          "Ollie Vance: sheets 0401 to 0500. Priya Nair: sheets 0501 to 0600.",
+          "Sam and Mrs. Dunmore, the manager, don't use order pads."
+        ]
+      },
+      {
+        "id": "6",
+        "title": "Pencil rubbing",
+        "kind": "report",
+        "source": "Detective, Saturday night",
+        "body": "The top sheet left in Ollie's pad is 0458. Rubbing a pencil lightly over it shows the pressed-in marks of numbers written on the sheet above it: 14.3.5   22.1.3   9.4.3 ...\n\nPriya's pad: the top sheet is 0539. A rubbing shows the marks of an order for two cream teas, nothing else.",
+        "lines": [
+          "The top sheet left in Ollie's pad is 0458. Rubbing a pencil lightly over it shows the pressed-in marks of numbers written on the sheet above it: 14.3.5   22.1.3   9.4.3 ...",
+          "Priya's pad: the top sheet is 0539. A rubbing shows the marks of an order for two cream teas, nothing else."
+        ]
+      },
+      {
+        "id": "7",
+        "title": "Mrs. Abernathy",
+        "kind": "statement",
+        "source": "Victim",
+        "body": "“The young man with the ponytail took my coat at two and hung it up, and he brought it back to me at half past three. The brooch was definitely on it when I came in, I touched it at the door for luck.”\n\n“Mr. Pell-Kaplan didn't leave his window seat. He kept asking me for a seven-letter word for 'sneak thief'.”",
+        "lines": [
+          "“The young man with the ponytail took my coat at two and hung it up, and he brought it back to me at half past three. The brooch was definitely on it when I came in, I touched it at the door for luck.”",
+          "“Mr. Pell-Kaplan didn't leave his window seat. He kept asking me for a seven-letter word for 'sneak thief'.”"
+        ]
+      },
+      {
+        "id": "8",
+        "title": "The shelf behind the counter",
+        "kind": "photo",
+        "source": "Copper Kettle, Saturday night",
+        "body": "A row of old display teapots on a high shelf behind the counter. Only staff go behind the counter.\n\nOne of them, an old blue teapot, is never used for serving.",
+        "lines": [
+          "A row of old display teapots on a high shelf behind the counter. Only staff go behind the counter.",
+          "One of them, an old blue teapot, is never used for serving."
+        ]
+      }
+    ],
+    "timeline": [],
+    "puzzles": [
+      {
+        "id": "q1",
+        "prompt": "Decode the first group, 14.3.5. What word is it?",
+        "answer": "it",
+        "hint": "Three numbers: a page, a line on that page, then a word on that line."
+      },
+      {
+        "id": "q2",
+        "prompt": "Decode the whole note. Where is the brooch hidden?",
+        "answer": "In the old blue teapot",
+        "hint": "Decode one group at a time and write each word down."
+      },
+      {
+        "id": "q3",
+        "prompt": "Whose order pad did the note's sheet come from?",
+        "answer": "Ollie Vance",
+        "hint": "The note is written on a numbered sheet. Who owns which numbers?"
+      },
+      {
+        "id": "q4",
+        "prompt": "Leonard knows the cookbook by heart. Why isn't he the thief?",
+        "answer": "He never left his window seat, and the note was written on Ollie's pad and points to a shelf only staff can reach",
+        "hint": "Knowing the book is not the same as writing the note."
+      },
+      {
+        "id": "q5",
+        "prompt": "Who stole the brooch?",
+        "answer": "Ollie Vance",
+        "hint": "Who touched the coat, who can reach the shelf, and whose pad?"
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "prompt": "Decode the first group, 14.3.5. What word is it?",
+        "kind": "text",
+        "answer": "it",
+        "accept": [
+          "IT"
+        ],
+        "explanation": "Page 14, line 3: “under no circumstances let it boil.” Word 5 is “it”.",
+        "evidence": [
+          "1",
+          "3"
+        ],
+        "hints": [
+          "Three numbers: a page, a line on that page, then a word on that line.",
+          "Open page 14, go to line 3, and count words from the left.",
+          "“under no circumstances let it boil”. Count to five."
+        ]
+      },
+      {
+        "id": "q2",
+        "prompt": "Decode the whole note. Where is the brooch hidden?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "In the scone tin"
+          },
+          {
+            "id": "b",
+            "text": "In the old blue teapot"
+          },
+          {
+            "id": "c",
+            "text": "In the sugar bowl"
+          },
+          {
+            "id": "d",
+            "text": "In a jar of lemon curd"
+          }
+        ],
+        "answer": "b",
+        "explanation": "The note reads: IT IS IN THE OLD BLUE TEAPOT. COLLECT SUNDAY AT NOON. The brooch was in the blue display teapot on the shelf behind the counter.",
+        "evidence": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "8"
+        ],
+        "hints": [
+          "Decode one group at a time and write each word down.",
+          "The first four words are IT IS IN THE. Keep going on page 22, line 5.",
+          "Page 22, line 5, words 2 to 4: an old blue something."
+        ]
+      },
+      {
+        "id": "q3",
+        "prompt": "Whose order pad did the note's sheet come from?",
+        "kind": "suspect",
+        "options": [
+          {
+            "id": "ollie",
+            "text": "Ollie Vance"
+          },
+          {
+            "id": "priya",
+            "text": "Priya Nair"
+          },
+          {
+            "id": "sam",
+            "text": "Sam Cole"
+          },
+          {
+            "id": "leonard",
+            "text": "Leonard Pell-Kaplan"
+          }
+        ],
+        "answer": "ollie",
+        "explanation": "Sheet 0457 is in Ollie's range (0401 to 0500), and the next sheet in his pad, 0458, carries the pressed-in marks of the same numbers.",
+        "evidence": [
+          "1",
+          "5",
+          "6"
+        ],
+        "hints": [
+          "The note is written on a numbered sheet. Who owns which numbers?",
+          "When you press hard with a pen, the sheet underneath remembers.",
+          "0457 falls in one waiter's range, and their next sheet has the same numbers pressed into it."
+        ]
+      },
+      {
+        "id": "q4",
+        "prompt": "Leonard knows the cookbook by heart. Why isn't he the thief?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "He's rich"
+          },
+          {
+            "id": "b",
+            "text": "He never left his window seat, and the note was written on Ollie's pad and points to a shelf only staff can reach"
+          },
+          {
+            "id": "c",
+            "text": "He was doing a crossword"
+          }
+        ],
+        "answer": "b",
+        "explanation": "Knowing the book makes him look guilty, but anyone can read a copy on the table. Mrs. Abernathy watched him at his seat, and the note and the hiding place both lead behind the counter to Ollie.",
+        "evidence": [
+          "6",
+          "7",
+          "8"
+        ],
+        "hints": [
+          "Knowing the book is not the same as writing the note.",
+          "What does Mrs. Abernathy say about Leonard? Where's the hiding place?",
+          "He stayed at his seat, and customers don't go behind the counter."
+        ]
+      },
+      {
+        "id": "q5",
+        "prompt": "Who stole the brooch?",
+        "kind": "suspect",
+        "options": [
+          {
+            "id": "ollie",
+            "text": "Ollie Vance"
+          },
+          {
+            "id": "priya",
+            "text": "Priya Nair"
+          },
+          {
+            "id": "sam",
+            "text": "Sam Cole"
+          },
+          {
+            "id": "leonard",
+            "text": "Leonard Pell-Kaplan"
+          }
+        ],
+        "answer": "ollie",
+        "explanation": "Ollie handled the coat at 2:00 and 3:30, hid the brooch in the blue teapot behind the counter, and wrote the note on his own pad telling a friend to collect it on Sunday at noon.",
+        "evidence": [
+          "1",
+          "5",
+          "6",
+          "7",
+          "8"
+        ],
+        "hints": [
+          "Who touched the coat, who can reach the shelf, and whose pad?",
+          "Mrs. Abernathy describes the person who took her coat. Match the description.",
+          "Ponytail, coat duty, pad 0401 to 0500."
+        ]
+      }
+    ],
+    "solution": {
+      "culprit": "Ollie Vance",
+      "culpritId": "ollie",
+      "explanation": "Ollie Vance unpinned the brooch when he hung up Mrs. Abernathy's coat, then hid it inside the old blue display teapot behind the counter, where nobody ever looks. He coded a message for a friend using the cookbook on table 6: IT IS IN THE OLD BLUE TEAPOT. COLLECT SUNDAY AT NOON. He tore the sheet off his own order pad, and the sheet underneath kept the dents of every number.",
+      "chain": [
+        {
+          "step": "Decoded with page.line.word: IT IS IN THE OLD BLUE TEAPOT. COLLECT SUNDAY AT NOON.",
+          "evidence": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "step": "The blue teapot is on a staff-only shelf behind the counter, and the brooch was inside it.",
+          "evidence": [
+            "8"
+          ]
+        },
+        {
+          "step": "The note is sheet 0457 from Ollie's pad, and his sheet 0458 has the same numbers pressed into it.",
+          "evidence": [
+            "5",
+            "6"
+          ]
+        },
+        {
+          "step": "Ollie took the coat at 2:00 and brought it back at 3:30, so he had the chance to unpin the brooch.",
+          "evidence": [
+            "7"
+          ]
+        }
+      ],
+      "eliminations": [
+        {
+          "name": "Priya Nair",
+          "why": "Her pad runs 0501 to 0600 and its indents show only a cream tea order."
+        },
+        {
+          "name": "Sam Cole",
+          "why": "He has no order pad and never handled the coat."
+        },
+        {
+          "name": "Leonard Pell-Kaplan",
+          "why": "Never left his window seat, can't go behind the counter, and the note came from Ollie's pad."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,479 @@
+{
+  "number": 12,
+  "title": "The Ghost Orchid",
+  "tier": "tricky",
+  "difficulty": 3,
+  "teaser": "The rarest flower in the garden vanished from a locked glasshouse. The door remembers every card. The cards don't always remember their owners.",
+  "minutes": 25,
+  "draft": false,
+  "booklet": {
+    "briefing": "Hartwell's Ghost Orchid is a pale, leafless flower that blooms for only a few days a year. Collectors would pay a fortune for it.\n\nOn Thursday at 6:30 am the head of security found its pot empty in Glasshouse 3. The orchid had been cut cleanly out of its bark.\n\nGlasshouse 3 can only be opened with a staff key card, and every card swipe is logged. The garden's gates, car park and patrols keep logs too. The thief is hiding in plain sight, somewhere in these records.",
+    "rules": [
+      "Glasshouse 3's door locks itself and opens only with a staff key card. There is no other way in: the glass roof and walls are alarmed and nothing was triggered.",
+      "After 9:00 pm the only ways in or out of the garden are the car park barrier (vehicles) and the North Gate (pedestrians). Both are logged."
+    ],
+    "setting": {
+      "place": "Hartwell Botanic Garden, Glasshouse 3",
+      "when": "Wednesday night"
+    },
+    "suspects": [
+      {
+        "id": "iris",
+        "name": "Iris Tan",
+        "role": "Orchid keeper (card #114)",
+        "description": "Has cared for the Ghost Orchid for six years.",
+        "motive": "Was refused permission to take a cutting for her own research.",
+        "statement": "I did the evening misting from six to twenty to seven, then paperwork in my office, and drove home at about twenty to ten."
+      },
+      {
+        "id": "theo",
+        "name": "Theo Grant",
+        "role": "Propagation technician (card #207)",
+        "description": "Joined the garden a year ago. Cycles to work on sunny days, drives when it rains.",
+        "motive": "Bank statements show heavy debts. An email on his phone from an overseas 'plant enthusiast' asks about 'the pale one'.",
+        "statement": "I checked the seed trays in Glasshouse 3 from quarter past nine and drove straight home at half past. I was in bed by eleven."
+      },
+      {
+        "id": "malik",
+        "name": "Malik Haddad",
+        "role": "Laboratory technician (card #262)",
+        "description": "Works late running long experiments in the lab block.",
+        "motive": "Has complained that the Ghost Orchid gets more funding than his lab.",
+        "statement": "I was in the lab from half ten until quarter to twelve, watching a machine run. Then I drove home."
+      },
+      {
+        "id": "ezra",
+        "name": "Ezra Booth",
+        "role": "Night security guard",
+        "description": "Walks a patrol round all night, scanning checkpoint tags as he goes. Took the 10 pm photo of the orchid.",
+        "motive": "Has a master card and knows the site better than anyone.",
+        "statement": "I did my rounds like always. The orchid was there at ten. I've got the photo."
+      }
+    ],
+    "witnesses": [],
+    "evidence": [
+      {
+        "id": "1",
+        "title": "Glasshouse 3 door log",
+        "kind": "log",
+        "source": "Key card system, Wednesday evening",
+        "body": "Card numbers are listed in the staff register. Card #331 belongs to Florence Kerr, head gardener.\n\nTime | Card | Direction\n18:02 | #114 | In\n18:40 | #114 | Out\n21:15 | #207 | In\n21:31 | #207 | Out\n23:05 | #331 | In\n23:12 | #331 | Out",
+        "lines": [
+          "Card numbers are listed in the staff register. Card #331 belongs to Florence Kerr, head gardener."
+        ],
+        "table": {
+          "columns": [
+            "Time",
+            "Card",
+            "Direction"
+          ],
+          "rows": [
+            [
+              "18:02",
+              "#114",
+              "In"
+            ],
+            [
+              "18:40",
+              "#114",
+              "Out"
+            ],
+            [
+              "21:15",
+              "#207",
+              "In"
+            ],
+            [
+              "21:31",
+              "#207",
+              "Out"
+            ],
+            [
+              "23:05",
+              "#331",
+              "In"
+            ],
+            [
+              "23:12",
+              "#331",
+              "Out"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "2",
+        "title": "Patrol photo",
+        "kind": "photo",
+        "source": "Ezra's patrol app, auto-timestamped",
+        "body": "22:00. Glasshouse 3, through the glass from outside: the Ghost Orchid in flower in its pot.",
+        "lines": [
+          "22:00. Glasshouse 3, through the glass from outside: the Ghost Orchid in flower in its pot."
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Florence Kerr, head gardener",
+        "kind": "statement",
+        "source": "Phoned on Thursday",
+        "body": "“I lost my key card on Tuesday at lunch. I think I left it on my table in the staff canteen. I reported it to security that afternoon but it hadn't been cancelled yet.”\n\n“On Wednesday night I was at my sister's wedding in Dunmore, 200 kilometres away. I was dancing till one in the morning, there are a hundred photos.”",
+        "lines": [
+          "“I lost my key card on Tuesday at lunch. I think I left it on my table in the staff canteen. I reported it to security that afternoon but it hadn't been cancelled yet.”",
+          "“On Wednesday night I was at my sister's wedding in Dunmore, 200 kilometres away. I was dancing till one in the morning, there are a hundred photos.”"
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Car park barrier",
+        "kind": "log",
+        "source": "Number-plate camera, Wednesday",
+        "body": "No vehicles entered after 20:00.\n\nTime | Direction | Car registered to\n21:40 | Out | Iris Tan\n23:20 | Out | Theo Grant\n23:50 | Out | Malik Haddad",
+        "lines": [
+          "No vehicles entered after 20:00."
+        ],
+        "table": {
+          "columns": [
+            "Time",
+            "Direction",
+            "Car registered to"
+          ],
+          "rows": [
+            [
+              "21:40",
+              "Out",
+              "Iris Tan"
+            ],
+            [
+              "23:20",
+              "Out",
+              "Theo Grant"
+            ],
+            [
+              "23:50",
+              "Out",
+              "Malik Haddad"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "5",
+        "title": "North Gate (pedestrians)",
+        "kind": "log",
+        "source": "Turnstile log, Wednesday",
+        "body": "No pedestrian entries or exits between 21:00 and 06:00, apart from Ezra's patrol scan at 23:04.",
+        "lines": [
+          "No pedestrian entries or exits between 21:00 and 06:00, apart from Ezra's patrol scan at 23:04."
+        ]
+      },
+      {
+        "id": "6",
+        "title": "Ezra's patrol checkpoints",
+        "kind": "log",
+        "source": "Patrol tag scans",
+        "body": "Site map note: walking from the North Gate to Glasshouse 3 takes 8 minutes. Car Park B is next to the North Gate.\n\nTime | Checkpoint\n22:00 | Glasshouse 3\n22:31 | Lab block\n23:04 | North Gate\n23:10 | Car Park B\n23:41 | Glasshouse 1",
+        "lines": [
+          "Site map note: walking from the North Gate to Glasshouse 3 takes 8 minutes. Car Park B is next to the North Gate."
+        ],
+        "table": {
+          "columns": [
+            "Time",
+            "Checkpoint"
+          ],
+          "rows": [
+            [
+              "22:00",
+              "Glasshouse 3"
+            ],
+            [
+              "22:31",
+              "Lab block"
+            ],
+            [
+              "23:04",
+              "North Gate"
+            ],
+            [
+              "23:10",
+              "Car Park B"
+            ],
+            [
+              "23:41",
+              "Glasshouse 1"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "7",
+        "title": "Lab block door",
+        "kind": "log",
+        "source": "Key card system. The lab block has one door.",
+        "body": "Card #262 (Malik Haddad): In 22:30, Out 23:45. No other entries or exits.",
+        "lines": [
+          "Card #262 (Malik Haddad): In 22:30, Out 23:45. No other entries or exits."
+        ]
+      },
+      {
+        "id": "8",
+        "title": "Canteen cook",
+        "kind": "statement",
+        "source": "Staff canteen",
+        "body": "“Tuesday lunchtime, after Florence left, the young chap from propagation sat at her table. I saw him pick up a card off it and put it in his pocket. I thought he'd hand it in.”\n\nLost property book: nothing handed in on Tuesday or Wednesday.",
+        "lines": [
+          "“Tuesday lunchtime, after Florence left, the young chap from propagation sat at her table. I saw him pick up a card off it and put it in his pocket. I thought he'd hand it in.”",
+          "Lost property book: nothing handed in on Tuesday or Wednesday."
+        ]
+      }
+    ],
+    "timeline": [],
+    "puzzles": [
+      {
+        "id": "q1",
+        "prompt": "During which visit to Glasshouse 3 was the orchid stolen?",
+        "answer": "23:05 to 23:12 (card #331)",
+        "hint": "Find the last moment anyone saw the orchid."
+      },
+      {
+        "id": "q2",
+        "prompt": "Card #331 is Florence's. Why couldn't she have used it?",
+        "answer": "She lost it on Tuesday and was 200 km away at a wedding on Wednesday night",
+        "hint": "What does Florence say happened to her card?"
+      },
+      {
+        "id": "q3",
+        "prompt": "Which suspect lied about when they left the garden?",
+        "answer": "Theo Grant",
+        "hint": "Line up each suspect's 'I left at...' with a log."
+      },
+      {
+        "id": "q4",
+        "prompt": "Ezra was on site all night. Why couldn't he have used the card at 23:05?",
+        "answer": "He scanned the North Gate at 23:04, 8 minutes' walk from Glasshouse 3, and Car Park B at 23:10",
+        "hint": "Ezra scans tags as he walks. Where was he at 23:04?"
+      },
+      {
+        "id": "q5",
+        "prompt": "Who stole the Ghost Orchid?",
+        "answer": "Theo Grant",
+        "hint": "Who was still inside the garden at 23:05?"
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "prompt": "During which visit to Glasshouse 3 was the orchid stolen?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "18:02 to 18:40 (card #114)"
+          },
+          {
+            "id": "b",
+            "text": "21:15 to 21:31 (card #207)"
+          },
+          {
+            "id": "c",
+            "text": "23:05 to 23:12 (card #331)"
+          }
+        ],
+        "answer": "c",
+        "explanation": "The patrol photo shows the orchid still there at 22:00. The only entry after that is card #331 at 23:05.",
+        "evidence": [
+          "1",
+          "2"
+        ],
+        "hints": [
+          "Find the last moment anyone saw the orchid.",
+          "Ezra's 22:00 photo. Which swipes come after it?",
+          "Only one visit happens after 22:00."
+        ]
+      },
+      {
+        "id": "q2",
+        "prompt": "Card #331 is Florence's. Why couldn't she have used it?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "She lost it on Tuesday and was 200 km away at a wedding on Wednesday night"
+          },
+          {
+            "id": "b",
+            "text": "Her card had been cancelled"
+          },
+          {
+            "id": "c",
+            "text": "Head gardeners don't go into Glasshouse 3"
+          }
+        ],
+        "answer": "a",
+        "explanation": "She reported it lost on Tuesday (it wasn't cancelled yet, which is why it still worked) and has a hundred wedding photos as an alibi.",
+        "evidence": [
+          "3"
+        ],
+        "hints": [
+          "What does Florence say happened to her card?",
+          "Where was Florence on Wednesday night?",
+          "Somebody else was holding her card. Who could have picked it up?"
+        ]
+      },
+      {
+        "id": "q3",
+        "prompt": "Which suspect lied about when they left the garden?",
+        "kind": "suspect",
+        "options": [
+          {
+            "id": "iris",
+            "text": "Iris Tan"
+          },
+          {
+            "id": "theo",
+            "text": "Theo Grant"
+          },
+          {
+            "id": "malik",
+            "text": "Malik Haddad"
+          },
+          {
+            "id": "ezra",
+            "text": "Ezra Booth"
+          }
+        ],
+        "answer": "theo",
+        "explanation": "Theo says he drove home at 21:30, but the barrier camera shows his car leaving at 23:20, eight minutes after card #331 left Glasshouse 3.",
+        "evidence": [
+          "4"
+        ],
+        "hints": [
+          "Line up each suspect's 'I left at...' with a log.",
+          "The car park camera reads number plates.",
+          "Someone said half past nine. Their car says twenty past eleven."
+        ]
+      },
+      {
+        "id": "q4",
+        "prompt": "Ezra was on site all night. Why couldn't he have used the card at 23:05?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "He took the 22:00 photo, so he must be honest"
+          },
+          {
+            "id": "b",
+            "text": "He scanned the North Gate at 23:04, 8 minutes' walk from Glasshouse 3, and Car Park B at 23:10"
+          },
+          {
+            "id": "c",
+            "text": "His master card would have shown in the log"
+          }
+        ],
+        "answer": "b",
+        "explanation": "At 23:04 he was at the North Gate. The earliest he could reach Glasshouse 3 is 23:12, and at 23:10 he was scanning Car Park B beside the gate.",
+        "evidence": [
+          "6"
+        ],
+        "hints": [
+          "Ezra scans tags as he walks. Where was he at 23:04?",
+          "Check the walking time on the site map note.",
+          "23:04 + 8 minutes = 23:12, and the thief was already leaving then. Besides, he was at Car Park B at 23:10."
+        ]
+      },
+      {
+        "id": "q5",
+        "prompt": "Who stole the Ghost Orchid?",
+        "kind": "suspect",
+        "options": [
+          {
+            "id": "iris",
+            "text": "Iris Tan"
+          },
+          {
+            "id": "theo",
+            "text": "Theo Grant"
+          },
+          {
+            "id": "malik",
+            "text": "Malik Haddad"
+          },
+          {
+            "id": "ezra",
+            "text": "Ezra Booth"
+          }
+        ],
+        "answer": "theo",
+        "explanation": "Iris drove out at 21:40 and nobody came back in. Malik was inside the one-door lab from 22:30 to 23:45. Ezra was at the North Gate. Theo was still on site, lied about leaving, and was seen pocketing Florence's lost card.",
+        "evidence": [
+          "4",
+          "5",
+          "6",
+          "7",
+          "8"
+        ],
+        "hints": [
+          "Who was still inside the garden at 23:05?",
+          "Iris left at 21:40 and no one came back. Malik's lab has only one door.",
+          "One suspect is left on site, lied about it, and was seen pocketing a card in the canteen."
+        ]
+      }
+    ],
+    "solution": {
+      "culprit": "Theo Grant",
+      "culpritId": "theo",
+      "explanation": "On Tuesday Theo Grant pocketed Florence's lost key card in the canteen. On Wednesday he swiped into Glasshouse 3 with his own card at 21:15 to look normal, then hid in his car until the garden was quiet. At 23:05 he used Florence's card to get back in, cut out the Ghost Orchid and drove out at 23:20. He told the police he'd left at half past nine. The number-plate camera disagrees.",
+      "chain": [
+        {
+          "step": "The orchid was there at 22:00, and the only entry after that is card #331 at 23:05 to 23:12.",
+          "evidence": [
+            "1",
+            "2"
+          ]
+        },
+        {
+          "step": "Card #331 is Florence's, lost on Tuesday. She was 200 km away.",
+          "evidence": [
+            "3"
+          ]
+        },
+        {
+          "step": "No one entered the site after 20:00 or 21:00, so the thief was already inside.",
+          "evidence": [
+            "4",
+            "5"
+          ]
+        },
+        {
+          "step": "Iris left at 21:40. Malik was in the one-door lab. Ezra was at the North Gate at 23:04 and Car Park B at 23:10.",
+          "evidence": [
+            "4",
+            "6",
+            "7"
+          ]
+        },
+        {
+          "step": "Theo's car left at 23:20 although he claims 21:30, and he was seen pocketing Florence's card.",
+          "evidence": [
+            "4",
+            "8"
+          ]
+        }
+      ],
+      "eliminations": [
+        {
+          "name": "Iris Tan",
+          "why": "Her car left at 21:40, and no vehicle or pedestrian came back in."
+        },
+        {
+          "name": "Malik Haddad",
+          "why": "The lab block has one door and his card shows him inside from 22:30 to 23:45."
+        },
+        {
+          "name": "Ezra Booth",
+          "why": "Scanned the North Gate at 23:04 and Car Park B at 23:10. Glasshouse 3 is 8 minutes' walk away."
+        }
+      ]
+    }
+  }
+}

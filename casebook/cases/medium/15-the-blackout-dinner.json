@@ -1,0 +1,210 @@
+{
+  "$schema": "../../schema/case.schema.json",
+  "id": "case-15",
+  "number": 15,
+  "slug": "the-blackout-dinner",
+  "title": "The Blackout Dinner",
+  "tier": "medium",
+  "difficulty": 3,
+  "minutes": 25,
+  "tagline": "Ninety seconds of darkness at a round table for six. When the lights came back, the diamonds were gone.",
+  "crime": "theft",
+  "tags": ["logic grid", "seating", "reach"],
+  "setting": { "place": "Fenwick House, the round dining room", "when": "Saturday, during the soup course" },
+  "briefing": [
+    "Lady Vera Fenwick hosted five guests at her round dining table. During the soup she took off her diamond bracelet, which kept catching on the lace tablecloth, and laid it beside her plate.",
+    "At 8:40 pm a storm knocked out the power. For ninety seconds the room was pitch black. When the lights flickered back on, the bracelet was gone.",
+    "There were no place cards. Lady Vera just waved everyone to a chair, and in the fuss afterwards nobody could quite remember who had sat where. The waiter, though, remembers everything by seat number."
+  ],
+  "rules": [
+    "The six seats are numbered 1 to 6 going round the table. Seat 1 is next to seats 2 and 6, and directly opposite seat 4.",
+    "Each seating clue was confirmed by at least two people, so all seven clues are true.",
+    "Nobody who was in the room stood up or moved a chair during the blackout (see the waiter's statement)."
+  ],
+  "suspects": [
+    {
+      "id": "arthur",
+      "name": "Arthur Quaile",
+      "role": "Guest, Lady Vera's accountant",
+      "description": "Precise and nervous. Knows exactly how much the bracelet is insured for.",
+      "motive": "Has been quietly borrowing from Lady Vera's accounts.",
+      "statement": "I sat further round the table than Dorothea, that I remember. I didn't move an inch in the dark."
+    },
+    {
+      "id": "beatrix",
+      "name": "Beatrix Lyle",
+      "role": "Guest, Lady Vera's niece",
+      "description": "Will inherit the bracelet one day. Impatient for that day.",
+      "motive": "Has said she'd 'rather have it now than later'.",
+      "statement": "I sat right opposite Aunt Vera, I could see her across the candles. In the dark I could hear her breathing, nothing else."
+    },
+    {
+      "id": "cosmo",
+      "name": "Cosmo Haverly",
+      "role": "Guest, jewellery designer",
+      "description": "Charming and very well dressed. Admired the bracelet loudly before dinner.",
+      "motive": "His business is failing, according to a gossip column.",
+      "statement": "I was next to Vera, yes. I was holding my spoon the whole time, I promise."
+    },
+    {
+      "id": "dorothea",
+      "name": "Dorothea Mabey",
+      "role": "Guest, retired judge",
+      "description": "Sharp-eyed and sharp-tongued. Sat next to Beatrix.",
+      "motive": "None known. Lady Vera calls her 'the only honest person I know'.",
+      "statement": "I sat next to Beatrix. Arthur and Ellis were kept well apart, thank goodness; they loathe each other."
+    },
+    {
+      "id": "ellis",
+      "name": "Ellis Strand",
+      "role": "Guest, Lady Vera's neighbour",
+      "description": "Wants to buy part of the Fenwick garden. Lady Vera keeps refusing.",
+      "motive": "Hopes to pressure Lady Vera into selling.",
+      "statement": "I was in an even-numbered seat, the waiter told me so when he brought the soup. I was on the phone in the hall when the lights went out."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev1",
+      "kind": "note",
+      "title": "The seating clues",
+      "source": "Collected by the detective, each confirmed by two people",
+      "body": [
+        "1. Lady Vera sat in seat 1, by the window. She always does.",
+        "2. Beatrix sat directly opposite Lady Vera.",
+        "3. Arthur and Ellis did not sit next to each other.",
+        "4. Dorothea sat next to Beatrix.",
+        "5. Cosmo sat next to Lady Vera.",
+        "6. Ellis sat in an even-numbered seat.",
+        "7. Arthur's seat number was higher than Dorothea's."
+      ]
+    },
+    {
+      "id": "ev2",
+      "kind": "statement",
+      "title": "The waiter",
+      "source": "Jonas Pike, serving that night",
+      "body": [
+        "“I was standing by the sideboard when the lights went. That floor is old oak boards, every step creaks like a ship. Nobody stood up and nobody moved a chair, I'd have heard it.”",
+        "“The table is wide, two and a half metres across. You couldn't reach the middle, let alone the other side. Only the seats either side of Lady Vera could reach her plate.”",
+        "“One guest's mobile rang about a minute before the power cut and he went out to the hall to answer it, so his chair was empty during the blackout. He came back a minute after the lights came on. I serve by seat number, but in all the fuss I couldn't tell you which chair was his.”"
+      ]
+    },
+    {
+      "id": "ev3",
+      "kind": "statement",
+      "title": "The butler",
+      "source": "Mr. Hollis",
+      "body": ["“Mr. Strand was on the hall telephone when the lights went out. I was holding the torch for him. He went back in once the power returned.”"]
+    },
+    {
+      "id": "ev4",
+      "kind": "report",
+      "title": "Search of the dining room",
+      "source": "Police, 9:30 pm",
+      "body": [
+        "Every guest's pockets and bags were searched. Nothing.",
+        "The bread roll on the side plate at seat 6 had been pulled open and pressed back together. Inside it: the diamond bracelet."
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "Which seat was Beatrix in?",
+      "kind": "number",
+      "answer": "4",
+      "explanation": "Lady Vera is in seat 1, and the seat directly opposite seat 1 is seat 4.",
+      "evidence": ["ev1"]
+    },
+    {
+      "id": "q2",
+      "prompt": "Who sat in seat 6?",
+      "kind": "suspect",
+      "answer": "cosmo",
+      "explanation": "Cosmo is next to Vera, so he's in seat 2 or 6. Ellis is in an even seat that isn't 4, so also 2 or 6. That leaves Arthur and Dorothea in 3 and 5. Arthur's number is higher, so Arthur is 5 and Dorothea 3. Arthur (5) can't sit beside Ellis, so Ellis isn't in 6. Ellis is in 2, Cosmo in 6.",
+      "evidence": ["ev1"]
+    },
+    {
+      "id": "q3",
+      "prompt": "Which two seats could reach Lady Vera's plate?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "Seats 2 and 6" },
+        { "id": "b", "text": "Seats 3 and 5" },
+        { "id": "c", "text": "Seat 4 only" }
+      ],
+      "answer": "a",
+      "explanation": "The table is too wide to reach across and nobody stood up, so only the seats on either side of seat 1 could reach the bracelet.",
+      "evidence": ["ev2"]
+    },
+    {
+      "id": "q4",
+      "prompt": "Why can't Lady Vera's other neighbour, in seat 2, be the thief?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "Seat 2 was Ellis's, and he was out in the hall on the telephone during the blackout" },
+        { "id": "b", "text": "Seat 2 is too far from seat 1" },
+        { "id": "c", "text": "Ellis is left-handed" }
+      ],
+      "answer": "a",
+      "explanation": "The seating puts Ellis in seat 2. The waiter says one guest's chair was empty during the blackout, and the butler was holding a torch for Ellis in the hall.",
+      "evidence": ["ev2", "ev3"]
+    },
+    {
+      "id": "q5",
+      "prompt": "Who stole the bracelet?",
+      "kind": "suspect",
+      "answer": "cosmo",
+      "explanation": "Only seats 2 and 6 could reach the bracelet. Seat 2 was empty. Seat 6 was Cosmo, and the bracelet was hidden in the bread roll on the seat 6 side plate.",
+      "evidence": ["ev1", "ev2", "ev3", "ev4"]
+    }
+  ],
+  "hints": [
+    { "question": "q1", "level": 1, "text": "Draw a circle with six seats numbered 1 to 6 and put Lady Vera in seat 1." },
+    { "question": "q1", "level": 2, "text": "Count three seats round from seat 1." },
+    { "question": "q1", "level": 3, "text": "Opposite seat 1 is the seat halfway round." },
+    { "question": "q2", "level": 1, "text": "Start with the people who must be next to someone you've already placed." },
+    { "question": "q2", "level": 2, "text": "Cosmo and Ellis can only be in seats 2 and 6. So who's in 3 and 5?" },
+    { "question": "q2", "level": 3, "text": "Clue 7 puts Arthur in 5. Now use clue 3: can Ellis sit in 6, next to seat 5?" },
+    { "question": "q3", "level": 1, "text": "What did the waiter say about reaching across the table?" },
+    { "question": "q3", "level": 2, "text": "If nobody stood up, the thief reached from their own chair." },
+    { "question": "q3", "level": 3, "text": "Only Vera's two neighbours were close enough." },
+    { "question": "q4", "level": 1, "text": "Who sat in seat 2, and where were they at 8:40?" },
+    { "question": "q4", "level": 2, "text": "Check the waiter's last line and the butler's statement." },
+    { "question": "q4", "level": 3, "text": "Seat 2 is Ellis's. Where does the butler say Ellis was? You can't steal from an empty chair." },
+    { "question": "q5", "level": 1, "text": "One neighbour was out of the room. Who's left?" },
+    { "question": "q5", "level": 2, "text": "Where did the police find the bracelet, by seat number?" },
+    { "question": "q5", "level": 3, "text": "The roll on seat 6's plate. Who sat in seat 6?" }
+  ],
+  "solution": {
+    "culprit": "cosmo",
+    "summary": "Cosmo Haverly, sitting in seat 6 beside Lady Vera, slid the bracelet off the tablecloth the moment the lights went out. He couldn't risk it in his pocket, so he pushed it into his bread roll and pressed it shut, planning to collect it later. With no place cards, he expected nobody could prove where he'd sat. The seating clues do exactly that.",
+    "chain": [
+      { "step": "The clues fix the seating: 1 Vera, 2 Ellis, 3 Dorothea, 4 Beatrix, 5 Arthur, 6 Cosmo.", "evidence": ["ev1"] },
+      { "step": "Only seats 2 and 6 could reach Vera's plate, because nobody stood and the table is too wide.", "evidence": ["ev2"] },
+      { "step": "Seat 2 is Ellis's, and his chair was empty: he was on the hall phone with the butler.", "evidence": ["ev1", "ev2", "ev3"] },
+      { "step": "The bracelet was inside the bread roll at seat 6, Cosmo's seat.", "evidence": ["ev4"] }
+    ],
+    "eliminations": [
+      { "suspect": "arthur", "why": "Seat 5, too far from seat 1 to reach without standing, and nobody stood." },
+      { "suspect": "beatrix", "why": "Seat 4, directly opposite, two and a half metres away." },
+      { "suspect": "dorothea", "why": "Seat 3, out of reach." },
+      { "suspect": "ellis", "why": "He sat in seat 2, next to Vera, but his chair was empty: he was on the hall telephone with the butler holding a torch for him." }
+    ]
+  },
+  "playtest": {
+    "solvePath": "A classic logic grid in disguise. Drawing the table makes it a five-minute puzzle; solvers who skip the drawing take three times as long. The empty seat and the bread roll are a satisfying double finish.",
+    "pitfalls": [
+      "With only six clues there were two possible seatings. Clue 7 (Arthur's number is higher than Dorothea's) was added to make it unique.",
+      "Players were confused by 'left' and 'right' at a round table. All clues now use 'next to', 'opposite' and seat numbers only."
+    ],
+    "revisions": [
+      "Verified by brute force (tools/solvers/15_seating.py): exactly one seating fits the seven clues.",
+      "Added the rule that every clue was confirmed by two people, so the thief can't have lied about seats.",
+      "Added the waiter's creaking floor and table width so 'only the neighbours could reach' is evidence, not assumption.",
+      "In the first draft the waiter said seat 2 was empty, which with the butler's statement gave away Ellis's seat and skipped the logic. Now the waiter can't say which chair was empty."
+    ],
+    "verifier": "tools/solvers/15_seating.py"
+  }
+}

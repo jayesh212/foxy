@@ -1,0 +1,248 @@
+{
+  "$schema": "../../schema/case.schema.json",
+  "id": "case-28",
+  "number": 28,
+  "slug": "inside-job",
+  "title": "Inside Job",
+  "tier": "hard",
+  "difficulty": 4,
+  "minutes": 35,
+  "tagline": "A smashed window, muddy footprints, an open safe and two missing paintings. A perfect burglary. A little too perfect.",
+  "crime": "insurance fraud",
+  "tags": ["staged scene", "physical evidence", "timeline"],
+  "setting": { "place": "Blackwood Grange, the study", "when": "Discovered Sunday morning" },
+  "briefing": [
+    "On Sunday morning Conrad Blackwood rang the police in a state. Overnight, burglars had smashed the study window, opened his safe and taken two small paintings worth a fortune, both insured last month for even more.",
+    "The study looks exactly like a burglary scene in a film: broken glass, muddy prints across the carpet, the safe door hanging open, two bare hooks on the wall.",
+    "Conrad has already told the police who he thinks did it: the window cleaner, who was up a ladder outside that very window on Friday. Mr. Foxy asks you to read the scene for yourself. Scenes can lie as well as people."
+  ],
+  "rules": [
+    "The safe has a combination lock and was opened without force.",
+    "Each fact in the evidence was checked by the police scientists."
+  ],
+  "suspects": [
+    {
+      "id": "conrad",
+      "name": "Conrad Blackwood",
+      "role": "Owner of Blackwood Grange",
+      "description": "Collector, host and, according to his bank, very short of money.",
+      "motive": "Raised the insurance on both paintings last month.",
+      "statement": "I went to bed at eleven, slept through it all, and found the mess at seven. It's obviously that window cleaner."
+    },
+    {
+      "id": "lydia",
+      "name": "Lydia Blackwood",
+      "role": "Conrad's wife",
+      "description": "The only other person who knows the safe combination. Has been in Lisbon visiting her mother.",
+      "motive": "Would share in any insurance money.",
+      "statement": "I've been in Portugal for three weeks. I flew home this morning when Conrad called."
+    },
+    {
+      "id": "sid",
+      "name": "Sid Mott",
+      "role": "Window cleaner",
+      "description": "Cleaned the study window on Friday from a ladder. Has a conviction for shoplifting from twenty years ago.",
+      "motive": "Conrad hasn't paid him for three months.",
+      "statement": "I cleaned the windows Friday afternoon like I do every month. I wouldn't know a valuable painting if it bit me."
+    },
+    {
+      "id": "pierce",
+      "name": "Pierce Moreland",
+      "role": "Houseman",
+      "description": "Lives in the flat over the garage. Locks up every night.",
+      "motive": "Has been told his job may go to save money.",
+      "statement": "I locked up at half ten, checked the study window myself, and heard nothing in the night. The garage flat is a long way from the study."
+    },
+    {
+      "id": "freya",
+      "name": "Freya Blackwood",
+      "role": "Conrad's daughter",
+      "description": "Studying art in Edinburgh. Visited for lunch a fortnight ago.",
+      "motive": "Has argued with her father about selling the family's paintings.",
+      "statement": "I was in Edinburgh all weekend. I haven't been home since lunch two Sundays ago."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev1",
+      "kind": "report",
+      "title": "The broken window",
+      "source": "Police scientist",
+      "body": [
+        "Most of the broken glass is lying outside, on the flower bed under the window. Only a few small pieces are on the study carpet.",
+        "Note from the scientist: “When a pane is hit, most of the glass flies away from the blow, in the direction it was struck.”"
+      ]
+    },
+    {
+      "id": "ev2",
+      "kind": "report",
+      "title": "The muddy footprints",
+      "source": "Police scientist",
+      "body": [
+        "Prints lead from the window across the carpet to the safe. None lead back to the window.",
+        "The 'mud' is not garden soil. It is peat-based potting compost with tiny white grains of perlite in it.",
+        "The flower bed under the window is ordinary clay soil, and it has no footprints in it at all.",
+        "The only potting compost at Blackwood Grange is in the conservatory, next to the study."
+      ]
+    },
+    {
+      "id": "ev3",
+      "kind": "photo",
+      "title": "The wall where the paintings hung",
+      "source": "Police photo, Sunday",
+      "body": [
+        "Two rectangles of brighter wallpaper where the frames shaded it from the sun for years.",
+        "Inside each rectangle lies a thin layer of dust, about the same as on the skirting board below.",
+        "The cleaner's rota: “Study: dust walls, frames and skirting every other Thursday.” Last dusting: Thursday, ten days before the 'burglary'."
+      ]
+    },
+    {
+      "id": "ev4",
+      "kind": "document",
+      "title": "Travel records",
+      "source": "Airline and police checks",
+      "body": [
+        "Lydia Blackwood: flew London to Lisbon 21 days ago. Flew Lisbon to London this morning, after the burglary.",
+        "Freya Blackwood: Edinburgh college swipe card used Saturday and Sunday. Last visit to Blackwood Grange was Sunday lunch, 14 days ago."
+      ]
+    },
+    {
+      "id": "ev5",
+      "kind": "document",
+      "title": "Storage unit rental",
+      "source": "Brightstore self-storage, found in Conrad's desk",
+      "body": ["Unit 41, rented 9 days ago by C. Blackwood. Paid in cash for three months.", "Police opened Unit 41: two small paintings wrapped in blankets, matching the insurance photographs."]
+    },
+    {
+      "id": "ev6",
+      "kind": "statement",
+      "title": "Pierce on the night",
+      "source": "Houseman",
+      "body": ["“When I checked the study at half ten on Saturday, the window was whole and latched. The paintings? Funny, I couldn't tell you. Mr. Blackwood keeps the study curtains drawn these days, and the lamp off.”"]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "Which side was the window broken from?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "From outside, by a burglar" },
+        { "id": "b", "text": "From inside the study" },
+        { "id": "c", "text": "We can't tell" }
+      ],
+      "answer": "b",
+      "explanation": "Glass flies away from the blow. Most of it is outside on the flower bed, so the pane was struck from inside the room.",
+      "evidence": ["ev1"]
+    },
+    {
+      "id": "q2",
+      "prompt": "What does the 'mud' on the carpet show?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "The burglar came from the garden" },
+        { "id": "b", "text": "The prints were made with potting compost from the conservatory, inside the house, and nobody walked through the flower bed" },
+        { "id": "c", "text": "The window cleaner's boots were dirty" }
+      ],
+      "answer": "b",
+      "explanation": "The prints are potting compost, only found in the conservatory, and they go one way only. The clay flower bed under the window has no prints. No one came in through that window.",
+      "evidence": ["ev2"]
+    },
+    {
+      "id": "q3",
+      "prompt": "Roughly when were the paintings really taken off the wall?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "On Saturday night" },
+        { "id": "b", "text": "More than a week before: the dust inside the bare patches matches ten days' dust on the skirting" },
+        { "id": "c", "text": "Years ago" }
+      ],
+      "answer": "b",
+      "explanation": "Paintings taken down on Saturday night would leave clean, dust-free rectangles. These have the same dust as the skirting, which was last dusted ten days ago, so they were already gone around then. Curtains drawn and the lamp off kept anyone from noticing.",
+      "evidence": ["ev3", "ev6"]
+    },
+    {
+      "id": "q4",
+      "prompt": "Who could open the safe without force?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "Only Conrad and Lydia know the combination" },
+        { "id": "b", "text": "Anyone with a screwdriver" },
+        { "id": "c", "text": "Sid, from the window" }
+      ],
+      "answer": "a",
+      "explanation": "The safe was opened by combination, which only Conrad and Lydia know.",
+      "evidence": ["ev4"]
+    },
+    {
+      "id": "q5",
+      "prompt": "Why couldn't Lydia have done it?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "She was in Lisbon for the whole three weeks, both when the paintings came down and on the night of the 'burglary'" },
+        { "id": "b", "text": "She loves the paintings" },
+        { "id": "c", "text": "She doesn't know the combination" }
+      ],
+      "answer": "a",
+      "explanation": "She flew out 21 days ago and back this morning. The paintings came down about ten days ago, and the scene was staged on Saturday night.",
+      "evidence": ["ev3", "ev4"]
+    },
+    {
+      "id": "q6",
+      "prompt": "Who staged the burglary?",
+      "kind": "suspect",
+      "answer": "conrad",
+      "explanation": "The glass, the compost and the dust all say the 'burglary' was staged from inside, and the paintings left more than a week earlier. Only Conrad and Lydia could open the safe, and Lydia was abroad. Conrad rented a storage unit nine days ago, and the paintings were in it.",
+      "evidence": ["ev1", "ev2", "ev3", "ev4", "ev5"]
+    }
+  ],
+  "hints": [
+    { "question": "q1", "level": 1, "text": "Where is most of the broken glass?" },
+    { "question": "q1", "level": 2, "text": "Read the scientist's note about which way glass flies." },
+    { "question": "q1", "level": 3, "text": "Glass outside means the blow came from inside." },
+    { "question": "q2", "level": 1, "text": "Is the 'mud' the same stuff as the soil under the window?" },
+    { "question": "q2", "level": 2, "text": "Where at Blackwood Grange can you find potting compost? And which way do the prints go?" },
+    { "question": "q2", "level": 3, "text": "Compost from indoors, prints that only go one way, a flower bed with no prints. Nobody came through the window." },
+    { "question": "q3", "level": 1, "text": "Look inside the bright rectangles on the wall." },
+    { "question": "q3", "level": 2, "text": "How much dust gathers in a fortnight, and when was the wall last dusted?" },
+    { "question": "q3", "level": 3, "text": "Same dust as the skirting means the paintings were gone soon after the last dusting, ten days ago." },
+    { "question": "q4", "level": 1, "text": "The safe wasn't forced." },
+    { "question": "q4", "level": 2, "text": "Who knows the combination?" },
+    { "question": "q4", "level": 3, "text": "Two people. One is his wife." },
+    { "question": "q5", "level": 1, "text": "When did Lydia leave, and when did she return?" },
+    { "question": "q5", "level": 2, "text": "Compare those dates with when the paintings came down." },
+    { "question": "q5", "level": 3, "text": "She was in Lisbon both times." },
+    { "question": "q6", "level": 1, "text": "Who gains, who could open the safe, and who was home?" },
+    { "question": "q6", "level": 2, "text": "Look in his desk." },
+    { "question": "q6", "level": 3, "text": "A storage unit rented nine days ago, paid in cash." }
+  ],
+  "solution": {
+    "culprit": "conrad",
+    "summary": "Conrad Blackwood, deep in debt, raised the insurance on two paintings, took them down about ten days ago and hid them in a storage unit. He kept the study curtains drawn so nobody noticed the bare wall. On Saturday night he staged a break-in: he smashed the window from the inside, opened his own safe, and tramped compost from the conservatory across the carpet to look like garden mud. Then he blamed the window cleaner. The scene was built to fool a glance, and it fails a careful look.",
+    "chain": [
+      { "step": "The window was broken from inside.", "evidence": ["ev1"] },
+      { "step": "The prints are indoor compost, go one way only, and nobody stepped in the flower bed.", "evidence": ["ev2"] },
+      { "step": "The paintings were removed more than a week before the 'burglary'.", "evidence": ["ev3", "ev6"] },
+      { "step": "Only Conrad and Lydia know the safe combination, and Lydia was in Lisbon throughout.", "evidence": ["ev4"] },
+      { "step": "Conrad rented a storage unit nine days ago, and the paintings are in it.", "evidence": ["ev5"] }
+    ],
+    "eliminations": [
+      { "suspect": "lydia", "why": "In Lisbon from 21 days before until the morning after, covering both the removal of the paintings and the staged night." },
+      { "suspect": "sid", "why": "Nobody came in through the window: the glass flew outwards, the flower bed has no prints, and he doesn't know the safe combination." },
+      { "suspect": "pierce", "why": "Doesn't know the combination, and the storage unit is in Conrad's name." },
+      { "suspect": "freya", "why": "In Edinburgh all weekend by her college swipe card, and doesn't know the combination." }
+    ]
+  },
+  "playtest": {
+    "solvePath": "Players arrive suspecting Sid, as Conrad wants. The glass, then the compost, flip the case to 'inside job', and the dust gives the satisfying twist that the paintings were long gone. About 30 minutes.",
+    "pitfalls": [
+      "Some players didn't know which way glass falls. The scientist's note now explains it.",
+      "Players argued Pierce could have learned the combination. Even so, the storage unit is in Conrad's name; the q4 options keep the focus on who officially knows it."
+    ],
+    "revisions": [
+      "Added the cleaner's rota so the dust can be turned into a date.",
+      "Added Pierce's comment about the drawn curtains, explaining why nobody noticed the missing paintings for ten days.",
+      "Gave Lydia three weeks away (not one) so she's cleared for both stages of the fraud."
+    ]
+  }
+}

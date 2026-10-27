@@ -1,0 +1,456 @@
+{
+  "number": 21,
+  "title": "The Wrong Hour",
+  "tier": "hard",
+  "difficulty": 4,
+  "teaser": "The papers say the vault was opened at 11:38 pm. The police built every alibi around that time. They were an hour out.",
+  "minutes": 35,
+  "draft": false,
+  "booklet": {
+    "briefing": "The Winter Swan is a jewelled egg made for a Russian empress, due to be auctioned on Monday. On Saturday morning its velvet stand in the basement vault of Halvorsen & Wilde was empty.\n\nThe vault's computer log shows the door code was entered at 23:38 and the door shut again at 23:46. The newspapers printed it at once: VAULT RAIDED AT 11:38 PM.\n\nThe door code is shared by five senior staff. The police checked everybody's alibi for 11:38 pm and arrested the two people who had none. Mr. Foxy has asked to see the vault log itself, including the line at the top that nobody read.",
+    "rules": [
+      "The Winter Swan was taken while the vault door was open, as recorded in the vault log.",
+      "Only the five suspects know the door code. The vault door can only be opened in person, from the corridor outside it."
+    ],
+    "setting": {
+      "place": "Halvorsen & Wilde auction house, Ryder Street, London",
+      "when": "Friday 18th July, night"
+    },
+    "suspects": [
+      {
+        "id": "celeste",
+        "name": "Celeste Moreau",
+        "role": "Head of jewellery",
+        "description": "Catalogued the Winter Swan herself. Spent the evening at a charity gala in a silver sequinned gown.",
+        "motive": "A private buyer offered her a fortune if the Swan 'never reached the auction'.",
+        "statement": "I was at the Savoy gala from seven until a quarter past midnight. Two hundred people saw me. Then I took a taxi home to Hampstead."
+      },
+      {
+        "id": "darnell",
+        "name": "Darnell Achebe",
+        "role": "Head of security",
+        "description": "Designed the vault system. Arrested on Saturday because he had no alibi for 11:38 pm.",
+        "motive": "Knows the vault better than anyone.",
+        "statement": "I was home alone until about midnight. Then my son had a bad asthma attack and I drove him to St. Thomas' Hospital. We were in A&E for hours."
+      },
+      {
+        "id": "magnus",
+        "name": "Magnus Ferreby",
+        "role": "Senior auctioneer",
+        "description": "Runs the late-night online sales for buyers in Asia.",
+        "motive": "Would earn a huge commission if the Swan sold privately through him.",
+        "statement": "I ran the midnight online sale for our Hong Kong clients from my home studio in Richmond. I was on camera the whole time."
+      },
+      {
+        "id": "hana",
+        "name": "Hana Sato",
+        "role": "Specialist, visiting from the Tokyo office",
+        "description": "In London for the sale, staying at a hotel in Docklands, 40 minutes from Ryder Street.",
+        "motive": "Argued that the Swan should be sold in Tokyo instead.",
+        "statement": "I was in my hotel room on a video call with the Tokyo office. Their meeting was at half past eight in the morning, Tokyo time."
+      },
+      {
+        "id": "owen",
+        "name": "Owen Pryce",
+        "role": "Night porter",
+        "description": "Works the front desk overnight. Arrested with Darnell because he had no alibi for 11:38 pm.",
+        "motive": "Has gambling debts.",
+        "statement": "At twenty to twelve I was walking my round of the upper floors. Nobody sees you on the round. After that I was at the front desk all night."
+      }
+    ],
+    "witnesses": [],
+    "evidence": [
+      {
+        "id": "1",
+        "title": "Vault door log",
+        "kind": "log",
+        "source": "Vault control computer, printed in full",
+        "body": "Header line: VAULT CONTROL v4.2 · ALL TIMES ARE COORDINATED UNIVERSAL TIME (UTC) · Friday 18 July\n\nTime | Event\n23:38:10 | Master code entered at corridor keypad\n23:38:14 | Vault door OPEN\n23:46:52 | Vault door CLOSED",
+        "lines": [
+          "Header line: VAULT CONTROL v4.2 · ALL TIMES ARE COORDINATED UNIVERSAL TIME (UTC) · Friday 18 July"
+        ],
+        "table": {
+          "columns": [
+            "Time",
+            "Event"
+          ],
+          "rows": [
+            [
+              "23:38:10",
+              "Master code entered at corridor keypad"
+            ],
+            [
+              "23:38:14",
+              "Vault door OPEN"
+            ],
+            [
+              "23:46:52",
+              "Vault door CLOSED"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "2",
+        "title": "Time zone card",
+        "kind": "document",
+        "source": "Pinned by the switchboard, for staff calling overseas offices",
+        "body": "London in winter (late October to late March): UTC + 0 (GMT).\n\nLondon in summer (late March to late October): UTC + 1 (British Summer Time, BST).\n\nTokyo, all year: UTC + 9.\n\nHong Kong, all year: UTC + 8.",
+        "lines": [
+          "London in winter (late October to late March): UTC + 0 (GMT).",
+          "London in summer (late March to late October): UTC + 1 (British Summer Time, BST).",
+          "Tokyo, all year: UTC + 9.",
+          "Hong Kong, all year: UTC + 8."
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Savoy doorman and taxi receipt",
+        "kind": "log",
+        "source": "Savoy hotel and Black Cab account, London times",
+        "body": "Doorman: “Ms. Moreau left at 00:15. Silver dress, couldn't miss her. I put her in a cab myself.”\n\nTaxi receipt on Celeste's company account: picked up 00:18, Savoy. Dropped off 00:31, Ryder Street.\n\nRyder Street is where Halvorsen & Wilde is. Hampstead is 6 kilometres the other way.",
+        "lines": [
+          "Doorman: “Ms. Moreau left at 00:15. Silver dress, couldn't miss her. I put her in a cab myself.”",
+          "Taxi receipt on Celeste's company account: picked up 00:18, Savoy. Dropped off 00:31, Ryder Street.",
+          "Ryder Street is where Halvorsen & Wilde is. Hampstead is 6 kilometres the other way."
+        ]
+      },
+      {
+        "id": "4",
+        "title": "St. Thomas' Hospital A&E record",
+        "kind": "document",
+        "source": "London times",
+        "body": "Patient: Sam Achebe, age 9, asthma. Brought in by father, Darnell Achebe.\n\nRegistered at desk: 00:22. Seen by doctor: 00:50. Discharged: 03:10. Father present throughout (nurse's note).",
+        "lines": [
+          "Patient: Sam Achebe, age 9, asthma. Brought in by father, Darnell Achebe.",
+          "Registered at desk: 00:22. Seen by doctor: 00:50. Discharged: 03:10. Father present throughout (nurse's note)."
+        ]
+      },
+      {
+        "id": "5",
+        "title": "Hong Kong online sale",
+        "kind": "log",
+        "source": "Halvorsen & Wilde live-stream archive, London times",
+        "body": "Live sale, hosted by Magnus Ferreby from his Richmond studio: 00:00 to 01:30. He is on camera calling bids for the whole broadcast, with a ten-minute break from 00:55 to 01:05.",
+        "lines": [
+          "Live sale, hosted by Magnus Ferreby from his Richmond studio: 00:00 to 01:30. He is on camera calling bids for the whole broadcast, with a ten-minute break from 00:55 to 01:05."
+        ]
+      },
+      {
+        "id": "6",
+        "title": "Tokyo office video call",
+        "kind": "log",
+        "source": "Tokyo office calendar, Tokyo times",
+        "body": "Saturday 19 July, 08:30 to 09:15 (Tokyo time): weekly meeting. Hana Sato joined by video from London, camera on, showing her hotel room. Nobody left the call early.",
+        "lines": [
+          "Saturday 19 July, 08:30 to 09:15 (Tokyo time): weekly meeting. Hana Sato joined by video from London, camera on, showing her hotel room. Nobody left the call early."
+        ]
+      },
+      {
+        "id": "7",
+        "title": "Front desk camera",
+        "kind": "photo",
+        "source": "Lobby camera, London times on the picture",
+        "body": "Owen Pryce is at the front desk continuously from 00:20 to 01:10, reading a newspaper and answering one phone call at 00:44. The corridor to the vault is in the basement, reached only by the back stairs.",
+        "lines": [
+          "Owen Pryce is at the front desk continuously from 00:20 to 01:10, reading a newspaper and answering one phone call at 00:44. The corridor to the vault is in the basement, reached only by the back stairs."
+        ]
+      },
+      {
+        "id": "8",
+        "title": "Vault floor",
+        "kind": "object",
+        "source": "Police search, Saturday",
+        "body": "Under the Swan's empty stand: one small silver sequin.",
+        "lines": [
+          "Under the Swan's empty stand: one small silver sequin."
+        ]
+      }
+    ],
+    "timeline": [],
+    "puzzles": [
+      {
+        "id": "q1",
+        "prompt": "What time zone are the vault log's times written in?",
+        "answer": "UTC",
+        "hint": "Read the vault log from the very first line."
+      },
+      {
+        "id": "q2",
+        "prompt": "What did London clocks say when the vault door opened? (24-hour clock.)",
+        "answer": "00:38",
+        "hint": "Is 18th July summer or winter in London?"
+      },
+      {
+        "id": "q3",
+        "prompt": "Hana's call ran from 08:30 to 09:15 Tokyo time. When was that in London?",
+        "answer": "00:30 to 01:15",
+        "hint": "Convert both cities to UTC first, then compare."
+      },
+      {
+        "id": "q4",
+        "prompt": "The police arrested two suspects. At the real time of the theft, where were they?",
+        "answer": "Darnell was in A&E with his son, and Owen was on camera at the front desk, nowhere near the basement",
+        "hint": "Check the two arrested people against 00:38, not 23:38."
+      },
+      {
+        "id": "q5",
+        "prompt": "Whose alibi stops working at the real time of the theft?",
+        "answer": "Celeste Moreau",
+        "hint": "Whose alibi ends shortly before 00:38?"
+      },
+      {
+        "id": "q6",
+        "prompt": "Who stole the Winter Swan?",
+        "answer": "Celeste Moreau",
+        "hint": "Line up all five suspects at 00:38 London time."
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "prompt": "What time zone are the vault log's times written in?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "London time (BST)"
+          },
+          {
+            "id": "b",
+            "text": "UTC"
+          },
+          {
+            "id": "c",
+            "text": "Tokyo time"
+          }
+        ],
+        "answer": "b",
+        "explanation": "The header line, which nobody read, says ALL TIMES ARE COORDINATED UNIVERSAL TIME (UTC).",
+        "evidence": [
+          "1"
+        ],
+        "hints": [
+          "Read the vault log from the very first line.",
+          "Computers often keep one clock for the whole world. Does this one say which?",
+          "The header spells it out in capitals."
+        ]
+      },
+      {
+        "id": "q2",
+        "prompt": "What did London clocks say when the vault door opened? (24-hour clock.)",
+        "kind": "time",
+        "answer": "00:38",
+        "accept": [
+          "0:38",
+          "12:38",
+          "12:38 am"
+        ],
+        "explanation": "18th July is summer, so London is on BST, UTC + 1. 23:38 UTC is 00:38 London time, just after midnight on Saturday.",
+        "evidence": [
+          "1",
+          "2"
+        ],
+        "hints": [
+          "Is 18th July summer or winter in London?",
+          "The time zone card tells you how far London is from UTC in summer.",
+          "Add one hour to 23:38. Mind the midnight."
+        ]
+      },
+      {
+        "id": "q3",
+        "prompt": "Hana's call ran from 08:30 to 09:15 Tokyo time. When was that in London?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "08:30 to 09:15"
+          },
+          {
+            "id": "b",
+            "text": "23:30 to 00:15"
+          },
+          {
+            "id": "c",
+            "text": "00:30 to 01:15"
+          }
+        ],
+        "answer": "c",
+        "explanation": "Tokyo is UTC + 9 and summer London is UTC + 1, so Tokyo is 8 hours ahead of London. 08:30 Tokyo is 00:30 London, so Hana was on camera in her hotel when the vault opened at 00:38.",
+        "evidence": [
+          "2",
+          "6"
+        ],
+        "hints": [
+          "Convert both cities to UTC first, then compare.",
+          "Tokyo is UTC + 9, London in July is UTC + 1. What's the gap?",
+          "Take 8 hours off 08:30."
+        ]
+      },
+      {
+        "id": "q4",
+        "prompt": "The police arrested two suspects. At the real time of the theft, where were they?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "Darnell was in A&E with his son, and Owen was on camera at the front desk, nowhere near the basement"
+          },
+          {
+            "id": "b",
+            "text": "Both were near the vault"
+          },
+          {
+            "id": "c",
+            "text": "Both were at the gala"
+          }
+        ],
+        "answer": "a",
+        "explanation": "Darnell registered at A&E at 00:22 and stayed all night. Owen was on the lobby camera from 00:20 to 01:10. Their missing alibis were for 23:38 London time, which is the wrong hour.",
+        "evidence": [
+          "4",
+          "7"
+        ],
+        "hints": [
+          "Check the two arrested people against 00:38, not 23:38.",
+          "Look at the hospital record and the lobby camera times.",
+          "One was in A&E from 00:22, the other at the front desk from 00:20. Both are cleared."
+        ]
+      },
+      {
+        "id": "q5",
+        "prompt": "Whose alibi stops working at the real time of the theft?",
+        "kind": "suspect",
+        "options": [
+          {
+            "id": "celeste",
+            "text": "Celeste Moreau"
+          },
+          {
+            "id": "darnell",
+            "text": "Darnell Achebe"
+          },
+          {
+            "id": "magnus",
+            "text": "Magnus Ferreby"
+          },
+          {
+            "id": "hana",
+            "text": "Hana Sato"
+          },
+          {
+            "id": "owen",
+            "text": "Owen Pryce"
+          }
+        ],
+        "answer": "celeste",
+        "explanation": "Celeste's gala alibi covers 11:38 pm London, but she left the Savoy at 00:15. Her taxi dropped her at Ryder Street, the auction house, at 00:31, seven minutes before the vault opened.",
+        "evidence": [
+          "3"
+        ],
+        "hints": [
+          "Whose alibi ends shortly before 00:38?",
+          "Look at the gala: when did she leave, and where did the taxi go?",
+          "Dropped off at 00:31 on Ryder Street. That isn't Hampstead."
+        ]
+      },
+      {
+        "id": "q6",
+        "prompt": "Who stole the Winter Swan?",
+        "kind": "suspect",
+        "options": [
+          {
+            "id": "celeste",
+            "text": "Celeste Moreau"
+          },
+          {
+            "id": "darnell",
+            "text": "Darnell Achebe"
+          },
+          {
+            "id": "magnus",
+            "text": "Magnus Ferreby"
+          },
+          {
+            "id": "hana",
+            "text": "Hana Sato"
+          },
+          {
+            "id": "owen",
+            "text": "Owen Pryce"
+          }
+        ],
+        "answer": "celeste",
+        "explanation": "Converted to London time, the vault opened at 00:38. Darnell, Magnus, Hana and Owen are all accounted for. Celeste was dropped at the auction house at 00:31, and a silver sequin from her gown was under the Swan's stand.",
+        "evidence": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8"
+        ],
+        "hints": [
+          "Line up all five suspects at 00:38 London time.",
+          "Four of them have records. One was dropped seven minutes from the vault, by the front door.",
+          "What was found under the stand, and who was wearing it?"
+        ]
+      }
+    ],
+    "solution": {
+      "culprit": "Celeste Moreau",
+      "culpritId": "celeste",
+      "explanation": "Celeste Moreau knew the vault log runs on UTC and that the papers would print 23:38 as if it were London time. She spent the evening in plain sight at the Savoy, left at 00:15 and took a taxi to Ryder Street. At 00:38 London time she keyed in the master code, lifted the Winter Swan, and was out eight minutes later. Everyone checked alibis for 11:38 pm, the one hour when she had two hundred witnesses. A sequin from her gown fell under the stand.",
+      "chain": [
+        {
+          "step": "The vault log is in UTC. In July London is UTC + 1, so the vault opened at 00:38 London time, not 23:38.",
+          "evidence": [
+            "1",
+            "2"
+          ]
+        },
+        {
+          "step": "At 00:38 London: Darnell was in A&E, Magnus was live on camera, Hana was on the Tokyo call (00:30 to 01:15 London), and Owen was at the front desk.",
+          "evidence": [
+            "4",
+            "5",
+            "6",
+            "7"
+          ]
+        },
+        {
+          "step": "Celeste left the gala at 00:15 and was dropped at Ryder Street at 00:31.",
+          "evidence": [
+            "3"
+          ]
+        },
+        {
+          "step": "A silver sequin from her gown was under the empty stand.",
+          "evidence": [
+            "8"
+          ]
+        }
+      ],
+      "eliminations": [
+        {
+          "name": "Darnell Achebe",
+          "why": "Registered at A&E with his son at 00:22, there until 03:10."
+        },
+        {
+          "name": "Magnus Ferreby",
+          "why": "Live on camera from 00:00 to 01:30 London time. His only break was 00:55 to 01:05, after the vault had closed, and Richmond is far too far away."
+        },
+        {
+          "name": "Hana Sato",
+          "why": "On the Tokyo video call from 00:30 to 01:15 London time, camera on, in a hotel 40 minutes away."
+        },
+        {
+          "name": "Owen Pryce",
+          "why": "On the lobby camera at the front desk from 00:20 to 01:10."
+        }
+      ]
+    }
+  }
+}

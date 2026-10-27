@@ -1,0 +1,197 @@
+{
+  "$schema": "../../schema/case.schema.json",
+  "id": "case-09",
+  "number": 9,
+  "slug": "tracks-in-the-snow",
+  "title": "Tracks in the Snow",
+  "tier": "easy",
+  "difficulty": 2,
+  "minutes": 15,
+  "tagline": "Fresh snow, one set of footprints and a champion's skis tampered with overnight.",
+  "crime": "sabotage",
+  "tags": ["footprints", "weather", "locked circle"],
+  "setting": { "place": "Edelweiss Lodge, high in the mountains", "when": "The night before the Valley Cup ski race" },
+  "briefing": [
+    "Lena Brandvold is favourite to win tomorrow's Valley Cup downhill race. She keeps her racing skis in the wooden ski shed 20 metres behind Edelweiss Lodge.",
+    "At 7:00 am Lena went to wax her skis and found that the screws on both bindings had been loosened. If she hadn't noticed, her skis could have come off mid-race.",
+    "Overnight the snow had covered everything in a smooth white blanket, except for one set of footprints. Mr. Foxy loves fresh snow. It remembers everything."
+  ],
+  "rules": ["Lena checked her skis at 10:30 pm and they were fine.", "Only the four guests and staff below slept at the lodge. The lodge is three kilometres from the nearest other building."],
+  "suspects": [
+    {
+      "id": "ingrid",
+      "name": "Ingrid Holm",
+      "role": "Lodge owner",
+      "description": "Runs the lodge alone. Small and quick, does everything herself.",
+      "motive": "A broken-down champion would make for gossip, and gossip brings guests? Lena thinks that's silly.",
+      "statement": "I locked up at eleven and went to bed. I was up again at six making breakfast."
+    },
+    {
+      "id": "mattias",
+      "name": "Mattias Berg",
+      "role": "Guest, Lena's former coach",
+      "description": "Broke his leg skiing last month. Has a full leg cast and walks with two crutches.",
+      "motive": "Lena sacked him as her coach in the spring.",
+      "statement": "With this leg? I can barely get to the bathroom. I didn't leave my room."
+    },
+    {
+      "id": "sophie",
+      "name": "Sophie Laurent",
+      "role": "Guest, sports journalist",
+      "description": "Writing a profile of Lena. Night owl, typed until late.",
+      "motive": "A disaster would make a much bigger story.",
+      "statement": "I was typing in the lounge by the fire until about one, then I went to bed."
+    },
+    {
+      "id": "kai",
+      "name": "Kai Rautio",
+      "role": "Guest, rival racer",
+      "description": "Finished second to Lena in the last three races.",
+      "motive": "Would be favourite if Lena couldn't race.",
+      "statement": "I went to bed at ten. I need my sleep before a race. I didn't go outside."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev1",
+      "kind": "report",
+      "title": "Lodge weather log",
+      "source": "Ingrid's notebook by the barometer",
+      "body": ["Snow began 8:45 pm. About 10 cm fell.", "Snow stopped: 11:00 pm exactly. Clear and still for the rest of the night."]
+    },
+    {
+      "id": "ev2",
+      "kind": "photo",
+      "title": "The snow at 7:00 am",
+      "source": "Photographed by Lena before anyone else went out",
+      "body": [
+        "One set of footprints goes from the back porch to the ski shed and back again. The edges are sharp and there is no new snow inside them.",
+        "There are no other footprints anywhere: none from the road, none round the sides of the lodge, none around the shed.",
+        "Lena's own prints from 10:30 pm have vanished under the snow that fell before 11:00."
+      ]
+    },
+    {
+      "id": "ev3",
+      "kind": "report",
+      "title": "The footprints, measured",
+      "source": "Lena and the race marshal",
+      "body": [
+        "Boot size: 10.",
+        "Even steps, both feet pressing equally deep. No drag marks and no small round holes beside the prints."
+      ]
+    },
+    {
+      "id": "ev4",
+      "kind": "document",
+      "title": "Guest boot sizes",
+      "source": "The lodge's boot-room rack, labelled by room",
+      "body": ["Each guest leaves their outdoor boots on the labelled rack by the back door."],
+      "table": {
+        "columns": ["Person", "Boot size", "Condition at 7:00 am"],
+        "rows": [
+          ["Ingrid Holm", "7", "Dry"],
+          ["Mattias Berg", "10 (one boot only, the other foot is in a cast)", "Dry"],
+          ["Sophie Laurent", "8", "Dry"],
+          ["Kai Rautio", "10", "Wet, with a small puddle of meltwater underneath"]
+        ]
+      }
+    },
+    {
+      "id": "ev5",
+      "kind": "object",
+      "title": "In Kai's jacket pocket",
+      "source": "Searched by the race marshal, with Kai's agreement",
+      "body": ["A small binding screwdriver, the type used for adjusting ski bindings."]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "When were the footprints made?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "Before 11:00 pm, while it was snowing" },
+        { "id": "b", "text": "After 11:00 pm, once the snow had stopped" },
+        { "id": "c", "text": "At 7:00 am, by Lena" }
+      ],
+      "answer": "b",
+      "explanation": "The prints are sharp with no fresh snow in them, while Lena's earlier prints were buried. They were made after the snow stopped at 11:00. Lena photographed them before going out.",
+      "evidence": ["ev1", "ev2"]
+    },
+    {
+      "id": "q2",
+      "prompt": "Where did the person who made the footprints come from?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "The road" },
+        { "id": "b", "text": "Inside the lodge, through the back porch" },
+        { "id": "c", "text": "The woods behind the shed" }
+      ],
+      "answer": "b",
+      "explanation": "The only prints run between the back porch and the shed. Nobody came from outside, so the saboteur slept in the lodge.",
+      "evidence": ["ev2"]
+    },
+    {
+      "id": "q3",
+      "prompt": "Mattias also wears a size 10 boot. Why couldn't he have made the prints?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "He's on crutches with a cast, and the prints show two normal booted feet with no crutch holes" },
+        { "id": "b", "text": "He used to coach Lena" },
+        { "id": "c", "text": "His room is upstairs" }
+      ],
+      "answer": "a",
+      "explanation": "Crutches would leave small round holes beside each step, and a cast can't make a boot print. The prints show two even boots.",
+      "evidence": ["ev3", "ev4"]
+    },
+    {
+      "id": "q4",
+      "prompt": "Who loosened Lena's bindings?",
+      "kind": "suspect",
+      "answer": "kai",
+      "explanation": "The saboteur came from inside the lodge after 11:00 pm, walked normally in size 10 boots, and came back with wet boots. Only Kai fits, and he had a binding screwdriver in his pocket.",
+      "evidence": ["ev2", "ev3", "ev4", "ev5"]
+    }
+  ],
+  "hints": [
+    { "question": "q1", "level": 1, "text": "When did the snow stop?" },
+    { "question": "q1", "level": 2, "text": "What happened to Lena's own 10:30 pm footprints? What about these ones?" },
+    { "question": "q1", "level": 3, "text": "Prints made while it snowed get filled in. These are crisp, so the snow had already stopped." },
+    { "question": "q2", "level": 1, "text": "Follow the footprints. Where do they start and end?" },
+    { "question": "q2", "level": 2, "text": "Are there any prints from the road?" },
+    { "question": "q2", "level": 3, "text": "Porch to shed and back, nothing else. The saboteur went back inside." },
+    { "question": "q3", "level": 1, "text": "How does someone with a leg cast walk?" },
+    { "question": "q3", "level": 2, "text": "Read the marshal's description of the steps very carefully." },
+    { "question": "q3", "level": 3, "text": "No round holes, two even boots. That's not a man on crutches." },
+    { "question": "q4", "level": 1, "text": "Check every person's boot size against the prints." },
+    { "question": "q4", "level": 2, "text": "Whose boots were wet in the morning?" },
+    { "question": "q4", "level": 3, "text": "Size 10, wet boots and a binding screwdriver. He said he never went outside." }
+  ],
+  "solution": {
+    "culprit": "kai",
+    "summary": "Kai Rautio waited until the lodge was quiet, put on his boots and crossed the fresh snow to the ski shed, where he loosened the screws on Lena's bindings with a small screwdriver. The snow had already stopped, so his tracks stayed perfectly sharp until morning, and his boots were still dripping on the rack at 7:00.",
+    "chain": [
+      { "step": "The prints are crisp, so they were made after the snow stopped at 11:00 pm.", "evidence": ["ev1", "ev2"] },
+      { "step": "They run only between the back porch and the shed, so the saboteur came from inside the lodge.", "evidence": ["ev2"] },
+      { "step": "Size 10, walked normally, no crutches. That leaves Kai.", "evidence": ["ev3", "ev4"] },
+      { "step": "His boots were wet at 7:00 am and he had a binding screwdriver.", "evidence": ["ev4", "ev5"] }
+    ],
+    "eliminations": [
+      { "suspect": "ingrid", "why": "Size 7 boots, and they were dry." },
+      { "suspect": "mattias", "why": "On crutches with a leg cast. The prints show two normal boots and no crutch holes." },
+      { "suspect": "sophie", "why": "Size 8 boots, and they were dry." }
+    ]
+  },
+  "playtest": {
+    "solvePath": "Solvers quickly see the prints start at the lodge. The boot-size table gives Mattias and Kai, and the crutch detail removes Mattias. A nice clean 'closed circle' case for beginners.",
+    "pitfalls": [
+      "Some asked whether someone could have walked backwards or stepped in the prints to fake them. The rule that there are no other prints anywhere, plus the wet boots, settles it.",
+      "Players asked whether Lena faked the sabotage herself. She photographed the untouched snow before going out, and her old prints were buried, so the fresh trail isn't hers."
+    ],
+    "revisions": [
+      "Added the timing of Lena's own buried footprints so solvers can see what a pre-11 pm print looks like.",
+      "Added the boot rack with wet and dry boots for a second, independent link to Kai.",
+      "Stated the lodge's remoteness so outsiders are clearly excluded."
+    ]
+  }
+}

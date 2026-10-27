@@ -1,0 +1,264 @@
+{
+  "$schema": "../../schema/case.schema.json",
+  "id": "case-25",
+  "number": 25,
+  "slug": "the-magpie-cipher",
+  "title": "The Magpie Cipher",
+  "tier": "hard",
+  "difficulty": 5,
+  "minutes": 45,
+  "tagline": "A chemist vanished, leaving one coded line in her diary. Crack it, and you'll know what to look for. Then you'll need three timestamps and a door log.",
+  "crime": "industrial espionage",
+  "tags": ["cipher", "Vigenère", "logic grid", "logs"],
+  "setting": { "place": "Halden Laboratories, Lab 2", "when": "Monday to Thursday, last week" },
+  "briefing": [
+    "Dr. Mira Kovac invented a new kind of battery at Halden Laboratories. On Thursday she didn't come to work. Her flat was empty and her phone was off.",
+    "Her desk diary was open on Thursday's page. At the bottom, in her neat capitals, was one line of nonsense, and above it a note: 'Key: the first creature I ever loved.'",
+    "The same week, police intercepted three emails offering Mira's battery formula to a foreign company. They were sent from Terminal 4 inside Lab 2. Somebody in that lab is selling Mira's work, and Mira found out who."
+  ],
+  "rules": [
+    "The emails were sent from Terminal 4, which is inside Lab 2. Whoever sent them was inside Lab 2 at that moment.",
+    "Lab 2 has one door, and every entry and exit is logged by staff badge. Badges can't be shared (they need a fingerprint too)."
+  ],
+  "suspects": [
+    {
+      "id": "greta",
+      "name": "Greta Lind",
+      "role": "Lab manager",
+      "description": "Runs Lab 2 with an iron hand. Mira's boss.",
+      "motive": "Was furious that Mira got all the credit for the battery.",
+      "statement": "Mira was the best scientist I've ever managed. I'd never betray her."
+    },
+    {
+      "id": "milo",
+      "name": "Milo Fenn",
+      "role": "Senior chemist",
+      "description": "Mira's rival for promotion. Loves classical music.",
+      "motive": "Lost the promotion to Mira in the spring.",
+      "statement": "Yes, we competed. That's science. I'm not a thief."
+    },
+    {
+      "id": "sol",
+      "name": "Sol Okafor",
+      "role": "Night technician",
+      "description": "Runs long experiments overnight. Commutes in by train.",
+      "motive": "Has been offered a better-paid job abroad.",
+      "statement": "I work odd hours. I'm in that lab more than anyone. Doesn't make me a spy."
+    },
+    {
+      "id": "vera",
+      "name": "Vera Reyes",
+      "role": "Research assistant",
+      "description": "Mira's assistant for two years. Always wears a little enamel bird brooch.",
+      "motive": "Mira said she would not be named on the battery patent.",
+      "statement": "I'm worried sick about Mira. I want her found."
+    },
+    {
+      "id": "ned",
+      "name": "Ned Barlow",
+      "role": "Junior researcher",
+      "description": "Joined last month. Eager and a bit clumsy.",
+      "motive": "Has money worries; his student loan is overdue.",
+      "statement": "I've only been here a month. I barely know how the terminals work."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev1",
+      "kind": "note",
+      "title": "Mira's diary, Thursday's page",
+      "source": "Her desk in Lab 2",
+      "body": [
+        "Key: the first creature I ever loved.",
+        "HAX WVZEXV JWZGW RG FTKGWX"
+      ]
+    },
+    {
+      "id": "ev2",
+      "kind": "photo",
+      "title": "Framed photos on Mira's desk",
+      "source": "Lab 2",
+      "body": [
+        "A small girl hugging a shaggy brown dog in a garden. On the back, in a child's writing: “Me and OTTER, the summer I was 4. My first best friend.”",
+        "A grown-up Mira with a grey cat on her lap. On the frame: “PEPPER, the boss of the house.”"
+      ]
+    },
+    {
+      "id": "ev3",
+      "kind": "note",
+      "title": "Mr. Foxy's guide to the Vigenère cipher",
+      "source": "Inside cover of the case booklet",
+      "body": [
+        "Number the alphabet from zero: A=0, B=1, C=2 ... Z=25.",
+        "Write the key under the coded message, letter by letter, repeating it as often as you need. Skip the spaces; the key only goes under letters.",
+        "To decode a letter, take the coded letter's number and subtract the key letter's number. If you go below zero, add 26. Turn the number back into a letter.",
+        "Example with the key CAT: the coded letter J (9) above key letter C (2) gives 9 − 2 = 7, which is H."
+      ]
+    },
+    {
+      "id": "ev4",
+      "kind": "letter",
+      "title": "The three intercepted emails",
+      "source": "Police, from the buyer's account",
+      "body": [
+        "All three are sent from Terminal 4, Lab 2. All three are signed with the same name.",
+        "Monday 10:14 am: “I have the full formula. 50,000 to see the first page.”",
+        "Tuesday 9:40 pm: “Payment received. Page one attached. The rest on Friday.”",
+        "Thursday 7:55 am: “K. suspects something. We must hurry.”"
+      ]
+    },
+    {
+      "id": "ev5",
+      "kind": "log",
+      "title": "Lab 2 door log",
+      "source": "Badge and fingerprint system, Monday to Thursday",
+      "body": ["Every entry and exit on the three email days (Monday, Tuesday and Thursday), by staff member. Anyone not listed on one of those days did not enter Lab 2 that day. Mira's own entries are left out; she is not a suspect."],
+      "table": {
+        "columns": ["Day", "Name", "In", "Out"],
+        "rows": [
+          ["Monday", "Greta Lind", "08:30", "10:00"],
+          ["Monday", "Sol Okafor", "09:00", "17:30"],
+          ["Monday", "Vera Reyes", "09:50", "12:00"],
+          ["Monday", "Milo Fenn", "10:00", "17:00"],
+          ["Monday", "Greta Lind", "10:40", "18:00"],
+          ["Tuesday", "Greta Lind", "08:30", "18:00"],
+          ["Tuesday", "Milo Fenn", "09:00", "17:30"],
+          ["Tuesday", "Ned Barlow", "09:00", "17:00"],
+          ["Tuesday", "Sol Okafor", "20:00", "23:00"],
+          ["Tuesday", "Vera Reyes", "21:20", "22:05"],
+          ["Thursday", "Ned Barlow", "07:30", "16:30"],
+          ["Thursday", "Vera Reyes", "07:40", "08:10"],
+          ["Thursday", "Sol Okafor", "08:30", "17:00"],
+          ["Thursday", "Greta Lind", "08:45", "18:00"],
+          ["Thursday", "Milo Fenn", "09:15", "17:30"]
+        ]
+      }
+    },
+    {
+      "id": "ev6",
+      "kind": "statement",
+      "title": "Mira Kovac, found safe",
+      "source": "Phoned the police from her sister's farm on Saturday",
+      "body": ["“I saw the name on the screen of Terminal 4 on Wednesday night, signing an email. I panicked and ran. I didn't see who was typing; the chair was empty by the time I got close. So I left the alias in my diary, coded, in case they searched my desk.”"]
+    },
+    {
+      "id": "ev7",
+      "kind": "object",
+      "title": "Vera's brooch",
+      "source": "Photographed at interview",
+      "body": ["A small black-and-white enamel bird with a long tail: a magpie."]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "What is the key to Mira's cipher?",
+      "kind": "text",
+      "answer": "otter",
+      "accept": ["OTTER", "Otter"],
+      "explanation": "'The first creature I ever loved' is the dog in the childhood photo: OTTER, 'my first best friend'. Pepper the cat came much later; using PEPPER gives gibberish.",
+      "evidence": ["ev1", "ev2"]
+    },
+    {
+      "id": "q2",
+      "prompt": "Decode the first word, HAX.",
+      "kind": "text",
+      "answer": "the",
+      "accept": ["THE"],
+      "explanation": "H(7) − O(14) = −7, +26 = 19 = T. A(0) − T(19) = −19, +26 = 7 = H. X(23) − T(19) = 4 = E.",
+      "evidence": ["ev1", "ev3"]
+    },
+    {
+      "id": "q3",
+      "prompt": "Decode the whole line. What name does the seller sign with?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "Raven" },
+        { "id": "b", "text": "Magpie" },
+        { "id": "c", "text": "Otter" },
+        { "id": "d", "text": "Pepper" }
+      ],
+      "answer": "b",
+      "explanation": "With OTTER repeating under the letters, the line reads THE SELLER SIGNS AS MAGPIE.",
+      "evidence": ["ev1", "ev3"]
+    },
+    {
+      "id": "q4",
+      "prompt": "Who was inside Lab 2 at all three email times (Monday 10:14, Tuesday 21:40, Thursday 07:55)?",
+      "kind": "suspect",
+      "answer": "vera",
+      "explanation": "Monday 10:14: Sol, Vera, Milo (Greta had stepped out from 10:00 to 10:40). Tuesday 21:40: Sol and Vera. Thursday 07:55: Ned and Vera. Only Vera is in all three.",
+      "evidence": ["ev4", "ev5"]
+    },
+    {
+      "id": "q5",
+      "prompt": "Sol was in the lab for two of the three emails. Which one rules him out?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "Monday 10:14" },
+        { "id": "b", "text": "Tuesday 21:40" },
+        { "id": "c", "text": "Thursday 07:55: he didn't arrive until 08:30" }
+      ],
+      "answer": "c",
+      "explanation": "Sol's Thursday badge-in is 08:30, thirty-five minutes after the third email.",
+      "evidence": ["ev4", "ev5"]
+    },
+    {
+      "id": "q6",
+      "prompt": "Who is selling Mira's formula?",
+      "kind": "suspect",
+      "answer": "vera",
+      "explanation": "The seller had to be at Terminal 4 for all three emails, and only Vera was in Lab 2 every time. The alias Mira hid in her diary is MAGPIE, and Vera wears a magpie brooch every day.",
+      "evidence": ["ev1", "ev4", "ev5", "ev6", "ev7"]
+    }
+  ],
+  "hints": [
+    { "question": "q1", "level": 1, "text": "Mira has two animals on her desk. Which one came first in her life?" },
+    { "question": "q1", "level": 2, "text": "Read the back of the childhood photo." },
+    { "question": "q1", "level": 3, "text": "“My first best friend.” Try that name, and if you get gibberish, try the other one to see the difference." },
+    { "question": "q2", "level": 1, "text": "Write O T T E R under H A X W V Z..., skipping the space." },
+    { "question": "q2", "level": 2, "text": "H is 7 and O is 14. 7 − 14 is negative, so add 26." },
+    { "question": "q2", "level": 3, "text": "You get 19, which is T. A three-letter word starting with T..." },
+    { "question": "q3", "level": 1, "text": "Keep the key repeating: OTTEROTTEROTTER... one key letter per coded letter." },
+    { "question": "q3", "level": 2, "text": "The second word is SELLER. Keep going." },
+    { "question": "q3", "level": 3, "text": "The last word starts M, A, G..." },
+    { "question": "q4", "level": 1, "text": "Make a grid: suspects down the side, the three email times across the top." },
+    { "question": "q4", "level": 2, "text": "For each time, tick whoever has an 'In' before it and an 'Out' after it on that day." },
+    { "question": "q4", "level": 3, "text": "Watch Greta on Monday: she stepped out at 10:00 and came back at 10:40." },
+    { "question": "q5", "level": 1, "text": "Check Sol's times on each email day." },
+    { "question": "q5", "level": 2, "text": "When did he arrive on Thursday?" },
+    { "question": "q5", "level": 3, "text": "He was still on his train at 7:55." },
+    { "question": "q6", "level": 1, "text": "Only one person could send all three emails." },
+    { "question": "q6", "level": 2, "text": "What's the alias, and is anyone wearing it?" },
+    { "question": "q6", "level": 3, "text": "Look at the brooch." }
+  ],
+  "solution": {
+    "culprit": "vera",
+    "summary": "Vera Reyes, angry at being left off the patent, started selling Mira's formula under the name MAGPIE, after the little bird brooch she always wears. On Wednesday night Mira glimpsed the alias on Terminal 4's screen, hid it in her diary in a code keyed to her childhood dog, Otter, and fled. The door log does the rest: Vera is the only person who was inside Lab 2 when each of the three emails was sent.",
+    "chain": [
+      { "step": "The key is OTTER, Mira's first pet. The line decodes to THE SELLER SIGNS AS MAGPIE.", "evidence": ["ev1", "ev2", "ev3"] },
+      { "step": "The seller was inside Lab 2 at Monday 10:14, Tuesday 21:40 and Thursday 07:55.", "evidence": ["ev4"] },
+      { "step": "Only Vera's badge times cover all three. Greta was out on Monday, Milo was gone by Tuesday night, Sol hadn't arrived on Thursday, and Ned wasn't in on Monday.", "evidence": ["ev5"] },
+      { "step": "Mira saw the alias on Terminal 4, and Vera wears a magpie brooch.", "evidence": ["ev6", "ev7"] }
+    ],
+    "eliminations": [
+      { "suspect": "greta", "why": "Out of Lab 2 from 10:00 to 10:40 on Monday, so she missed the first email. Not in Lab 2 on Tuesday night either." },
+      { "suspect": "milo", "why": "Left at 17:30 on Tuesday and wasn't in Lab 2 at 21:40. On Thursday he didn't arrive until 09:15." },
+      { "suspect": "sol", "why": "Didn't badge in until 08:30 on Thursday, after the 07:55 email." },
+      { "suspect": "ned", "why": "Not in Lab 2 at all on Monday, and gone by 17:00 on Tuesday." }
+    ]
+  },
+  "playtest": {
+    "solvePath": "Decoding by hand takes most solvers 10 to 15 minutes with Mr. Foxy's guide. Several try PEPPER first and get gibberish, which is intended and teaches them the key matters. The door-log grid is quick once they draw it.",
+    "pitfalls": [
+      "Players restarted the key at every word. The guide now says the key only goes under letters and carries on across spaces.",
+      "Some players stopped at Sol, who is in the lab for two of three emails. The q5 question makes them check the third."
+    ],
+    "revisions": [
+      "Checked the ciphertext by script: OTTER gives THE SELLER SIGNS AS MAGPIE, PEPPER gives nonsense.",
+      "Added the worked example with the key CAT so the subtraction and wrap-around are shown once.",
+      "Added the fingerprint rule so nobody can argue a borrowed badge.",
+      "Made Mira's sighting say she didn't see the typist, so the cipher gives the alias but not the person."
+    ]
+  }
+}

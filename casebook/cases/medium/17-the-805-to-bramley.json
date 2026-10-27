@@ -1,0 +1,211 @@
+{
+  "$schema": "../../schema/case.schema.json",
+  "id": "case-17",
+  "number": 17,
+  "slug": "the-805-to-bramley",
+  "title": "The 8:05 to Bramley",
+  "tier": "medium",
+  "difficulty": 3,
+  "minutes": 25,
+  "tagline": "A priceless violin goes missing at 8:30. The violin teacher was on a train by then. Which train, exactly?",
+  "crime": "theft",
+  "tags": ["timetable", "alibi", "small print"],
+  "setting": { "place": "Ashby School of Music, Practice Room 9", "when": "Saturday morning" },
+  "briefing": [
+    "The Ashby School of Music owns the Albescu violin, made in 1742. It is kept locked in a case in Practice Room 9.",
+    "On Saturday morning the cleaner saw the violin case on its stand at 8:30. At 8:50 a student came for her lesson and found the case open and empty.",
+    "Four people had a key to Room 9. Two say they were on trains, one says she was at an exam, and one was stuck in the basement. Get the railway timetable out, and read the small print."
+  ],
+  "rules": ["The violin was taken from Room 9 between 8:30 am and 8:50 am on Saturday.", "Only the four key holders could open Room 9; the lock wasn't forced."],
+  "suspects": [
+    {
+      "id": "neville",
+      "name": "Neville Prior",
+      "role": "Violin teacher",
+      "description": "Has taught at Ashby for twenty years and plays the Albescu at school concerts.",
+      "motive": "A dealer recently offered him a fortune for 'any fine old instrument'.",
+      "statement": "I caught the 8:05 from Ashby to Bramley, as I do every Saturday, to teach a private pupil. I was on the train at half past eight, nowhere near the school."
+    },
+    {
+      "id": "miriam",
+      "name": "Miriam Oduya",
+      "role": "Head of strings",
+      "description": "Lives in Bramley and comes in by train.",
+      "motive": "Has argued that the Albescu should be sold to pay for a new concert hall.",
+      "statement": "I came in on the 8:35 from Bramley. I didn't get to Ashby till ten past nine."
+    },
+    {
+      "id": "otto",
+      "name": "Otto Lang",
+      "role": "Caretaker",
+      "description": "Keeps a key to every room in the building.",
+      "motive": "Was refused a pay rise.",
+      "statement": "I was down in the boiler room with the heating engineer from quarter past eight. The boiler had packed up again."
+    },
+    {
+      "id": "priscilla",
+      "name": "Priscilla Wynn",
+      "role": "Senior student",
+      "description": "Has a key to practise early. Hopes to borrow the Albescu for a competition.",
+      "motive": "Was told she couldn't borrow the Albescu.",
+      "statement": "I had my grade 8 piano exam in Bramley at half past eight. I was nervous enough without stealing violins."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev1",
+      "kind": "timetable",
+      "title": "Ashby to Bramley line",
+      "source": "Northern Valley Railways, current timetable",
+      "body": [
+        "SX = Saturdays excepted (runs Monday to Friday only).",
+        "SO = Saturdays only."
+      ],
+      "table": {
+        "columns": ["Train", "Ashby", "Corby", "Dunwell", "Bramley", "Notes"],
+        "rows": [
+          ["Northbound", "8:05", "8:12", "8:24", "8:41", "SX"],
+          ["Northbound", "8:20", "8:27", "8:39", "8:56", "SO"],
+          ["Northbound", "9:05", "9:12", "9:24", "9:41", "Daily"]
+        ]
+      }
+    },
+    {
+      "id": "ev2",
+      "kind": "timetable",
+      "title": "Bramley to Ashby line",
+      "source": "Northern Valley Railways, current timetable",
+      "body": ["Southbound trains."],
+      "table": {
+        "columns": ["Train", "Bramley", "Dunwell", "Corby", "Ashby", "Notes"],
+        "rows": [
+          ["Southbound", "8:35", "8:52", "9:03", "9:10", "Daily"]
+        ]
+      }
+    },
+    {
+      "id": "ev3",
+      "kind": "object",
+      "title": "Neville's ticket",
+      "source": "From his coat pocket",
+      "body": ["Single. ASHBY to BRAMLEY.", "Issued by ticket machine, Ashby station, Platform 1.", "Date: Saturday. Time issued: 08:58."]
+    },
+    {
+      "id": "ev4",
+      "kind": "log",
+      "title": "Guard's ticket check",
+      "source": "Southbound 8:35 from Bramley",
+      "body": ["The guard's handheld scanner records every ticket checked.", "08:53: ticket checked between Dunwell and Corby. Season ticket, holder M. Oduya, Bramley to Ashby."]
+    },
+    {
+      "id": "ev5",
+      "kind": "document",
+      "title": "Exam board record",
+      "source": "Associated Music Exams, Bramley centre",
+      "body": ["Candidate: Priscilla Wynn. Piano, grade 8.", "In the exam room: 8:30 to 9:02. Examiner's signature on the mark sheet."]
+    },
+    {
+      "id": "ev6",
+      "kind": "document",
+      "title": "Heating engineer's job sheet",
+      "source": "Warmline Boilers",
+      "body": ["Ashby School of Music, basement boiler room. Arrived 8:15. Left 9:20.", "Engineer's note: “Caretaker helped me the whole time, holding the torch and passing tools.”"]
+    },
+    {
+      "id": "ev7",
+      "kind": "object",
+      "title": "Left-luggage locker",
+      "source": "Ashby station, Saturday afternoon",
+      "body": [
+        "Locker 14, rented at 08:55. Inside: a violin case containing the Albescu violin.",
+        "The locker key was found on Neville's key ring. Ashby station is a 4-minute walk from the music school."
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "Did an 8:05 train from Ashby run on Saturday?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "Yes, it runs every day" },
+        { "id": "b", "text": "No, it's marked SX: it doesn't run on Saturdays" },
+        { "id": "c", "text": "Yes, but it doesn't stop at Bramley" }
+      ],
+      "answer": "b",
+      "explanation": "The 8:05 is marked SX, Saturdays excepted. On Saturdays there's an 8:20 (SO) and a 9:05.",
+      "evidence": ["ev1"]
+    },
+    {
+      "id": "q2",
+      "prompt": "Neville's ticket was bought at 8:58. Which train did he actually catch?",
+      "kind": "time",
+      "answer": "09:05",
+      "accept": ["9:05", "9.05"],
+      "explanation": "The first northbound train after 8:58 on a Saturday is the 9:05. That means he was still in Ashby during the theft.",
+      "evidence": ["ev1", "ev3"]
+    },
+    {
+      "id": "q3",
+      "prompt": "Miriam says she was on the 8:35 from Bramley. What proves it?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "Her season ticket" },
+        { "id": "b", "text": "The guard scanned her ticket at 8:53, between Dunwell and Corby, so she was on the train during the theft" },
+        { "id": "c", "text": "She lives in Bramley" }
+      ],
+      "answer": "b",
+      "explanation": "The 8:35 leaves Dunwell at 8:52 and reaches Corby at 9:03. A scan at 8:53 puts her on that train, far from Ashby.",
+      "evidence": ["ev2", "ev4"]
+    },
+    {
+      "id": "q4",
+      "prompt": "Who stole the Albescu violin?",
+      "kind": "suspect",
+      "answer": "neville",
+      "explanation": "Neville's 8:05 alibi is impossible on a Saturday. He took the violin, put it in Locker 14 at Ashby station at 8:55, bought his ticket at 8:58 and caught the 9:05. Miriam, Priscilla and Otto all have records putting them elsewhere.",
+      "evidence": ["ev1", "ev3", "ev4", "ev5", "ev6", "ev7"]
+    }
+  ],
+  "hints": [
+    { "question": "q1", "level": 1, "text": "Look at the Notes column of the timetable." },
+    { "question": "q1", "level": 2, "text": "What do SX and SO stand for?" },
+    { "question": "q1", "level": 3, "text": "SX means Saturdays excepted. What day was the theft?" },
+    { "question": "q2", "level": 1, "text": "You can't catch a train before you've bought the ticket." },
+    { "question": "q2", "level": 2, "text": "Find the first Saturday train from Ashby after 8:58." },
+    { "question": "q2", "level": 3, "text": "The 8:20 had already gone. What's next?" },
+    { "question": "q3", "level": 1, "text": "Trains don't just run on time; guards check tickets on them." },
+    { "question": "q3", "level": 2, "text": "Where is the 8:35 from Bramley at 8:53?" },
+    { "question": "q3", "level": 3, "text": "Just after Dunwell, nowhere near Ashby." },
+    { "question": "q4", "level": 1, "text": "Three suspects have a record from someone else. One only has his own word." },
+    { "question": "q4", "level": 2, "text": "What was rented at Ashby station at 8:55, three minutes before a certain ticket was bought?" },
+    { "question": "q4", "level": 3, "text": "Whose key ring had the locker key?" }
+  ],
+  "solution": {
+    "culprit": "neville",
+    "summary": "Neville Prior catches the 8:05 every weekday, so he thought it made a perfect story. On Saturday he let himself into Room 9 at about 8:35, slipped the Albescu into a plain case and walked four minutes to Ashby station. He put it in Locker 14 at 8:55 for the dealer to collect, bought his ticket at 8:58 and caught the 9:05. But the 8:05 doesn't run on Saturdays.",
+    "chain": [
+      { "step": "The 8:05 is marked SX: it doesn't run on Saturdays.", "evidence": ["ev1"] },
+      { "step": "Neville's ticket was bought at 8:58 in Ashby, so the earliest train he could take was the 9:05. He was in Ashby during the theft.", "evidence": ["ev1", "ev3"] },
+      { "step": "Miriam was scanned on the 8:35 from Bramley at 8:53. Priscilla was in her exam in Bramley. Otto was with the engineer.", "evidence": ["ev2", "ev4", "ev5", "ev6"] },
+      { "step": "The violin was in Locker 14 at Ashby station, rented at 8:55, and the key was on Neville's key ring.", "evidence": ["ev7"] }
+    ],
+    "eliminations": [
+      { "suspect": "miriam", "why": "The guard scanned her season ticket at 8:53 between Dunwell and Corby on the southbound train." },
+      { "suspect": "otto", "why": "The heating engineer says Otto helped him in the basement from 8:15 to 9:20." },
+      { "suspect": "priscilla", "why": "In her piano exam in Bramley from 8:30 to 9:02, signed off by the examiner." }
+    ]
+  },
+  "playtest": {
+    "solvePath": "Most solvers spot the SX footnote within a few minutes, then use the ticket time to work out which train Neville really took. Checking Miriam's alibi against the southbound times is the part that takes longest.",
+    "pitfalls": [
+      "Some players mixed up the northbound and southbound tables. They're now separate exhibits with clear titles.",
+      "One tester thought Neville might have caught the 8:20 SO. The 8:58 ticket time rules that out."
+    ],
+    "revisions": [
+      "Added an 8:20 Saturday train so players can't simply say 'there were no trains', and have to use the ticket time.",
+      "Made the guard's scan time fall between two stations so solvers have to place Miriam on the line.",
+      "Added the left-luggage locker for positive proof against Neville."
+    ]
+  }
+}

@@ -1,0 +1,393 @@
+{
+  "number": 6,
+  "title": "The Dark Beach",
+  "tier": "warm",
+  "difficulty": 2,
+  "teaser": "The witness saw everything, clear as day. That's the problem.",
+  "minutes": 15,
+  "draft": false,
+  "booklet": {
+    "briefing": "The gift shop at Saltmarsh Bay lifeboat station raises money for the rescue boat. Its collection box is a big model lifeboat full of coins and notes.\n\nAt 7:31 pm on the 2nd of December the shop's burglar alarm went off. The window facing the beach had been smashed and the model lifeboat was gone.\n\nA local man, Gideon Pell, phoned the police a few minutes later. He said he'd seen the burglar climbing out of the window and knew exactly who it was.\n\nIt looks like an open-and-shut case. Mr. Foxy isn't so sure.",
+    "rules": [
+      "The window was smashed at 7:31 pm, when the alarm went off. The alarm is a siren only; it has no lights or cameras."
+    ],
+    "setting": {
+      "place": "Saltmarsh Bay lifeboat station",
+      "when": "2nd December, 7:30 pm"
+    },
+    "suspects": [
+      {
+        "id": "gideon",
+        "name": "Gideon Pell",
+        "role": "Dog walker and witness",
+        "description": "Retired. Walks his spaniel on the beach every evening. Lost the vote for chair of the lifeboat fundraising committee to Marnie Toll in October.",
+        "motive": "Bitter about losing the committee vote to Marnie.",
+        "statement": "I was on the sand with my dog, fifty metres from the shop. I didn't need a torch. I saw Marnie Toll climb out of that window, clear as day. I saw her face and that red scarf she always wears."
+      },
+      {
+        "id": "marnie",
+        "name": "Marnie Toll",
+        "role": "Chair of the fundraising committee",
+        "description": "Runs the gift shop. Famous for her red scarf.",
+        "motive": "Gideon says she has money troubles. Nobody else has heard of any.",
+        "statement": "That's absurd. I was at the pub quiz at The Anchor from seven until gone nine. Half the village was there."
+      },
+      {
+        "id": "fergus",
+        "name": "Fergus Dunn",
+        "role": "Shop volunteer and lifeboat crew",
+        "description": "Has a key to the shop and knows the alarm code.",
+        "motive": "Could get in at any time.",
+        "statement": "I was out on the boat. Tuesday night is crew training."
+      }
+    ],
+    "witnesses": [],
+    "evidence": [
+      {
+        "id": "1",
+        "title": "Tide and sky almanac, Saltmarsh Bay",
+        "kind": "document",
+        "source": "Harbour office noticeboard",
+        "body": "2nd December\n\nEvent | Time\nSunrise | 8:01 am\nSunset | 3:58 pm\nLast light (end of twilight) | 4:41 pm\nMoon | New moon: not visible all night",
+        "lines": [
+          "2nd December"
+        ],
+        "table": {
+          "columns": [
+            "Event",
+            "Time"
+          ],
+          "rows": [
+            [
+              "Sunrise",
+              "8:01 am"
+            ],
+            [
+              "Sunset",
+              "3:58 pm"
+            ],
+            [
+              "Last light (end of twilight)",
+              "4:41 pm"
+            ],
+            [
+              "Moon",
+              "New moon: not visible all night"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "2",
+        "title": "Council notice",
+        "kind": "letter",
+        "source": "Posted on the promenade, 1st October",
+        "body": "ALL PROMENADE AND BEACH LAMPS WILL BE SWITCHED OFF FROM 1st OCTOBER UNTIL 15th DECEMBER FOR CABLE REPAIRS. PLEASE CARRY A TORCH AFTER DARK.",
+        "lines": [
+          "ALL PROMENADE AND BEACH LAMPS WILL BE SWITCHED OFF FROM 1st OCTOBER UNTIL 15th DECEMBER FOR CABLE REPAIRS. PLEASE CARRY A TORCH AFTER DARK."
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Weather report",
+        "kind": "report",
+        "source": "Coastguard station, 2nd December",
+        "body": "Thick cloud all evening. No stars visible. Light drizzle from 6 pm.",
+        "lines": [
+          "Thick cloud all evening. No stars visible. Light drizzle from 6 pm."
+        ]
+      },
+      {
+        "id": "4",
+        "title": "The Anchor pub quiz",
+        "kind": "log",
+        "source": "Quizmaster's records",
+        "body": "Team “Lifeboat Ladies” (captain M. Toll) handed in each round's answer sheet in Marnie's handwriting.\n\nQuizmaster: “Marnie was sitting at the table by the fire all night in her red scarf. She argued with me about question 7 for ten minutes.”\n\nRound | Sheet handed in\nRound 1 | 7:12 pm\nRound 2 | 7:24 pm\nRound 3 | 7:37 pm\nRound 4 | 7:51 pm",
+        "lines": [
+          "Team “Lifeboat Ladies” (captain M. Toll) handed in each round's answer sheet in Marnie's handwriting.",
+          "Quizmaster: “Marnie was sitting at the table by the fire all night in her red scarf. She argued with me about question 7 for ten minutes.”"
+        ],
+        "table": {
+          "columns": [
+            "Round",
+            "Sheet handed in"
+          ],
+          "rows": [
+            [
+              "Round 1",
+              "7:12 pm"
+            ],
+            [
+              "Round 2",
+              "7:24 pm"
+            ],
+            [
+              "Round 3",
+              "7:37 pm"
+            ],
+            [
+              "Round 4",
+              "7:51 pm"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "5",
+        "title": "Lifeboat exercise log",
+        "kind": "log",
+        "source": "Saltmarsh Bay lifeboat, logged by the coastguard",
+        "body": "Crew training exercise, 2nd December.\n\nLaunched 7:00 pm. Recovered 8:15 pm. Crew on board: F. Dunn, A. Shah, K. O'Brien, L. Mayhew.\n\nPosition at 7:30 pm: two miles offshore.",
+        "lines": [
+          "Crew training exercise, 2nd December.",
+          "Launched 7:00 pm. Recovered 8:15 pm. Crew on board: F. Dunn, A. Shah, K. O'Brien, L. Mayhew.",
+          "Position at 7:30 pm: two miles offshore."
+        ]
+      },
+      {
+        "id": "6",
+        "title": "Scene examination",
+        "kind": "report",
+        "source": "Police, 9:00 pm",
+        "body": "Glass from the window lies inside the shop: it was broken from the beach side.\n\nOne shard has a smear of fresh blood on it. Blood type: O negative.\n\nBlood types on file (blood donor register): Gideon Pell O negative. Marnie Toll A positive. Fergus Dunn B positive.\n\nWhen interviewed, Gideon had a fresh cut on his right palm, bandaged. He said he'd cut it opening a tin of dog food.",
+        "lines": [
+          "Glass from the window lies inside the shop: it was broken from the beach side.",
+          "One shard has a smear of fresh blood on it. Blood type: O negative.",
+          "Blood types on file (blood donor register): Gideon Pell O negative. Marnie Toll A positive. Fergus Dunn B positive.",
+          "When interviewed, Gideon had a fresh cut on his right palm, bandaged. He said he'd cut it opening a tin of dog food."
+        ]
+      }
+    ],
+    "timeline": [],
+    "puzzles": [
+      {
+        "id": "q1",
+        "prompt": "Could anyone standing 50 metres away on the beach, with no torch, see a face at 7:30 pm on 2nd December?",
+        "answer": "No. It had been dark for almost three hours, there was no moon, thick cloud, and the beach lamps were off",
+        "hint": "It's December. What time does it get dark?"
+      },
+      {
+        "id": "q2",
+        "prompt": "So whose statement cannot be true?",
+        "answer": "Gideon Pell",
+        "hint": "Somebody described something they couldn't have seen."
+      },
+      {
+        "id": "q3",
+        "prompt": "Where was Marnie at 7:31 pm?",
+        "answer": "At the pub quiz in The Anchor",
+        "hint": "Marnie says she was at the quiz. Is there a record?"
+      },
+      {
+        "id": "q4",
+        "prompt": "Why can't Fergus be the burglar?",
+        "answer": "He was two miles out at sea on a training exercise",
+        "hint": "Having a key makes Fergus less likely to break a window, but that isn't proof. Find proof."
+      },
+      {
+        "id": "q5",
+        "prompt": "Who smashed the window and took the collection box?",
+        "answer": "Gideon Pell",
+        "hint": "Why would someone invent a sighting?"
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "prompt": "Could anyone standing 50 metres away on the beach, with no torch, see a face at 7:30 pm on 2nd December?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "Yes, it was still light"
+          },
+          {
+            "id": "b",
+            "text": "Yes, by moonlight"
+          },
+          {
+            "id": "c",
+            "text": "No. It had been dark for almost three hours, there was no moon, thick cloud, and the beach lamps were off"
+          }
+        ],
+        "answer": "c",
+        "explanation": "Last light was 4:41 pm, the moon was new, cloud hid the stars and the council had switched the beach lamps off. The alarm has no lights. It was pitch black.",
+        "evidence": [
+          "1",
+          "2",
+          "3"
+        ],
+        "hints": [
+          "It's December. What time does it get dark?",
+          "Check the almanac for last light, the moon, and then the council notice about the lamps.",
+          "Dark since 4:41, no moon, thick cloud, no lamps, no torch. How would you see anyone's face?"
+        ]
+      },
+      {
+        "id": "q2",
+        "prompt": "So whose statement cannot be true?",
+        "kind": "suspect",
+        "options": [
+          {
+            "id": "gideon",
+            "text": "Gideon Pell"
+          },
+          {
+            "id": "marnie",
+            "text": "Marnie Toll"
+          },
+          {
+            "id": "fergus",
+            "text": "Fergus Dunn"
+          }
+        ],
+        "answer": "gideon",
+        "explanation": "Gideon claims he saw Marnie's face and scarf clearly with no torch. In that darkness it's impossible.",
+        "evidence": [
+          "1",
+          "2",
+          "3"
+        ],
+        "hints": [
+          "Somebody described something they couldn't have seen.",
+          "Reread the witness statement. What does he claim he saw, and how?",
+          "“I didn't need a torch.” On that beach, that night, he'd have needed one badly."
+        ]
+      },
+      {
+        "id": "q3",
+        "prompt": "Where was Marnie at 7:31 pm?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "At the lifeboat station"
+          },
+          {
+            "id": "b",
+            "text": "At the pub quiz in The Anchor"
+          },
+          {
+            "id": "c",
+            "text": "At home"
+          }
+        ],
+        "answer": "b",
+        "explanation": "She handed in round 2 at 7:24 and round 3 at 7:37 in her own handwriting, and the quizmaster saw her by the fire all night.",
+        "evidence": [
+          "4"
+        ],
+        "hints": [
+          "Marnie says she was at the quiz. Is there a record?",
+          "Look at the times the answer sheets were handed in around 7:31.",
+          "7:24 and 7:37, both in her handwriting, and she was arguing with the quizmaster."
+        ]
+      },
+      {
+        "id": "q4",
+        "prompt": "Why can't Fergus be the burglar?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "He has a key, so he'd never break a window"
+          },
+          {
+            "id": "b",
+            "text": "He was two miles out at sea on a training exercise"
+          },
+          {
+            "id": "c",
+            "text": "He's lifeboat crew, so he must be honest"
+          }
+        ],
+        "answer": "b",
+        "explanation": "Having a key is suggestive but not proof. The coastguard log is proof: the boat was two miles offshore with Fergus aboard at 7:30.",
+        "evidence": [
+          "5"
+        ],
+        "hints": [
+          "Having a key makes Fergus less likely to break a window, but that isn't proof. Find proof.",
+          "Tuesday night is crew training. Is there a log?",
+          "Two miles offshore at 7:30. Not even Fergus swims that fast."
+        ]
+      },
+      {
+        "id": "q5",
+        "prompt": "Who smashed the window and took the collection box?",
+        "kind": "suspect",
+        "options": [
+          {
+            "id": "gideon",
+            "text": "Gideon Pell"
+          },
+          {
+            "id": "marnie",
+            "text": "Marnie Toll"
+          },
+          {
+            "id": "fergus",
+            "text": "Fergus Dunn"
+          }
+        ],
+        "answer": "gideon",
+        "explanation": "Gideon invented a sighting that was impossible in the dark, to frame his rival. The blood on the glass is his type and he has a fresh cut on his palm.",
+        "evidence": [
+          "1",
+          "4",
+          "5",
+          "6"
+        ],
+        "hints": [
+          "Why would someone invent a sighting?",
+          "Look at the blood on the glass and the blood donor register.",
+          "A fresh cut, the right blood type and a grudge. The witness is the burglar."
+        ]
+      }
+    ],
+    "solution": {
+      "culprit": "Gideon Pell",
+      "culpritId": "gideon",
+      "explanation": "Gideon Pell smashed the gift shop window in the dark, cut his hand on the glass and grabbed the model lifeboat. Then he called the police to 'report' that he'd seen his rival Marnie do it. He forgot one thing: on a moonless, cloudy December night with the beach lamps switched off, nobody can see a face fifty metres away without a torch.",
+      "chain": [
+        {
+          "step": "At 7:30 pm on 2nd December it was completely dark: no daylight, no moon, thick cloud and no lamps.",
+          "evidence": [
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        {
+          "step": "So Gideon's 'clear as day' sighting is impossible. He made it up.",
+          "evidence": [
+            "1"
+          ]
+        },
+        {
+          "step": "Marnie was at the quiz, handing in sheets at 7:24 and 7:37. Fergus was two miles out at sea.",
+          "evidence": [
+            "4",
+            "5"
+          ]
+        },
+        {
+          "step": "The blood on the glass is O negative, Gideon's type, and he has a fresh cut on his palm.",
+          "evidence": [
+            "6"
+          ]
+        }
+      ],
+      "eliminations": [
+        {
+          "name": "Marnie Toll",
+          "why": "At The Anchor quiz from 7:00, with sheets in her handwriting at 7:24 and 7:37 and the quizmaster as a witness."
+        },
+        {
+          "name": "Fergus Dunn",
+          "why": "On the lifeboat two miles offshore from 7:00 to 8:15 pm, logged by the coastguard."
+        }
+      ]
+    }
+  }
+}

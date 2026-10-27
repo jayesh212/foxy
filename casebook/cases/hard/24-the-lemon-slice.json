@@ -1,0 +1,272 @@
+{
+  "$schema": "../../schema/case.schema.json",
+  "id": "case-24",
+  "number": 24,
+  "slug": "the-lemon-slice",
+  "title": "The Lemon Slice",
+  "tier": "hard",
+  "difficulty": 4,
+  "minutes": 35,
+  "tagline": "Sir Clive collapsed at 9:42. The poison takes half an hour to work. Something he swallowed after nine o'clock was not what it seemed.",
+  "crime": "poisoning (attempted murder)",
+  "tags": ["toxicology window", "timeline", "elimination", "photos"],
+  "setting": { "place": "Marbury Hall dining room", "when": "Friday dinner, 8:30 pm to 9:45 pm" },
+  "briefing": [
+    "Sir Clive Marbury, owner of Marbury Shipping, hosted five guests for dinner on Friday. At 9:42 pm he gasped, clutched his chest and collapsed. The quick-thinking butler called an ambulance, and Sir Clive survived, but only just.",
+    "The hospital found aconite in his blood, a plant poison. Someone at the table tried to kill him.",
+    "Everyone shared the same food from the same dishes, and the same wine from the same decanter. Mr. Foxy wants to know exactly what Sir Clive swallowed, and exactly when."
+  ],
+  "rules": [
+    "The poison was swallowed at the dinner table.",
+    "The five suspects were the only other people at the table. The butler served but never touched Sir Clive's glasses after 8:55 (confirmed by the photos)."
+  ],
+  "suspects": [
+    {
+      "id": "hester",
+      "name": "Lady Hester Marbury",
+      "role": "Sir Clive's wife (seat 4)",
+      "description": "Sat at the far end of the table, facing her husband.",
+      "motive": "Their marriage has been cold for years.",
+      "statement": "I didn't move from my seat all evening. The table is far too long to reach Clive from my end."
+    },
+    {
+      "id": "pruitt",
+      "name": "Gordon Pruitt",
+      "role": "Business partner (seat 6)",
+      "description": "Sat at Sir Clive's left hand. Asked for extra lemon with his fish.",
+      "motive": "Sir Clive was about to push him out of the company.",
+      "statement": "I squeezed my lemon over the sole like a civilised man and left the slice on my plate."
+    },
+    {
+      "id": "colonel",
+      "name": "Colonel Basil Marsh",
+      "role": "Old friend (seat 5)",
+      "description": "Proposed a toast at 9:00 and walked round the table to clink glasses with Sir Clive.",
+      "motive": "Lost a fortune on a Marbury ship that sank.",
+      "statement": "I made my toast, clinked Clive's wine glass, and went straight back to my seat."
+    },
+    {
+      "id": "rupert",
+      "name": "Rupert Marbury",
+      "role": "Nephew and heir (seat 2)",
+      "description": "Sat at Sir Clive's right hand. Inherits the company if his uncle dies.",
+      "motive": "Has run up huge debts and was told on Thursday he'd been cut out of the will next month.",
+      "statement": "I ate my fish, squeezed the lemon and left it on the side of the plate. I was watching the flambé like everyone else."
+    },
+    {
+      "id": "imogen",
+      "name": "Imogen Marbury",
+      "role": "Niece, photographer (seat 3)",
+      "description": "Took photographs all evening for a magazine article about the house.",
+      "motive": "Sir Clive refused to pay for her art school.",
+      "statement": "I was taking pictures. My camera puts the time on every one. Look for yourselves."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev1",
+      "kind": "report",
+      "title": "Hospital toxicology",
+      "source": "County Hospital, Saturday",
+      "body": ["Aconite poisoning.", "From the amount found, symptoms begin 30 to 40 minutes after the poison is swallowed. Sir Clive collapsed at 9:42 pm."]
+    },
+    {
+      "id": "ev2",
+      "kind": "log",
+      "title": "What Sir Clive ate and drank",
+      "source": "The butler's service notes",
+      "body": ["Everyone was served from the same dishes and the same decanter."],
+      "table": {
+        "columns": ["Time", "What"],
+        "rows": [
+          ["8:40", "Soup, from one tureen. Everyone ate it."],
+          ["8:55", "Butler fills Sir Clive's water glass from the water jug."],
+          ["9:00", "Fish course (sole) served to every seat, each plate with one lemon slice. Flambé at the sideboard; all eyes on the flames, 9:00 to 9:02. Colonel's toast."],
+          ["9:05", "Sir Clive's watch alarm beeps. He takes his heart pill with a long drink of water, as he does every night."],
+          ["9:10", "Claret poured from the decanter for everyone. Sir Clive drinks."],
+          ["9:18", "Fish plates cleared."],
+          ["9:20", "Dessert. Sir Clive refuses it."]
+        ]
+      }
+    },
+    {
+      "id": "ev3",
+      "kind": "report",
+      "title": "Police laboratory",
+      "source": "Tests on everything from the table",
+      "body": [
+        "No aconite in: the soup tureen, the water jug, the claret decanter, Sir Clive's claret glass, his pill bottle.",
+        "Aconite found in: the water left in Sir Clive's water glass, and very strongly in a lemon slice found at the bottom of that glass."
+      ]
+    },
+    {
+      "id": "ev4",
+      "kind": "photo",
+      "title": "Imogen's photographs",
+      "source": "Camera timestamps",
+      "body": [
+        "8:58 pm: Sir Clive laughing. His water glass is full, with nothing in it but water.",
+        "9:01 pm: Everyone turned towards the flambé. The Colonel, standing behind Sir Clive's chair, clinks wine glasses with him, his other hand on his walking cane. Sir Clive's water glass is half hidden behind Rupert's arm. Rupert's fish plate is in front of him, out of the Colonel's reach.",
+        "9:04 pm: Sir Clive checking his watch. A pale yellow slice is floating in his water glass."
+      ]
+    },
+    {
+      "id": "ev5",
+      "kind": "statement",
+      "title": "Sir Clive, from his hospital bed",
+      "source": "Saturday afternoon",
+      "body": ["“Lemon? In my water? I can't stand the stuff, everybody knows that. I took my pill without looking, I never look.”"]
+    },
+    {
+      "id": "ev6",
+      "kind": "note",
+      "title": "Butler's note on the fish plates",
+      "source": "Cleared at 9:18",
+      "body": ["Every lemon slice was still on its plate, squeezed or not, except one.", "The police later searched the table, chairs and floor: no loose lemon slices anywhere."],
+      "table": {
+        "columns": ["Seat", "Lemon slice on the plate?"],
+        "rows": [
+          ["1 (Sir Clive)", "Yes, untouched"],
+          ["2", "No"],
+          ["3", "Yes, untouched"],
+          ["4", "Yes, squeezed"],
+          ["5", "Yes, squeezed"],
+          ["6", "Yes, squeezed (and an extra one, also squeezed)"]
+        ]
+      }
+    },
+    {
+      "id": "ev7",
+      "kind": "map",
+      "title": "Place cards",
+      "source": "Dining table, six seats",
+      "body": ["Seat 1, head of the table: Sir Clive. Seat 2, his right: Rupert. Seat 3: Imogen. Seat 4, the far end: Lady Hester. Seat 5: Colonel Marsh. Seat 6, his left: Gordon Pruitt.", "Only seats 2 and 6 are close enough to touch Sir Clive's glasses without standing up."]
+    },
+    {
+      "id": "ev8",
+      "kind": "object",
+      "title": "In the fern pot",
+      "source": "Beside seat 2, found Saturday",
+      "body": ["A tiny brown glass dropper bottle, empty, with traces of aconite tincture. Fingerprints on it: Rupert Marbury's."]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "Between what times did Sir Clive swallow the poison?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "8:40 to 8:55" },
+        { "id": "b", "text": "9:02 to 9:12" },
+        { "id": "c", "text": "9:10 to 9:20" }
+      ],
+      "answer": "b",
+      "explanation": "He collapsed at 9:42 and the poison works after 30 to 40 minutes. 9:42 minus 40 is 9:02, minus 30 is 9:12.",
+      "evidence": ["ev1"]
+    },
+    {
+      "id": "q2",
+      "prompt": "What did he swallow in that window that carried the poison?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "The claret at 9:10" },
+        { "id": "b", "text": "The water he drank with his pill at 9:05" },
+        { "id": "c", "text": "The soup" }
+      ],
+      "answer": "b",
+      "explanation": "Both the 9:05 water and the 9:10 claret fall in the window, but the lab found no poison in the claret, the decanter or the jug. It was in his water glass, soaked into a lemon slice.",
+      "evidence": ["ev2", "ev3"]
+    },
+    {
+      "id": "q3",
+      "prompt": "When did the lemon slice get into the glass?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "Between 8:58 and 9:04, during the flambé, after the lemons arrived with the fish at 9:00" },
+        { "id": "b", "text": "When the butler filled the glass at 8:55" },
+        { "id": "c", "text": "Sir Clive added it himself" }
+      ],
+      "answer": "a",
+      "explanation": "The 8:58 photo shows plain water, the 9:04 photo shows a slice. Lemons only came to the table at 9:00, and Sir Clive hates lemon and left his own untouched.",
+      "evidence": ["ev2", "ev4", "ev5", "ev6"]
+    },
+    {
+      "id": "q4",
+      "prompt": "Whose fish plate was missing its lemon slice?",
+      "kind": "suspect",
+      "answer": "rupert",
+      "explanation": "The butler's table shows seat 2 had no slice, and the place cards put Rupert in seat 2. There were no loose slices anywhere else.",
+      "evidence": ["ev6", "ev7"]
+    },
+    {
+      "id": "q5",
+      "prompt": "The Colonel walked round to Sir Clive at 9:00. Why isn't he the poisoner?",
+      "kind": "choice",
+      "options": [
+        { "id": "a", "text": "His own lemon slice was still on his plate (seat 5), so the slice in the glass wasn't his" },
+        { "id": "b", "text": "He's an old friend" },
+        { "id": "c", "text": "He didn't touch any glasses" }
+      ],
+      "answer": "a",
+      "explanation": "He did get close, and he did clink glasses. But every slice is accounted for except Rupert's, so the poisoned slice came from seat 2.",
+      "evidence": ["ev6", "ev7"]
+    },
+    {
+      "id": "q6",
+      "prompt": "Who poisoned Sir Clive?",
+      "kind": "suspect",
+      "answer": "rupert",
+      "explanation": "The poison was in a lemon slice dropped into Sir Clive's water between 9:00 and 9:04. Rupert sat beside him, his slice is the only one missing, his arm hid the glass in the 9:01 photo, and the dropper bottle with his fingerprints was in the fern beside his seat.",
+      "evidence": ["ev3", "ev4", "ev6", "ev7", "ev8"]
+    }
+  ],
+  "hints": [
+    { "question": "q1", "level": 1, "text": "The toxicology report gives you the delay. Work backwards from the collapse." },
+    { "question": "q1", "level": 2, "text": "9:42 minus 40 minutes, and 9:42 minus 30 minutes." },
+    { "question": "q1", "level": 3, "text": "From 9:02 to 9:12. Now check the service notes for what happened then." },
+    { "question": "q2", "level": 1, "text": "Two things in the service notes fall inside your window." },
+    { "question": "q2", "level": 2, "text": "Which one did the laboratory find poison in?" },
+    { "question": "q2", "level": 3, "text": "The claret was clean. The water glass wasn't, and neither was something floating in it." },
+    { "question": "q3", "level": 1, "text": "Imogen's camera stamps the time on every photo." },
+    { "question": "q3", "level": 2, "text": "Compare the water glass at 8:58 and at 9:04. When did the lemons come to the table?" },
+    { "question": "q3", "level": 3, "text": "Between 9:00 and 9:04, while everyone was watching the flames." },
+    { "question": "q4", "level": 1, "text": "Every plate came with exactly one lemon slice. Count them back." },
+    { "question": "q4", "level": 2, "text": "The butler's table tells you which seat is missing one." },
+    { "question": "q4", "level": 3, "text": "Seat 2. Who was sitting there?" },
+    { "question": "q5", "level": 1, "text": "Getting close isn't enough. Where did the poisoned slice come from?" },
+    { "question": "q5", "level": 2, "text": "Check seat 5 in the butler's table." },
+    { "question": "q5", "level": 3, "text": "His own slice was still on his plate." },
+    { "question": "q6", "level": 1, "text": "Put together the window, the slice and the seat." },
+    { "question": "q6", "level": 2, "text": "Look at the 9:01 photo. What was hiding the water glass?" },
+    { "question": "q6", "level": 3, "text": "And what was hidden in the fern next to that seat?" }
+  ],
+  "solution": {
+    "culprit": "rupert",
+    "summary": "Rupert Marbury learned he was to be cut out of his uncle's will and decided to act first. He knew Sir Clive takes his heart pill at 9:05 every night with a long drink of water, without looking. When the fish arrived with its lemon slices and every head turned to the flambé, Rupert dripped aconite onto his own lemon slice under the table and dropped it into his uncle's glass. Sir Clive hates lemon and would have noticed if he'd looked. He never looks. Rupert's plate was the only one left without a slice.",
+    "chain": [
+      { "step": "Collapse at 9:42 with a 30 to 40 minute delay: the poison was swallowed between 9:02 and 9:12.", "evidence": ["ev1"] },
+      { "step": "In that window he drank water at 9:05 and claret at 9:10. Only the water glass and a lemon slice in it held poison.", "evidence": ["ev2", "ev3"] },
+      { "step": "The slice went in between 8:58 and 9:04, after the lemons were served at 9:00. Sir Clive hates lemon and left his own.", "evidence": ["ev4", "ev5", "ev6"] },
+      { "step": "Only seat 2's slice is missing. Seat 2 is Rupert, right beside Sir Clive.", "evidence": ["ev6", "ev7"] },
+      { "step": "Rupert's arm hid the glass at 9:01, and his fingerprints are on the dropper bottle in the fern by his seat.", "evidence": ["ev4", "ev8"] }
+    ],
+    "eliminations": [
+      { "suspect": "hester", "why": "At the far end of the table, out of reach, and her squeezed slice was still on her plate." },
+      { "suspect": "pruitt", "why": "Sat close enough, but both his slices, his own and his extra, were on his plate." },
+      { "suspect": "colonel", "why": "Came close for the toast, but his own slice was still on his plate." },
+      { "suspect": "imogen", "why": "Out of reach in seat 3, busy photographing, and her slice was untouched on her plate." }
+    ]
+  },
+  "playtest": {
+    "solvePath": "The toxicology window is the first lock; the lab report is the second. Players who count lemon slices solve it in about thirty minutes. The 9:01 photo is a lovely late clue for those who check every picture.",
+    "pitfalls": [
+      "Players focused on the Colonel's toast. That's intended; the lemon count clears him.", "One tester asked whether the Colonel could have taken Rupert's slice while standing. The 9:01 photo now shows his hands full and Rupert's plate out of his reach, and Rupert lied about leaving his slice on the plate.",
+      "Some argued Pruitt's extra lemon could have been anyone's. The butler confirms both of his slices were on his plate."
+    ],
+    "revisions": [
+      "Put both the water and the claret inside the toxicology window so solvers have to use the lab report, not just the clock.",
+      "Made Sir Clive's own slice 'untouched' so he clearly didn't add one to his glass.",
+      "Added the police search for loose slices so nobody can argue a slice fell on the floor and another was taken."
+    ]
+  }
+}

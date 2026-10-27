@@ -1,0 +1,451 @@
+{
+  "number": 19,
+  "title": "The Mayor's Cat",
+  "tier": "tricky",
+  "difficulty": 3,
+  "teaser": "Duchess the cat has been catnapped. The ransom note arrived at exactly 4:00. Only one suspect could have got there in time.",
+  "minutes": 25,
+  "draft": false,
+  "booklet": {
+    "briefing": "Mayor Priya Gill wants to build a bypass road around Cobbleford. Not everyone is pleased. On Wednesday her beloved cat, Duchess, vanished from the garden.\n\nAt exactly 4:00:00 pm, the doorbell camera at the Mayor's House filmed a gloved hand pushing a note through the letterbox: “STOP THE BYPASS OR YOU WON'T SEE DUCHESS AGAIN.” The hood and the angle hid the face.\n\nFour villagers loudly oppose the bypass. Each was seen somewhere else shortly before or after 4:00. Get out the village map and do the sums.",
+    "rules": [
+      "The note was delivered by the catnapper in person at exactly 4:00 pm.",
+      "Everyone walks at 80 metres a minute. A bicycle goes 250 metres a minute, but only on roads, not on footpaths.",
+      "Use the shortest route. No one in the village has a car available that afternoon (see the evidence)."
+    ],
+    "setting": {
+      "place": "Cobbleford village",
+      "when": "Wednesday afternoon"
+    },
+    "suspects": [
+      {
+        "id": "ada",
+        "name": "Ada Finch",
+        "role": "Shopkeeper",
+        "description": "Runs the village shop and fears the bypass will take away passing trade.",
+        "motive": "Started the 'Save Our High Street' petition.",
+        "statement": "I was in the shop till gone four. I served old Mr. Lowe at about four minutes to."
+      },
+      {
+        "id": "bert",
+        "name": "Bert Lacey",
+        "role": "Cellarman at the Plough pub, bell ringer",
+        "description": "Looks after the pub's beer cellar. Rings the church bells on Wednesdays. Rides an old green bicycle.",
+        "motive": "The bypass would take lorries, and their thirsty drivers, away from the Plough.",
+        "statement": "I settled my tab at the Plough at 3:52 and walked straight to the church for bell practice. I got there a bit after four."
+      },
+      {
+        "id": "cora",
+        "name": "Cora Whitlow",
+        "role": "Retired teacher",
+        "description": "Walks everywhere. Thinks the bypass will ruin the meadows.",
+        "motive": "Chains herself to things in protest. Often.",
+        "statement": "I was at the library returning books. Then I walked to the Mayor's House to complain, but I heard the news and turned round."
+      },
+      {
+        "id": "dawson",
+        "name": "Amos Dawson",
+        "role": "Farmer",
+        "description": "The bypass would cut his farm in two.",
+        "motive": "Stands to lose his best field.",
+        "statement": "I was on the farm all afternoon waiting for the vet. My tractor's in pieces at the garage."
+      }
+    ],
+    "witnesses": [],
+    "evidence": [
+      {
+        "id": "1",
+        "title": "Cobbleford map: distances",
+        "kind": "map",
+        "source": "Parish council map",
+        "body": "Roads can be walked or cycled. Footpaths can only be walked. There are no other routes.\n\nFrom | To | Distance | Type\nMayor's House | Shop | 400 m | Road\nShop | Church | 300 m | Road\nChurch | Plough pub | 500 m | Road\nMayor's House | Church | 600 m | Road\nMayor's House | Library | 800 m | Road\nFarm | Mayor's House | 1500 m | Footpath (across the fields)\nFarm | Plough pub | 900 m | Footpath (farm track)\nLibrary | Shop | 700 m | Footpath (through the park)",
+        "lines": [
+          "Roads can be walked or cycled. Footpaths can only be walked. There are no other routes."
+        ],
+        "table": {
+          "columns": [
+            "From",
+            "To",
+            "Distance",
+            "Type"
+          ],
+          "rows": [
+            [
+              "Mayor's House",
+              "Shop",
+              "400 m",
+              "Road"
+            ],
+            [
+              "Shop",
+              "Church",
+              "300 m",
+              "Road"
+            ],
+            [
+              "Church",
+              "Plough pub",
+              "500 m",
+              "Road"
+            ],
+            [
+              "Mayor's House",
+              "Church",
+              "600 m",
+              "Road"
+            ],
+            [
+              "Mayor's House",
+              "Library",
+              "800 m",
+              "Road"
+            ],
+            [
+              "Farm",
+              "Mayor's House",
+              "1500 m",
+              "Footpath (across the fields)"
+            ],
+            [
+              "Farm",
+              "Plough pub",
+              "900 m",
+              "Footpath (farm track)"
+            ],
+            [
+              "Library",
+              "Shop",
+              "700 m",
+              "Footpath (through the park)"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "2",
+        "title": "Sightings",
+        "kind": "log",
+        "source": "Tills, records and witnesses",
+        "body": "Times confirmed by a till receipt, a library computer or a witness's phone.\n\nTime | Where | Who | Source\n3:48 pm | Farm | Amos Dawson | Milk tanker driver, collecting at the farm gate\n3:51 pm | Library | Cora Whitlow | Library computer: books returned\n3:52 pm | Plough pub | Bert Lacey | Pub till: tab settled\n3:56 pm | Shop | Ada Finch | Shop till: sale to Mr. Lowe, served by Ada\n4:03 pm | Church | Bert Lacey | Bell practice sign-in sheet\n4:15 pm | Farm | Amos Dawson | Vet's visit record",
+        "lines": [
+          "Times confirmed by a till receipt, a library computer or a witness's phone."
+        ],
+        "table": {
+          "columns": [
+            "Time",
+            "Where",
+            "Who",
+            "Source"
+          ],
+          "rows": [
+            [
+              "3:48 pm",
+              "Farm",
+              "Amos Dawson",
+              "Milk tanker driver, collecting at the farm gate"
+            ],
+            [
+              "3:51 pm",
+              "Library",
+              "Cora Whitlow",
+              "Library computer: books returned"
+            ],
+            [
+              "3:52 pm",
+              "Plough pub",
+              "Bert Lacey",
+              "Pub till: tab settled"
+            ],
+            [
+              "3:56 pm",
+              "Shop",
+              "Ada Finch",
+              "Shop till: sale to Mr. Lowe, served by Ada"
+            ],
+            [
+              "4:03 pm",
+              "Church",
+              "Bert Lacey",
+              "Bell practice sign-in sheet"
+            ],
+            [
+              "4:15 pm",
+              "Farm",
+              "Amos Dawson",
+              "Vet's visit record"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "3",
+        "title": "The tower captain",
+        "kind": "statement",
+        "source": "Bell practice, St. Luke's Church",
+        "body": "“Bert signed in at 4:03, bit out of breath. His green bike was leaning on the church railings when I came out at six. It hadn't been there at quarter to four when I arrived.”",
+        "lines": [
+          "“Bert signed in at 4:03, bit out of breath. His green bike was leaning on the church railings when I came out at six. It hadn't been there at quarter to four when I arrived.”"
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Garage note",
+        "kind": "document",
+        "source": "Cobbleford Motors",
+        "body": "Amos Dawson's tractor: engine removed for repair since Monday. Not drivable.\n\nNo other vehicles are registered to anyone at the farm.",
+        "lines": [
+          "Amos Dawson's tractor: engine removed for repair since Monday. Not drivable.",
+          "No other vehicles are registered to anyone at the farm."
+        ]
+      },
+      {
+        "id": "5",
+        "title": "Where Duchess was found",
+        "kind": "report",
+        "source": "Thursday morning",
+        "body": "Duchess was found, cross but unharmed, in a crate in the Plough's beer cellar, with a saucer of milk. Only the landlord and the cellarman have keys to the cellar; the landlord was away all week at his sister's.\n\nWhite cat hairs were found in the wicker basket of Bert Lacey's green bicycle.",
+        "lines": [
+          "Duchess was found, cross but unharmed, in a crate in the Plough's beer cellar, with a saucer of milk. Only the landlord and the cellarman have keys to the cellar; the landlord was away all week at his sister's.",
+          "White cat hairs were found in the wicker basket of Bert Lacey's green bicycle."
+        ]
+      }
+    ],
+    "timeline": [],
+    "puzzles": [
+      {
+        "id": "q1",
+        "prompt": "What is the earliest time Ada could have reached the Mayor's letterbox? (24-hour clock.)",
+        "answer": "16:01",
+        "hint": "Time = distance ÷ speed."
+      },
+      {
+        "id": "q2",
+        "prompt": "Why can't Cora or Amos Dawson have delivered the note?",
+        "answer": "Cora needs 10 minutes from the library (arrives 4:01); Amos needs nearly 19 minutes from the farm (arrives about 4:07)",
+        "hint": "Do the same sum for each of them, using the shortest route."
+      },
+      {
+        "id": "q3",
+        "prompt": "Bert says he walked from the pub to the church. Could he have delivered the note on foot?",
+        "answer": "No. Pub to Mayor's House to church is 1,700 m, about 21 minutes on foot, and he had only 11",
+        "hint": "Bert has to go pub, then Mayor's House, then church, between 3:52 and 4:03."
+      },
+      {
+        "id": "q4",
+        "prompt": "And by bicycle?",
+        "answer": "Yes: about 4½ minutes to the Mayor's House by 3:57, then under 2½ minutes to the church by 4:03",
+        "hint": "Are all of Bert's stretches roads?"
+      },
+      {
+        "id": "q5",
+        "prompt": "Who took Duchess and sent the note?",
+        "answer": "Bert Lacey",
+        "hint": "Only one suspect can reach the letterbox, and only one way."
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "prompt": "What is the earliest time Ada could have reached the Mayor's letterbox? (24-hour clock.)",
+        "kind": "time",
+        "answer": "16:01",
+        "accept": [
+          "4:01",
+          "4:01 pm"
+        ],
+        "explanation": "She was at the shop till at 3:56. The shop is 400 m from the Mayor's House: 400 ÷ 80 = 5 minutes. She couldn't arrive before 4:01.",
+        "evidence": [
+          "1",
+          "2"
+        ],
+        "hints": [
+          "Time = distance ÷ speed.",
+          "Shop to Mayor's House is 400 m, and Ada walks at 80 m a minute.",
+          "Five minutes after 3:56."
+        ]
+      },
+      {
+        "id": "q2",
+        "prompt": "Why can't Cora or Amos Dawson have delivered the note?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "Cora needs 10 minutes from the library (arrives 4:01); Amos needs nearly 19 minutes from the farm (arrives about 4:07)"
+          },
+          {
+            "id": "b",
+            "text": "They were both seen at the Mayor's House at 4:05"
+          },
+          {
+            "id": "c",
+            "text": "They both have bicycles"
+          }
+        ],
+        "answer": "a",
+        "explanation": "Library to Mayor's House is 800 m: 10 minutes, so 3:51 becomes 4:01. Farm to Mayor's House is 1500 m: 18¾ minutes, so 3:48 becomes about 4:07, and he had no working vehicle.",
+        "evidence": [
+          "1",
+          "2",
+          "4"
+        ],
+        "hints": [
+          "Do the same sum for each of them, using the shortest route.",
+          "Library to Mayor's House: 800 m. Farm to Mayor's House: 1500 m.",
+          "10 minutes after 3:51 and nearly 19 after 3:48. Both arrive after 4:00."
+        ]
+      },
+      {
+        "id": "q3",
+        "prompt": "Bert says he walked from the pub to the church. Could he have delivered the note on foot?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "Yes, easily"
+          },
+          {
+            "id": "b",
+            "text": "No. Pub to Mayor's House to church is 1,700 m, about 21 minutes on foot, and he had only 11"
+          },
+          {
+            "id": "c",
+            "text": "No, because the church is closed on Wednesdays"
+          }
+        ],
+        "answer": "b",
+        "explanation": "Pub to Mayor's House is 1,100 m by the shortest road (via the church), and Mayor's House to church is another 600 m. On foot that's over 21 minutes, but 3:52 to 4:03 is only 11.",
+        "evidence": [
+          "1",
+          "2"
+        ],
+        "hints": [
+          "Bert has to go pub, then Mayor's House, then church, between 3:52 and 4:03.",
+          "The shortest way from the pub to the Mayor's House goes through the church.",
+          "500 + 600 + 600 = 1,700 m on foot. How long is that at 80 m a minute?"
+        ]
+      },
+      {
+        "id": "q4",
+        "prompt": "And by bicycle?",
+        "kind": "choice",
+        "options": [
+          {
+            "id": "a",
+            "text": "Yes: about 4½ minutes to the Mayor's House by 3:57, then under 2½ minutes to the church by 4:03"
+          },
+          {
+            "id": "b",
+            "text": "No, bicycles can't use that route"
+          },
+          {
+            "id": "c",
+            "text": "Only if he skipped the letterbox"
+          }
+        ],
+        "answer": "a",
+        "explanation": "All three stretches are roads. 1,100 m ÷ 250 = 4.4 minutes, arriving about 3:56, then 600 m ÷ 250 = 2.4 minutes, arriving about 4:02.",
+        "evidence": [
+          "1",
+          "2"
+        ],
+        "hints": [
+          "Are all of Bert's stretches roads?",
+          "Redo the sum at 250 m a minute.",
+          "About 4 and a half minutes there, about 2 and a half to the church. Plenty of time."
+        ]
+      },
+      {
+        "id": "q5",
+        "prompt": "Who took Duchess and sent the note?",
+        "kind": "suspect",
+        "options": [
+          {
+            "id": "ada",
+            "text": "Ada Finch"
+          },
+          {
+            "id": "bert",
+            "text": "Bert Lacey"
+          },
+          {
+            "id": "cora",
+            "text": "Cora Whitlow"
+          },
+          {
+            "id": "dawson",
+            "text": "Amos Dawson"
+          }
+        ],
+        "answer": "bert",
+        "explanation": "Bert is the only suspect who could be at the letterbox at 4:00, and only by bicycle. He claimed he walked, but his bike appeared at the church railings that afternoon. Duchess was in the cellar he holds the key to, and her white hairs were in his bike basket.",
+        "evidence": [
+          "1",
+          "2",
+          "3",
+          "5"
+        ],
+        "hints": [
+          "Only one suspect can reach the letterbox, and only one way.",
+          "Bert says he walked. Did his bike stay at the pub?",
+          "Where was Duchess found, and what was in the bike basket?"
+        ]
+      }
+    ],
+    "solution": {
+      "culprit": "Bert Lacey",
+      "culpritId": "bert",
+      "explanation": "Bert Lacey scooped Duchess from the Mayor's garden that morning and hid her in the Plough's cellar. At 3:52 he settled his tab, jumped on his green bicycle, pedalled to the Mayor's House, pushed the note through the letterbox at 4:00 and raced on to the church, signing in at 4:03 a little out of breath. He told everyone he'd walked, but on foot the trip would have taken him twice as long.",
+      "chain": [
+        {
+          "step": "Ada can't arrive before 4:01, Cora before 4:01, or Dawson before about 4:07, and Dawson had no working vehicle.",
+          "evidence": [
+            "1",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "step": "Bert on foot needs over 21 minutes for pub to Mayor's House to church; he had 11.",
+          "evidence": [
+            "1",
+            "2"
+          ]
+        },
+        {
+          "step": "By bicycle on roads it takes under 7 minutes, so he could deliver the note at 4:00 and sign in at 4:03.",
+          "evidence": [
+            "1",
+            "2"
+          ]
+        },
+        {
+          "step": "His bike appeared at the church railings that afternoon, even though he says he walked.",
+          "evidence": [
+            "3"
+          ]
+        },
+        {
+          "step": "Duchess was in the cellar he has a key to, and her hairs were in his bike basket.",
+          "evidence": [
+            "5"
+          ]
+        }
+      ],
+      "eliminations": [
+        {
+          "name": "Ada Finch",
+          "why": "At the shop till at 3:56, five minutes' walk away. She couldn't arrive until 4:01."
+        },
+        {
+          "name": "Cora Whitlow",
+          "why": "At the library at 3:51, ten minutes' walk away. She couldn't arrive until 4:01."
+        },
+        {
+          "name": "Amos Dawson",
+          "why": "At the farm at 3:48, nearly 19 minutes' walk away, and his tractor was in pieces."
+        }
+      ]
+    }
+  }
+}
